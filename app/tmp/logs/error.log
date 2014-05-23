@@ -1,0 +1,20 @@
+2014-05-23 10:43:06 Error: Fatal Error (1): Call to a member function findAll() on a non-object in [/var/www/instapro/app/Controller/PessoasController.php, line 5]
+2014-05-23 10:43:06 Error: [FatalErrorException] Call to a member function findAll() on a non-object
+Request URL: /instapro/pessoas
+Stack Trace:
+#0 /var/www/instapro/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/instap...', 5)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/instap...', 5, Array)
+#2 /var/www/instapro/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/instap...', 5, Array)
+#3 /var/www/instapro/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-23 10:43:18 Error: Fatal Error (1): Call to a member function findAll() on a non-object in [/var/www/instapro/app/Controller/PessoasController.php, line 5]
+2014-05-23 10:43:18 Error: [FatalErrorException] Call to a member function findAll() on a non-object
+Request URL: /instapro/pessoas
+Stack Trace:
+#0 /var/www/instapro/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/instap...', 5)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/instap...', 5, Array)
+#2 /var/www/instapro/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/instap...', 5, Array)
+#3 /var/www/instapro/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
