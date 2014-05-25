@@ -1,5 +1,5 @@
 <?php
-class contactsController extends Controller{
+class ContactsController extends Controller{
 	var $components = array('Email');
 	public function send(){
 		if(!empty($thisdata)){
