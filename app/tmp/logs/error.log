@@ -68,3 +68,78 @@ Stack Trace:
 #3 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(902): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2014-05-25 16:40:40 Error: [MissingViewException] View file "/home/alejandroschmechel/projects/instapro/app/View/Pessoas/index.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/home/alejandroschmechel/projects/instapro/app/View/Pessoas/index.ctp',
+)
+Request URL: /instapro/pessoas
+Stack Trace:
+#0 /home/alejandroschmechel/projects/instapro/lib/Cake/View/View.php(463): View->_getViewFileName(NULL)
+#1 /home/alejandroschmechel/projects/instapro/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /home/alejandroschmechel/projects/instapro/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#3 /home/alejandroschmechel/projects/instapro/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(PessoasController), Object(CakeRequest), Object(CakeResponse))
+#4 /home/alejandroschmechel/projects/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-05-25 16:40:53 Error: [MissingViewException] View file "/home/alejandroschmechel/projects/instapro/app/View/Pessoas/index.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/home/alejandroschmechel/projects/instapro/app/View/Pessoas/index.ctp',
+)
+Request URL: /instapro/pessoas
+Stack Trace:
+#0 /home/alejandroschmechel/projects/instapro/lib/Cake/View/View.php(463): View->_getViewFileName(NULL)
+#1 /home/alejandroschmechel/projects/instapro/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /home/alejandroschmechel/projects/instapro/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#3 /home/alejandroschmechel/projects/instapro/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(PessoasController), Object(CakeRequest), Object(CakeResponse))
+#4 /home/alejandroschmechel/projects/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-05-25 16:42:00 Error: [MissingViewException] View file "/home/alejandroschmechel/projects/instapro/app/View/Pessoas/index.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/home/alejandroschmechel/projects/instapro/app/View/Pessoas/index.ctp',
+)
+Request URL: /instapro/pessoas
+Stack Trace:
+#0 /home/alejandroschmechel/projects/instapro/lib/Cake/View/View.php(463): View->_getViewFileName(NULL)
+#1 /home/alejandroschmechel/projects/instapro/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /home/alejandroschmechel/projects/instapro/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#3 /home/alejandroschmechel/projects/instapro/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(PessoasController), Object(CakeRequest), Object(CakeResponse))
+#4 /home/alejandroschmechel/projects/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-05-25 16:42:07 Error: [MissingControllerException] Controller class ContactsController could not be found.
+Exception Attributes: array (
+  'class' => 'ContactsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/contacts
+Stack Trace:
+#0 /home/alejandroschmechel/projects/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-25 16:50:15 Error: [MissingControllerException] Controller class ContactsController could not be found.
+Exception Attributes: array (
+  'class' => 'ContactsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/contacts
+Stack Trace:
+#0 /home/alejandroschmechel/projects/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-25 16:50:54 Error: [MissingTableException] Table contacts for model Contact was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'contacts',
+  'class' => 'Contact',
+  'ds' => 'default',
+)
+Request URL: /instapro/contacts
+Stack Trace:
+#0 /home/alejandroschmechel/projects/instapro/lib/Cake/Model/Model.php(3499): Model->setSource('contacts')
+#1 /home/alejandroschmechel/projects/instapro/lib/Cake/Model/Model.php(1355): Model->getDataSource()
+#2 /home/alejandroschmechel/projects/instapro/lib/Cake/View/Helper/FormHelper.php(207): Model->schema()
+#3 /home/alejandroschmechel/projects/instapro/lib/Cake/View/Helper/FormHelper.php(459): FormHelper->_introspectModel('Contact', 'fields')
+#4 /home/alejandroschmechel/projects/instapro/app/View/Contacts/index.ctp(2): FormHelper->create('Contact', Array)
+#5 /home/alejandroschmechel/projects/instapro/lib/Cake/View/View.php(935): include('/home/alejandro...')
+#6 /home/alejandroschmechel/projects/instapro/lib/Cake/View/View.php(897): View->_evaluate('/home/alejandro...', Array)
+#7 /home/alejandroschmechel/projects/instapro/lib/Cake/View/View.php(466): View->_render('/home/alejandro...')
+#8 /home/alejandroschmechel/projects/instapro/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#9 /home/alejandroschmechel/projects/instapro/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#10 /home/alejandroschmechel/projects/instapro/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(ContactsController), Object(CakeRequest), Object(CakeResponse))
+#11 /home/alejandroschmechel/projects/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
