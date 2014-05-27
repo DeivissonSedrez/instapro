@@ -143,3 +143,295 @@ Stack Trace:
 #10 /home/alejandroschmechel/projects/instapro/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(ContactsController), Object(CakeRequest), Object(CakeResponse))
 #11 /home/alejandroschmechel/projects/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #12 {main}
+2014-05-26 19:10:00 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE) in [/home/alejandroschmechel/projects/instapro/app/Controller/PessoasController.php, line 6]
+2014-05-26 19:10:00 Error: [FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE)
+Request URL: /instapro/pessoas/adicionar
+Stack Trace:
+#0 /home/alejandroschmechel/projects/instapro/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/alejandro...', 6)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/alejandro...', 6, Array)
+#2 /home/alejandroschmechel/projects/instapro/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/alejandro...', 6, Array)
+#3 /home/alejandroschmechel/projects/instapro/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-26 19:11:01 Error: Fatal Error (1): Call to a member function find() on a non-object in [/home/alejandroschmechel/projects/instapro/app/Controller/PessoasController.php, line 8]
+2014-05-26 19:11:01 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /instapro/pessoas/adicionar
+Stack Trace:
+#0 /home/alejandroschmechel/projects/instapro/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/alejandro...', 8)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/alejandro...', 8, Array)
+#2 /home/alejandroschmechel/projects/instapro/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/alejandro...', 8, Array)
+#3 /home/alejandroschmechel/projects/instapro/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-26 19:11:38 Error: [MissingTableException] Table paises for model Paises was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'paises',
+  'class' => 'Paises',
+  'ds' => 'default',
+)
+Request URL: /instapro/pessoas/adicionar
+Stack Trace:
+#0 /home/alejandroschmechel/projects/instapro/lib/Cake/Model/Model.php(3499): Model->setSource('paises')
+#1 /home/alejandroschmechel/projects/instapro/lib/Cake/Model/Model.php(1355): Model->getDataSource()
+#2 /home/alejandroschmechel/projects/instapro/lib/Cake/Model/Model.php(1447): Model->schema()
+#3 /home/alejandroschmechel/projects/instapro/lib/Cake/Model/Model.php(1434): Model->hasField('title', false)
+#4 /home/alejandroschmechel/projects/instapro/lib/Cake/Model/Model.php(880): Model->hasField(Array)
+#5 /home/alejandroschmechel/projects/instapro/lib/Cake/Model/Model.php(3070): Model->__get('displayField')
+#6 /home/alejandroschmechel/projects/instapro/lib/Cake/Model/Model.php(2935): Model->_findList('before', Array)
+#7 /home/alejandroschmechel/projects/instapro/lib/Cake/Model/Model.php(2870): Model->buildQuery('list', Array)
+#8 /home/alejandroschmechel/projects/instapro/app/Controller/PessoasController.php(11): Model->find('list')
+#9 [internal function]: PessoasController->adicionar()
+#10 /home/alejandroschmechel/projects/instapro/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(PessoasController), Array)
+#11 /home/alejandroschmechel/projects/instapro/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#12 /home/alejandroschmechel/projects/instapro/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(PessoasController), Object(CakeRequest), Object(CakeResponse))
+#13 /home/alejandroschmechel/projects/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-05-26 19:12:15 Error: Fatal Error (1): Call to a member function find() on a non-object in [/home/alejandroschmechel/projects/instapro/app/Controller/PessoasController.php, line 11]
+2014-05-26 19:12:15 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /instapro/pessoas/adicionar
+Stack Trace:
+#0 /home/alejandroschmechel/projects/instapro/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/alejandro...', 11)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/alejandro...', 11, Array)
+#2 /home/alejandroschmechel/projects/instapro/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/alejandro...', 11, Array)
+#3 /home/alejandroschmechel/projects/instapro/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-26 19:24:17 Error: [MissingControllerException] Controller class PessoasaController could not be found.
+Exception Attributes: array (
+  'class' => 'PessoasaController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/pessoasa
+Stack Trace:
+#0 /home/alejandroschmechel/projects/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-26 20:08:51 Error: Fatal Error (1): Call to a member function find() on a non-object in [/home/alejandroschmechel/projects/instapro/app/Controller/PessoasController.php, line 11]
+2014-05-26 20:08:51 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /instapro/pessoas/adicionar
+Stack Trace:
+#0 /home/alejandroschmechel/projects/instapro/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/alejandro...', 11)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/alejandro...', 11, Array)
+#2 /home/alejandroschmechel/projects/instapro/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/alejandro...', 11, Array)
+#3 /home/alejandroschmechel/projects/instapro/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-26 20:09:10 Error: Fatal Error (1): Call to a member function find() on a non-object in [/home/alejandroschmechel/projects/instapro/app/Controller/PessoasController.php, line 12]
+2014-05-26 20:09:10 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /instapro/pessoas/adicionar
+Stack Trace:
+#0 /home/alejandroschmechel/projects/instapro/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/alejandro...', 12)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/alejandro...', 12, Array)
+#2 /home/alejandroschmechel/projects/instapro/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/alejandro...', 12, Array)
+#3 /home/alejandroschmechel/projects/instapro/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-26 20:09:12 Error: Fatal Error (1): Call to a member function find() on a non-object in [/home/alejandroschmechel/projects/instapro/app/Controller/PessoasController.php, line 12]
+2014-05-26 20:09:12 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /instapro/pessoas/adicionar
+Stack Trace:
+#0 /home/alejandroschmechel/projects/instapro/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/alejandro...', 12)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/alejandro...', 12, Array)
+#2 /home/alejandroschmechel/projects/instapro/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/alejandro...', 12, Array)
+#3 /home/alejandroschmechel/projects/instapro/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-26 20:17:55 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/js/scripts.js
+Stack Trace:
+#0 /home/alejandroschmechel/projects/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-26 20:18:05 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/js/scripts.js
+Stack Trace:
+#0 /home/alejandroschmechel/projects/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-26 20:27:24 Error: [MissingActionException] Action PessoasController::blablabla() could not be found.
+Exception Attributes: array (
+  'controller' => 'PessoasController',
+  'action' => 'blablabla',
+)
+Request URL: /instapro/pessoas/blablabla
+Stack Trace:
+#0 /home/alejandroschmechel/projects/instapro/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /home/alejandroschmechel/projects/instapro/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(PessoasController), Object(CakeRequest), Object(CakeResponse))
+#2 /home/alejandroschmechel/projects/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-05-26 20:27:42 Error: [MissingActionException] Action PessoasController::blablabla() could not be found.
+Exception Attributes: array (
+  'controller' => 'PessoasController',
+  'action' => 'blablabla',
+)
+Request URL: /instapro/pessoas/blablabla
+Stack Trace:
+#0 /home/alejandroschmechel/projects/instapro/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /home/alejandroschmechel/projects/instapro/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(PessoasController), Object(CakeRequest), Object(CakeResponse))
+#2 /home/alejandroschmechel/projects/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-05-26 20:37:33 Error: Fatal Error (4): syntax error, unexpected '}' in [/home/alejandroschmechel/projects/instapro/app/Controller/PessoasController.php, line 20]
+2014-05-26 20:37:33 Error: [FatalErrorException] syntax error, unexpected '}'
+Request URL: /instapro/pessoas/adicionar
+Stack Trace:
+#0 /home/alejandroschmechel/projects/instapro/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/alejandro...', 20)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/alejandro...', 20, Array)
+#2 /home/alejandroschmechel/projects/instapro/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/alejandro...', 20, Array)
+#3 /home/alejandroschmechel/projects/instapro/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-26 20:59:57 Error: Fatal Error (1): Call to a member function find() on a non-object in [/home/alejandroschmechel/projects/instapro/app/Controller/PessoasController.php, line 19]
+2014-05-26 20:59:57 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /instapro/pessoas/getCities
+Stack Trace:
+#0 /home/alejandroschmechel/projects/instapro/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/alejandro...', 19)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/alejandro...', 19, Array)
+#2 /home/alejandroschmechel/projects/instapro/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/alejandro...', 19, Array)
+#3 /home/alejandroschmechel/projects/instapro/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-26 21:05:34 Error: Fatal Error (4): syntax error, unexpected 'as' (T_AS) in [/home/alejandroschmechel/projects/instapro/app/Controller/PessoasController.php, line 28]
+2014-05-26 21:05:34 Error: [FatalErrorException] syntax error, unexpected 'as' (T_AS)
+Request URL: /instapro/pessoas/adicionar
+Stack Trace:
+#0 /home/alejandroschmechel/projects/instapro/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/alejandro...', 28)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/alejandro...', 28, Array)
+#2 /home/alejandroschmechel/projects/instapro/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/alejandro...', 28, Array)
+#3 /home/alejandroschmechel/projects/instapro/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-26 21:10:23 Error: [MissingViewException] View file "/home/alejandroschmechel/projects/instapro/app/View/Pessoas/salvar_pessoa.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/home/alejandroschmechel/projects/instapro/app/View/Pessoas/salvar_pessoa.ctp',
+)
+Request URL: /instapro/pessoas/salvarPessoa
+Stack Trace:
+#0 /home/alejandroschmechel/projects/instapro/lib/Cake/View/View.php(463): View->_getViewFileName(NULL)
+#1 /home/alejandroschmechel/projects/instapro/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /home/alejandroschmechel/projects/instapro/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#3 /home/alejandroschmechel/projects/instapro/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(PessoasController), Object(CakeRequest), Object(CakeResponse))
+#4 /home/alejandroschmechel/projects/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-05-26 21:13:24 Error: [MissingActionException] Action PessoasController::salvarPessoa() could not be found.
+Exception Attributes: array (
+  'controller' => 'PessoasController',
+  'action' => 'salvarPessoa',
+)
+Request URL: /instapro/pessoas/salvarPessoa
+Stack Trace:
+#0 /home/alejandroschmechel/projects/instapro/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /home/alejandroschmechel/projects/instapro/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(PessoasController), Object(CakeRequest), Object(CakeResponse))
+#2 /home/alejandroschmechel/projects/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-05-26 21:13:42 Error: [MissingActionException] Action PessoasController::salvarPessoa() could not be found.
+Exception Attributes: array (
+  'controller' => 'PessoasController',
+  'action' => 'salvarPessoa',
+)
+Request URL: /instapro/pessoas/salvarPessoa
+Stack Trace:
+#0 /home/alejandroschmechel/projects/instapro/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /home/alejandroschmechel/projects/instapro/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(PessoasController), Object(CakeRequest), Object(CakeResponse))
+#2 /home/alejandroschmechel/projects/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-05-26 21:13:46 Error: [MissingActionException] Action PessoasController::salvarPessoa() could not be found.
+Exception Attributes: array (
+  'controller' => 'PessoasController',
+  'action' => 'salvarPessoa',
+)
+Request URL: /instapro/pessoas/salvarPessoa
+Stack Trace:
+#0 /home/alejandroschmechel/projects/instapro/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /home/alejandroschmechel/projects/instapro/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(PessoasController), Object(CakeRequest), Object(CakeResponse))
+#2 /home/alejandroschmechel/projects/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-05-26 21:16:10 Error: [MissingActionException] Action PessoasController::salvarPessoa() could not be found.
+Exception Attributes: array (
+  'controller' => 'PessoasController',
+  'action' => 'salvarPessoa',
+)
+Request URL: /instapro/pessoas/salvarPessoa
+Stack Trace:
+#0 /home/alejandroschmechel/projects/instapro/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /home/alejandroschmechel/projects/instapro/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(PessoasController), Object(CakeRequest), Object(CakeResponse))
+#2 /home/alejandroschmechel/projects/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-05-26 21:16:57 Error: [MissingActionException] Action PessoasController::salvarPessoa() could not be found.
+Exception Attributes: array (
+  'controller' => 'PessoasController',
+  'action' => 'salvarPessoa',
+)
+Request URL: /instapro/pessoas/salvarPessoa
+Stack Trace:
+#0 /home/alejandroschmechel/projects/instapro/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /home/alejandroschmechel/projects/instapro/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(PessoasController), Object(CakeRequest), Object(CakeResponse))
+#2 /home/alejandroschmechel/projects/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-05-26 21:16:59 Error: [MissingActionException] Action PessoasController::salvarPessoa() could not be found.
+Exception Attributes: array (
+  'controller' => 'PessoasController',
+  'action' => 'salvarPessoa',
+)
+Request URL: /instapro/pessoas/salvarPessoa
+Stack Trace:
+#0 /home/alejandroschmechel/projects/instapro/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /home/alejandroschmechel/projects/instapro/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(PessoasController), Object(CakeRequest), Object(CakeResponse))
+#2 /home/alejandroschmechel/projects/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-05-26 21:26:25 Error: Fatal Error (4): syntax error, unexpected '{' in [/home/alejandroschmechel/projects/instapro/app/Controller/PessoasController.php, line 15]
+2014-05-26 21:26:25 Error: [FatalErrorException] syntax error, unexpected '{'
+Request URL: /instapro/pessoas/adicionar
+Stack Trace:
+#0 /home/alejandroschmechel/projects/instapro/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/alejandro...', 15)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/alejandro...', 15, Array)
+#2 /home/alejandroschmechel/projects/instapro/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/alejandro...', 15, Array)
+#3 /home/alejandroschmechel/projects/instapro/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-26 21:37:40 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`instapro`.`pessoas`, CONSTRAINT `FK_pessoas` FOREIGN KEY (`tipo_acesso`) REFERENCES `pessoa_acesso` (`id`))
+Request URL: /instapro/pessoas/adicionar
+Stack Trace:
+#0 /home/alejandroschmechel/projects/instapro/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /home/alejandroschmechel/projects/instapro/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('INSERT INTO `in...', Array)
+#2 /home/alejandroschmechel/projects/instapro/lib/Cake/Model/Datasource/DboSource.php(1004): DboSource->execute('INSERT INTO `in...')
+#3 /home/alejandroschmechel/projects/instapro/lib/Cake/Model/Model.php(1832): DboSource->create(Object(Pessoas), Array, Array)
+#4 /home/alejandroschmechel/projects/instapro/app/Controller/PessoasController.php(16): Model->save(Array)
+#5 [internal function]: PessoasController->adicionar()
+#6 /home/alejandroschmechel/projects/instapro/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(PessoasController), Array)
+#7 /home/alejandroschmechel/projects/instapro/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#8 /home/alejandroschmechel/projects/instapro/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(PessoasController), Object(CakeRequest), Object(CakeResponse))
+#9 /home/alejandroschmechel/projects/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-05-26 21:42:02 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`instapro`.`pessoas`, CONSTRAINT `FK_pessoas_tipo` FOREIGN KEY (`tipo_pessoa`) REFERENCES `pessoa_tipo` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+Request URL: /instapro/pessoas/adicionar
+Stack Trace:
+#0 /home/alejandroschmechel/projects/instapro/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /home/alejandroschmechel/projects/instapro/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('INSERT INTO `in...', Array)
+#2 /home/alejandroschmechel/projects/instapro/lib/Cake/Model/Datasource/DboSource.php(1004): DboSource->execute('INSERT INTO `in...')
+#3 /home/alejandroschmechel/projects/instapro/lib/Cake/Model/Model.php(1832): DboSource->create(Object(Pessoas), Array, Array)
+#4 /home/alejandroschmechel/projects/instapro/app/Controller/PessoasController.php(17): Model->save(Array)
+#5 [internal function]: PessoasController->adicionar()
+#6 /home/alejandroschmechel/projects/instapro/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(PessoasController), Array)
+#7 /home/alejandroschmechel/projects/instapro/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#8 /home/alejandroschmechel/projects/instapro/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(PessoasController), Object(CakeRequest), Object(CakeResponse))
+#9 /home/alejandroschmechel/projects/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-05-26 21:43:40 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`instapro`.`pessoas`, CONSTRAINT `FK_pessoas_tipo` FOREIGN KEY (`tipo_pessoa`) REFERENCES `pessoa_tipo` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+Request URL: /instapro/pessoas/adicionar
+Stack Trace:
+#0 /home/alejandroschmechel/projects/instapro/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /home/alejandroschmechel/projects/instapro/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('INSERT INTO `in...', Array)
+#2 /home/alejandroschmechel/projects/instapro/lib/Cake/Model/Datasource/DboSource.php(1004): DboSource->execute('INSERT INTO `in...')
+#3 /home/alejandroschmechel/projects/instapro/lib/Cake/Model/Model.php(1832): DboSource->create(Object(Pessoas), Array, Array)
+#4 /home/alejandroschmechel/projects/instapro/app/Controller/PessoasController.php(18): Model->save(Array)
+#5 [internal function]: PessoasController->adicionar()
+#6 /home/alejandroschmechel/projects/instapro/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(PessoasController), Array)
+#7 /home/alejandroschmechel/projects/instapro/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#8 /home/alejandroschmechel/projects/instapro/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(PessoasController), Object(CakeRequest), Object(CakeResponse))
+#9 /home/alejandroschmechel/projects/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}

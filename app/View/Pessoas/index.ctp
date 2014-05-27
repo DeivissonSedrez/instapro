@@ -57,4 +57,11 @@
 			<li>0</li>
 		</ul>
 	</div>
+	<div>
+		<ul>
+			<?php foreach($pessoas as $pessoa){
+				echo "<li>".$pessoa['Pessoas']['nome']."</li>";
+			} ?>
+		</ul>
+	</div>
 </div>

@@ -35,6 +35,7 @@
 
 </head>
 <body>
+	<?php echo $this->Form->input('base', array('id' => 'base', 'value' => $this->base, 'type' => 'hidden')) ?>
 	<div id="layout">
 	<div id="header-wrapper">
 				<div id="header">
