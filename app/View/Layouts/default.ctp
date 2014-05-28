@@ -35,6 +35,7 @@
 
 </head>
 <body>
+	<?php echo $this->Form->input('base', array('id' => 'base', 'value' => $this->base, 'type' => 'hidden')) ?>
 	<div id="layout">
 	<div id="header-wrapper">
 				<div id="header">
@@ -44,25 +45,29 @@
 						</div>
 						<div class="user">
 							<!--<img src="_content/user-img.png" alt="" />-->
-							<span>Welcome <a href="#">Owsian !</a></span>
-							<span class="logout"><a href="#">Logout</a></span>
+							<span>Bem Vindo <a href="#">Admin !</a></span>
+							<span class="logout"><a href="#">Sair</a></span>
 						</div>
 					</div>
-					
 					<div id="launcher-wrapper" class="fixed">
 						<div class="logo">
-							<a href="index-2.html"><?php echo $this->Html->image('back-logo.png',array('alt' => 'InstaPro Portal Jurídico', 'border' => '0'));?> </a>
+							<!--?php echo $this->Html->link(
+							$this->Html->image("back-logo.png",array("alt"=> "InstaPro Portal Jurídico", "border" => "0")), 
+							array(
+								'controller' => 'home', 
+								'action' => 'index','comments' => 'false'));?-->
+							<a href="/instapro/home"><?php echo $this->Html->image('back-logo.png',array('alt' => 'InstaPro Portal Jurídico', 'border' => '0'));?> </a>
 						</div>
 						
 						<div class="launcher">
 							<ul class="fixed">
-								<li class="users"><a href="#">Users</a></li>
-								<li class="mailbox">
+								<li class="users"><?php echo $this->Html->link('Usuários', array('controller' => 'pessoas', 'action' => 'index'));?></li>
+								<!--li class="mailbox">
 									<a href="#">Mailbox</a>
 									<span class="red-bullet"></span>
-								</li>
-								<li class="dialog"><a href="#">Dialog</a></li>
-								<li class="settings last"><a href="#">Settings</a></li>
+								</li-->
+								<!--li class="dialog"><a href="#">Dialog</a></li-->
+								<li class="settings last"><a href="#">Configurações</a></li>
 							</ul>
 						</div>
 					</div>
@@ -72,17 +77,17 @@
 				<div id="sidebar">
 					<ul id="navigation">
 						<li class="first active">
-							<div><?php echo $this->html->link('DashBoard', array('controller' => 'home', 'action' => 'index'));?><span class="icon-nav dashboard"></span></div>
+							<div><?php echo $this->Html->link('DashBoard', array('controller' => 'home', 'action' => 'index'));?><span class="icon-nav dashboard"></span></div>
 							<div class="back"></div>
-						</li>						
+						</li>				
 						<li class="last">
-							<div><?php echo $this->html->link('Usuários', array('controller' => 'pessoas', 'action' => 'index'));?><span class="icon-nav users"></span></div>
+							<div><?php echo $this->Html->link('Processos', array('controller' => 'processos', 'action' => 'index'));?><span class="icon-nav interface-elements"></span></div>
+						</li>		
+						<li class="last">
+							<div><?php echo $this->Html->link('Usuários', array('controller' => 'pessoas', 'action' => 'index'));?><span class="icon-nav users"></span></div>
 							<div class="back"></div>
 						</li>
-						<li>
-							<div></div>
-							<div class="back"></div>
-						</li>
+						
 						<li>
 							<div></div>
 							<div class="back"></div>
