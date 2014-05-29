@@ -80,7 +80,7 @@
 							<div><?php echo $this->Html->link('DashBoard', array('controller' => 'home', 'action' => 'index'));?><span class="icon-nav dashboard"></span></div>
 							<div class="back"></div>
 						</li>				
-						<li class="last">
+						<li>
 							<div><?php echo $this->Html->link('Processos', array('controller' => 'processos', 'action' => 'index'));?><span class="icon-nav interface-elements"></span></div>
 						</li>		
 						<li class="last">
