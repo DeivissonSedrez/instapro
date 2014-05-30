@@ -786,3 +786,30 @@ Request URL: /instapro/processos
 Stack Trace:
 #0 D:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2014-05-29 21:39:21 Error: [MissingControllerException] Controller class ProcessosController could not be found.
+Exception Attributes: array (
+  'class' => 'ProcessosController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/processos
+Stack Trace:
+#0 /home/alejandroschmechel/projects/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-29 21:39:24 Error: [MissingControllerException] Controller class ProcessosController could not be found.
+Exception Attributes: array (
+  'class' => 'ProcessosController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/processos
+Stack Trace:
+#0 /home/alejandroschmechel/projects/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-30 20:47:02 Error: [MissingControllerException] Controller class ProcessosController could not be found.
+Exception Attributes: array (
+  'class' => 'ProcessosController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/processos
+Stack Trace:
+#0 /home/alejandroschmechel/projects/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
