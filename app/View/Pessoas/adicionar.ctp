@@ -17,7 +17,7 @@ echo $this->Html->script("scripts");
 	<?php echo $this->Form->create('busca')?>
 	<?php echo $this->Html->link('Novo Usuário', array('controller'=> 'pessoas', 'action' => 'adicionar'), array('class' => 'button-blue'));?>
 	<div style="position:relative; float:right;">
-	<?php echo $this->Form->input('valor', array('label'=>false, 'type' => 'text', 'class'=>'small',              'maxlength'=>100, 'div'=>false));?>
+	<?php echo $this->Form->input('valor', array('label'=>false, 'type' => 'text', 'class'=>'small', 'maxlength'=>100, 'div'=>false));?>
 	<a href="#" class='button-grey arrow'>Buscar<span></span></a>
 	</div>
 	<?php echo $this->Form->end();?>
@@ -26,6 +26,14 @@ echo $this->Html->script("scripts");
 <h2 style="margin-left: 40%;"><?php echo $this->Session->flash(); ?></h2>
 
 <div  class="frame-big pad10">
+<h1>Dados de Login</h1>
+<div class="hr"></div>
+<?php echo $this->Form->input('tipo_login', array('label'=> array('text' => '<h4 style="display:inline">Tipo Usuário: </h4>', 'value'=> 3, 'class'=>'labelform'), 'class'=>'dropdown', 'type'=>'select', 'options' => $permissoes, 'css' => array('display'=>'inline'))); 
+echo $this->Form->input('login', array('label'=> array('text' => '<h4 style="display:inline">Login: </h4>', 'class'=>'labelform'), 'class'=>'small',  'css' => array('display'=>'inline')));
+echo $this->Form->input('password', array('label'=> array('text' => '<h4 style="display:inline">Senha: </h4>', 'class'=>'labelform'), 'class'=>'small', 'type'=>'password','css' => array('display'=>'inline')));
+echo $this->Form->input('password2', array('label'=> array('text' => '<h4 style="display:inline">Confirme a senha: </h4>', 'class'=>'labelform'), 'class'=>'small','type'=>'password', 'css' => array('display'=>'inline')));
+?>
+<div class="hr"></div>
 <h1>Dados Pessoais</h1>
 <div class="hr"></div>
 <?php 

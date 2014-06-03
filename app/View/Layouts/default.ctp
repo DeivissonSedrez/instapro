@@ -82,8 +82,9 @@
 						</li>				
 						<li>
 							<div><?php echo $this->Html->link('Processos', array('controller' => 'processos', 'action' => 'index'));?><span class="icon-nav interface-elements"></span></div>
+							<div class="back"></div>
 						</li>		
-						<li class="last">
+						<li>
 							<div><?php echo $this->Html->link('Usuários', array('controller' => 'pessoas', 'action' => 'index'));?><span class="icon-nav users"></span></div>
 							<div class="back"></div>
 						</li>
