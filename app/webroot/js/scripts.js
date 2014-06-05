@@ -1,27 +1,27 @@
 $(document).ready(function(){
-	$("#PessoasIdPais").on('change', function(){
+	$("#PessoaContatoIdPais").on('change', function(){
 		var countryId = $(this).val();
 		if(countryId == 33){
-			$("#PessoasIdEstado").parent().slideDown(400);
-			$("#PessoasIdEstado").change();
+			$("#PessoaContatoIdEstado").parent().slideDown(400);
+			$("#PessoaContatoIdEstado").change();
 		} else{
-			$("#PessoasIdCidade").parent().slideUp(400, function(){
-				$("#PessoasIdEstado").parent().slideUp(400);
+			$("#PessoaContatoIdCidade").parent().slideUp(400, function(){
+				$("#PessoaContatoIdEstado").parent().slideUp(400);
 			})
 		}
 	});
-	$("#PessoasIdEstado").on('change', function(){
+	$("#PessoaContatoIdEstado").on('change', function(){
 		var state = $(this).val();
 		var base = $("#base").val();
-		$("#PessoasIdCidade").html('');
-		$("#PessoasIdCidade").parent().slideUp(400, function(){
+		$("#PessoaContatoIdCidade").html('');
+		$("#PessoaContatoIdCidade").parent().slideUp(400, function(){
 			$.post(base+"/pessoas/getCities", {state : state}, function(response){
-				$("#PessoasIdCidade").html(response);
-				$("#PessoasIdCidade").parent().slideDown(400);
+				$("#PessoaContatoIdCidade").html(response);
+				$("#PessoaContatoIdCidade").parent().slideDown(400);
 			});
 		});
 	});
-    $('#PessoasTelefone1').focusout(function(){
+    $('#PessoaContatoTelefone1').focusout(function(){
         var phone, element;
         element = $(this);
         element.unmask();
@@ -32,7 +32,7 @@ $(document).ready(function(){
             element.mask('(99) 9999-9999?9');
         }
     }).trigger('focusout');
-	$('#PessoasTelefone2').focusout(function(){
+	$('#PessoaContatoTelefone2').focusout(function(){
 	        var phone, element;
 	        element = $(this);
 	        element.unmask();
@@ -43,7 +43,7 @@ $(document).ready(function(){
 	            element.mask('(99) 9999-9999?9');
 	        }
 	    }).trigger('focusout');
-	$('#PessoasTelefone3').focusout(function(){
+	$('#PessoaContatoTelefone3').focusout(function(){
 	        var phone, element;
 	        element = $(this);
 	        element.unmask();
@@ -54,11 +54,11 @@ $(document).ready(function(){
 	            element.mask('(99) 9999-9999?9');
 	        }
 	    }).trigger('focusout');
-	$("#PessoasCpf").mask("999.999.999-99");
-   	$("#PessoasCep").mask("99999-999");
-   	$("#PessoasDtNascimento").mask("99/99/9999");
-   	$("#ssn").mask("999-99-9999");
+	$("#PessoaFisicaCpf").mask("999.999.999-99");
+   	$("#PessoaContatoCep").mask("99999-999");
+   	$("#PessoaFisicaDataNascimento").mask("99/99/9999");
+   	$("#PessoaFisicaRg").mask("999-99-9999");
 
-   	$("#PessoasIdPais").val(33);
-   	$("#PessoasIdPais").change();
+   	$("#PessoaContatoIdPais").val(33);
+   	$("#PessoaContatoIdPais").change();
 });
