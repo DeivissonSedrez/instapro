@@ -20,7 +20,7 @@ class Pessoas extends AppModel{
 
 			)
 		)
-	)
+	);
 
 	public function beforeSave($options = array()){
 		if (!empty($this->data['Pessoas']['password'])) {
