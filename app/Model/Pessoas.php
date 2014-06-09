@@ -14,6 +14,14 @@ class Pessoas extends AppModel{
 		)
 	);
 
+	public $validation = array(
+		'nome' => array(
+			'notempty' => array(
+
+			)
+		)
+	)
+
 	public function beforeSave($options = array()){
 		if (!empty($this->data['Pessoas']['password'])) {
             $passwordHasher = new SimplePasswordHasher(array('hashType' => 'sha256'));
