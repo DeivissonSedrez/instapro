@@ -13,7 +13,6 @@ class Pessoas extends AppModel{
 	        'foreignKey' => 'id_pessoa'
 		)
 	);
-
 	public $validation = array(
 		'nome' => array(
 			'notempty' => array(
