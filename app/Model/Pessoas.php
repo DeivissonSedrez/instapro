@@ -13,6 +13,13 @@ class Pessoas extends AppModel{
 	        'foreignKey' => 'id_pessoa'
 		)
 	);
+	public $validation = array(
+		'nome' => array(
+			'notempty' => array(
+
+			)
+		)
+	);
 
 	public function beforeSave($options = array()){
 		if (!empty($this->data['Pessoas']['password'])) {
