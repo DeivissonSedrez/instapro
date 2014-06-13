@@ -1,4 +1,5 @@
 <?php
+App::uses('SimplePasswordHasher', 'Controller/Component/Auth');
 
 class  PessoasController extends AppController{
 
@@ -54,19 +55,51 @@ class  PessoasController extends AppController{
 	}
 
 	public function login() {
+		$this->layout = 'login';
 	    if ($this->request->is('post')) {
-	    	//die(var_dump($this->request->data));
-	        if ($this->Auth->login()) {
-	            return $this->redirect($this->Auth->redirectUrl());
- 	        } else {
-	            $this->Session->setFlash(
-	                __('Username or password is incorrect!'),
-	                'default',
-	                array(),
-	                'auth'
-	            );
+	        $username = $this->request->data['Pessoas']['username'];
+	        $passwordHasher = new SimplePasswordHasher(array('hashType' => 'sha256'));
+            $password = $passwordHasher->hash($this->request->data['Pessoas']['password']);
+	        
+	        if($data = $this->Pessoas->find('first' , array('conditions' => array('Pessoas.login' => $username, 'Pessoas.password' => $password)))){
+                if($dat = $this->registerSession($data)){
+                    $this->redirect('/pessoas');
+                }                       
+                else{
+                    $this->Session->setFlash(
+		                __('Não foi possivel setar a sessão!'),
+		                'default',
+		                array(),
+		                'auth'
+		            );
+		            $this->redirect($this->referer());
+                }
 	        }
+	        $this->Session->setFlash(
+                __('Usuário e senha incorretos!'),
+                'default',
+                array(),
+                'auth'
+            );
+            $this->redirect($this->referer());
 	    }
 	}
+
+	public function registerSession($data){
+        $this->Session->write('User.id', $data['Pessoas']['id']);
+        $this->Session->write('User.nome', $data['Pessoas']['nome']);
+        $this->Session->write('User.login', $data['Pessoas']['login']);
+        if($this->Session->read('User')){
+        	$this->Auth->login($data['Pessoas']['id']);
+            return true;
+        }
+    }
+    
+    public function logout(){
+        $this->autoRender = false;
+        $this->Session->delete('User');
+        $this->Session->destroy();
+        $this->redirect(array('controller' => 'home'));
+    }
 }
 ?>

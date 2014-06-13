@@ -43,11 +43,6 @@
 						<div class="color-scheme">
 							<!--<a href="#" class="button">Dropdown suggestion</a>-->
 						</div>
-						<div class="user">
-							<!--<img src="_content/user-img.png" alt="" />-->
-							<span>Bem Vindo <a href="#"><?php echo CakeSession::read('User.login'); ?> !</a></span>
-							<span class="logout"><a href="<?php echo $this->Html->url('/pessoas/logout') ?>">Sair</a></span>
-						</div>
 					</div>
 					<div id="launcher-wrapper" class="fixed">
 						<div class="logo">
@@ -58,63 +53,11 @@
 								'action' => 'index','comments' => 'false'));?-->
 							<a href="/instapro/home"><?php echo $this->Html->image('back-logo.png',array('alt' => 'InstaPro Portal Jurídico', 'border' => '0'));?> </a>
 						</div>
-						
-						<div class="launcher">
-							<ul class="fixed">
-								<li class="users"><?php echo $this->Html->link('Usuários', array('controller' => 'pessoas', 'action' => 'index'));?></li>
-								<!--li class="mailbox">
-									<a href="#">Mailbox</a>
-									<span class="red-bullet"></span>
-								</li-->
-								<!--li class="dialog"><a href="#">Dialog</a></li-->
-								<li class="settings last"><a href="#">Configurações</a></li>
-							</ul>
-						</div>
+					
 					</div>
 				</div>
 			</div>
-			<div class="page">
-				<div id="sidebar">
-					<ul id="navigation">
-						<li class="first active">
-							<div><?php echo $this->Html->link('DashBoard', array('controller' => 'home', 'action' => 'index'));?><span class="icon-nav dashboard"></span></div>
-							<div class="back"></div>
-						</li>				
-						<li>
-							<div><?php echo $this->Html->link('Processos', array('controller' => 'processos', 'action' => 'index'));?><span class="icon-nav interface-elements"></span></div>
-							<div class="back"></div>
-						</li>		
-						<li>
-							<div><?php echo $this->Html->link('Usuários', array('controller' => 'pessoas', 'action' => 'index'));?><span class="icon-nav users"></span></div>
-							<div class="back"></div>
-						</li>
-						
-						<li>
-							<div></div>
-							<div class="back"></div>
-						</li>
-						<li>
-							<div></div>
-							<div class="back"></div>
-						</li>
-						<li>
-							<div></div>
-							<div class="back"></div>
-						</li>
-						<li>
-							<div></div>
-							<div class="back"></div>
-						</li>
-						<li>
-							<div></div>
-							<div class="back"></div>
-						</li>
-						<li class="last">
-							<div></div>
-							<div class="back"></div>
-						</li>
-					</ul>
-				</div>			
+			<div class="page">	
 				
 				<div id="content">
 				<?php echo $content_for_layout; ?>

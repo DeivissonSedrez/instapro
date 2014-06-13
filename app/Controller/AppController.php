@@ -38,7 +38,7 @@ class AppController extends Controller {
 	            'controller' => 'pessoas',
 	            'action' => 'login'
 	        ),
-	        'authError' => 'Did you really think you are allowed to see that?',
+	        'authError' => 'Você deve logar para acessar essa página!',
 	        'authenticate' => array(
 	            'Form' => array(
 	                'fields' => array('username' => 'login'),
