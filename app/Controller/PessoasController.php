@@ -3,7 +3,7 @@
 class  PessoasController extends AppController{
 
 	var $uses = array('Pais', 'Estados', 'Cidade', 'Pessoas','PessoaAcesso', 'PessoaContato', 'PessoaFisica');
-	
+
 	public function index(){		
 		$this->set('pessoas', $this->Pessoas->find('all'));
 	}
@@ -54,35 +54,19 @@ class  PessoasController extends AppController{
 	}
 
 	public function login() {
-    //if already logged in
-    if ($this->Session->check('Auth.pessoa')) {
-        $this->redirect(array('action' => 'index'));
-    }
-
-    $pessoa = $this->Pessoas->findById(2);
-
-    debug($pessoa);
-
-    if ($this->request->is('post')) {
-
-        debug($this->request->data['Pessoa']['password']);
-
-        debug($this->request->data);
-
-        debug(AuthComponent::password($this->request->data['Pessoa']['password']));
-
-        debug($pessoa['Pessoa']['password']);
-
-        if ($pessoa['Pessoa']['password'] == AuthComponent::password($this->request->data['Pessoa']['password'])) {
-            echo 'pessoa pw == hashed request data pw <br />';
-        }
-
-        if ($this->Auth->login()) {
-            return $this->redirect($this->Auth->redirectUrl());
-        } else {
-            $this->Session->setFlash(__('Login Inválido.'));
-        }
-    }
-}
+	    if ($this->request->is('post')) {
+	    	//die(var_dump($this->request->data));
+	        if ($this->Auth->login()) {
+	            return $this->redirect($this->Auth->redirectUrl());
+ 	        } else {
+	            $this->Session->setFlash(
+	                __('Username or password is incorrect!'),
+	                'default',
+	                array(),
+	                'auth'
+	            );
+	        }
+	    }
+	}
 }
 ?>
