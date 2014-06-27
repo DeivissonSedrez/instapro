@@ -404,7 +404,7 @@ html[xmlns] .clearfix, html[xmlns] .section, html[xmlns] .fixed, html[xmlns] .ro
 	
 	
 	
- 	input 																			{ padding-left:10px;font-size:12px;color:#757f8c;-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;background-color: #fff;-webkit-box-shadow: 0 2px 1px rgba(0,0,0,.1), inset 0 2px 3px rgba(104,122,144,.25);-moz-box-shadow: 0 2px 1px rgba(0,0,0,.1), inset 0 2px 3px rgba(104,122,144,.25);box-shadow: 0 2px 1px rgba(0,0,0,.1), inset 0 2px 3px rgba(104,122,144,.25);border: solid 1px #b9c4cf;width:94.7%;height:30px;margin-bottom:10px;-moz-transition: all 1s;-webkit-transition: all 1s; }
+ 	input 																			{ padding-left:10px;font-size:12px;color:#757f8c;-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;background-color: #fff;-webkit-box-shadow: 0 2px 1px rgba(0,0,0,.1), inset 0 2px 3px rgba(104,122,144,.25);-moz-box-shadow: 0 2px 1px rgba(0,0,0,.1), inset 0 2px 3px rgba(104,122,144,.25);box-shadow: 0 2px 1px rgba(0,0,0,.1), inset 0 2px 3px rgba(104,122,144,.25);border: solid 1px #b9c4cf;width:94.7%;height:20px;margin-bottom:10px;-moz-transition: all 1s;-webkit-transition: all 1s; }
 	input:focus 																	{ border:1px solid #7bafdd;box-shadow:inset 0px 1px 3px 0 rgba(0,0,0,0.2), 0 0 3px 1px rgba(123,175,221,0.8); }
 	
 	textarea 																		{ font-size:12px;color:#757f8c;font-family:arial, verdana, trebuchet ms;-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;background-color: #fff;-webkit-box-shadow: 0 2px 1px rgba(0,0,0,.1), inset 0 2px 3px rgba(104,122,144,.25);-moz-box-shadow: 0 2px 1px rgba(0,0,0,.1), inset 0 2px 3px rgba(104,122,144,.25);box-shadow: 0 2px 1px rgba(0,0,0,.1), inset 0 2px 3px rgba(104,122,144,.25);border: solid 1px #b9c4cf;width:97.4%;height:110px;margin-bottom:10px;padding:10px 0 0 10px; }
@@ -447,8 +447,10 @@ html[xmlns] .clearfix, html[xmlns] .section, html[xmlns] .fixed, html[xmlns] .ro
 	.listaalfabeto li:hover  														{ opacity: 1; color: #0163AC;   width:22px; height: 25px; font-size:20px; }
 	.labelform 																		{ display: inline-block; width:150px;}
 	/* font-size: 12px; font-family: arial , verdana , trebuchet ms; line-height: 18px; font-weight: bolder; outline: none; color:#757f8c;*/
-	.dropdown 																		{padding-left:10px;font-size:12px;color:#757f8c;-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;background-color: #fff;-webkit-box-shadow: 0 2px 1px rgba(0,0,0,.1), inset 0 2px 3px rgba(104,122,144,.25);-moz-box-shadow: 0 2px 1px rgba(0,0,0,.1), inset 0 2px 3px rgba(104,122,144,.25);box-shadow: 0 2px 1px rgba(0,0,0,.1), inset 0 2px 3px rgba(104,122,144,.25);border: solid 1px #b9c4cf;width:200px;height:30px;margin-bottom:10px;-moz-transition: all 1s;-webkit-transition: all 1s;}
+	.dropdown 																		{padding-left:10px;font-size:12px;color:#757f8c;-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;background-color: #fff;-webkit-box-shadow: 0 2px 1px rgba(0,0,0,.1), inset 0 2px 3px rgba(104,122,144,.25);-moz-box-shadow: 0 2px 1px rgba(0,0,0,.1), inset 0 2px 3px rgba(104,122,144,.25);box-shadow: 0 2px 1px rgba(0,0,0,.1), inset 0 2px 3px rgba(104,122,144,.25);border: solid 1px #b9c4cf;width:200px;height:20px;margin-bottom:10px;-moz-transition: all 1s;-webkit-transition: all 1s;}
 	.dropdown p 																	{display: inline-block; font-weight: bold;}
+	.dropdown.small																	{width: 3
+		0px;}
 
 	.dropdown select 																{ border: 0 !important;  /*Removes border*/
 																				      -webkit-appearance: none;  /*Removes default chrome and safari style*/

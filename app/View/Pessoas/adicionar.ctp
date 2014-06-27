@@ -17,7 +17,7 @@ echo $this->Html->script("scripts");
 	<?php echo $this->Form->create('busca')?>
 	<?php echo $this->Html->link('Novo Usuário', array('controller'=> 'pessoas', 'action' => 'adicionar'), array('class' => 'button-blue'));?>
 	<div style="position:relative; float:right;">
-	<?php echo $this->Form->input('valor', array('label'=>false, 'type' => 'text', 'class'=>'small', 'maxlength'=>100, 'div'=>false));?>
+	<?php echo $this->Form->input('valor', array('label'=>false, 'type' => 'text', 'class'=>'small', 'maxlength'=>100, 'div'=>false, 'css'=> array('height'=>30) ));?>
 	<a href="#" class='button-grey arrow'>Buscar<span></span></a>
 	</div>
 	<?php echo $this->Form->end();?>
@@ -34,6 +34,10 @@ echo $this->Form->input('tipo_pessoa', array('label'=> array('text' => '<h4 styl
 echo $this->Form->input('login', array('label'=> array('text' => '<h4 style="display:inline">Login: </h4>', 'class'=>'labelform'), 'class'=>'small',  'css' => array('display'=>'inline')));
 echo $this->Form->input('password', array('label'=> array('text' => '<h4 style="display:inline">Senha: </h4>', 'class'=>'labelform'), 'class'=>'small', 'type'=>'password','css' => array('display'=>'inline')));
 echo $this->Form->input('PessoaAcesso.password2', array('label'=> array('text' => '<h4 style="display:inline">Confirme a senha: </h4>', 'class'=>'labelform'), 'class'=>'small','type'=>'password', 'css' => array('display'=>'inline')));
+echo $this->Form->input('Vprocessos', array('label'=> array('text' => '<h4 style="display:inline">Visualiza Processos: </h4>', 'value'=> 1, 'class'=>'labelform'), 'class'=>'dropdown', 'type'=>'select', 'options' => array('S' => 'Sim', 'N' => 'Não'), 'css' => array('display'=>'inline')));
+echo $this->Form->input('Cprocessos', array('label'=> array('text' => '<h4 style="display:inline">Cadastra Processos: </h4>', 'value'=> 1, 'class'=>'labelform'), 'class'=>'dropdown', 'type'=>'select', 'options' => array('S' => 'Sim', 'N' => 'Não'), 'css' => array('display'=>'inline')));
+echo $this->Form->input('Vpessoas', array('label'=> array('text' => '<h4 style="display:inline">Visualiza Pessoas: </h4>', 'value'=> 2, 'class'=>'labelform'), 'class'=>'dropdown', 'type'=>'select', 'options' => array('S' => 'Sim', 'N' => 'Não'), 'css' => array('display'=>'inline')));
+echo $this->Form->input('Cpessoas', array('label'=> array('text' => '<h4 style="display:inline">Cadastra Pessoas: </h4>', 'value'=> 2, 'class'=>'labelform'), 'class'=>'dropdown', 'type'=>'select', 'options' => array('S' => 'Sim', 'N' => 'Não'), 'css' => array('display'=>'inline')));
 ?>
 <div class="hr"></div>
 <h1>Dados Pessoais</h1>
