@@ -48,4 +48,10 @@ class AppController extends Controller {
 	    ),
 	    'Session'
 	);
+
+	function beforeRender() {
+	    if($this->name == 'CakeError') {
+	        $this->layout = 'error';
+	    }
+	}
 }
