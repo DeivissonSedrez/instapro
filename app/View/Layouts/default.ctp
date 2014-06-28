@@ -17,13 +17,10 @@
 
 	<!-- Fonts -->
 	<link href='http://fonts.googleapis.com/css?family=Droid+Sans:regular,bold|PT+Sans+Narrow:regular,bold|Droid+Serif:i&amp;v1' rel='stylesheet' type='text/css' />
-
 	
 	<?php echo $this->Html->script(array('jquery-1.11.1.js')); ?>
 	
 	<!-- Scripts -->
-
-	<?php //echo $this->Html->script(array('custom.js'));?> 
 	<?php echo $this->Html->script(array('jquery.maskedinput.js')); ?>
 
 </head>
