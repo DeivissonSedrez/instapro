@@ -1461,3 +1461,47 @@ Request URL: /instapro/login
 Stack Trace:
 #0 D:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2014-06-29 19:04:52 Error: [MissingDatasourceConfigException] The datasource configuration "default" was not found in database.php
+Exception Attributes: array (
+  'config' => 'default',
+)
+Request URL: /instapro/pessoas/login
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\lib\Cake\Model\ConnectionManager.php(91): ConnectionManager::_getConnectionObject('default')
+#1 C:\xampp\htdocs\instapro\lib\Cake\Model\Model.php(3477): ConnectionManager::getDataSource('default')
+#2 C:\xampp\htdocs\instapro\lib\Cake\Model\Model.php(1126): Model->setDataSource('default')
+#3 C:\xampp\htdocs\instapro\lib\Cake\Model\Model.php(3499): Model->setSource('pessoas')
+#4 C:\xampp\htdocs\instapro\lib\Cake\Model\Model.php(1355): Model->getDataSource()
+#5 C:\xampp\htdocs\instapro\lib\Cake\View\Helper\FormHelper.php(207): Model->schema()
+#6 C:\xampp\htdocs\instapro\lib\Cake\View\Helper\FormHelper.php(459): FormHelper->_introspectModel('Pessoas', 'fields')
+#7 C:\xampp\htdocs\instapro\app\View\Pessoas\login.ctp(3): FormHelper->create('Pessoas')
+#8 C:\xampp\htdocs\instapro\lib\Cake\View\View.php(935): include('C:\xampp\htdocs...')
+#9 C:\xampp\htdocs\instapro\lib\Cake\View\View.php(897): View->_evaluate('C:\xampp\htdocs...', Array)
+#10 C:\xampp\htdocs\instapro\lib\Cake\View\View.php(466): View->_render('C:\xampp\htdocs...')
+#11 C:\xampp\htdocs\instapro\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#12 C:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(192): Controller->render()
+#13 C:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(PessoasController), Object(CakeRequest), Object(CakeResponse))
+#14 C:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2014-06-29 19:32:08 Error: [MissingDatasourceConfigException] The datasource configuration "default" was not found in database.php
+Exception Attributes: array (
+  'config' => 'default',
+)
+Request URL: /instapro/pessoas/login
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\lib\Cake\Model\ConnectionManager.php(91): ConnectionManager::_getConnectionObject('default')
+#1 C:\xampp\htdocs\instapro\lib\Cake\Model\Model.php(3477): ConnectionManager::getDataSource('default')
+#2 C:\xampp\htdocs\instapro\lib\Cake\Model\Model.php(1126): Model->setDataSource('default')
+#3 C:\xampp\htdocs\instapro\lib\Cake\Model\Model.php(3499): Model->setSource('pessoas')
+#4 C:\xampp\htdocs\instapro\lib\Cake\Model\Model.php(1355): Model->getDataSource()
+#5 C:\xampp\htdocs\instapro\lib\Cake\View\Helper\FormHelper.php(207): Model->schema()
+#6 C:\xampp\htdocs\instapro\lib\Cake\View\Helper\FormHelper.php(459): FormHelper->_introspectModel('Pessoas', 'fields')
+#7 C:\xampp\htdocs\instapro\app\View\Pessoas\login.ctp(3): FormHelper->create('Pessoas')
+#8 C:\xampp\htdocs\instapro\lib\Cake\View\View.php(935): include('C:\xampp\htdocs...')
+#9 C:\xampp\htdocs\instapro\lib\Cake\View\View.php(897): View->_evaluate('C:\xampp\htdocs...', Array)
+#10 C:\xampp\htdocs\instapro\lib\Cake\View\View.php(466): View->_render('C:\xampp\htdocs...')
+#11 C:\xampp\htdocs\instapro\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#12 C:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(192): Controller->render()
+#13 C:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(PessoasController), Object(CakeRequest), Object(CakeResponse))
+#14 C:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
