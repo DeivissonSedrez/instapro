@@ -48,7 +48,7 @@
 
 				<div id="avatar"><img src="../img/login/avatars/alex.jpg" alt="Selected user avatar"><div id="av-overlay"></div></div>
 
-				<?php echo $this->Form->button('login-btn',  array('text'=>'Entrar', 'class'=>'button submit', 'id'=>'login-btn','type'=>'submit')); ?>
+				<?php echo $this->Form->button('Entrar',  array('class'=>'button submit', 'id'=>'login-btn','type'=>'submit')); ?>
 				<?php echo $this->Form->end(); ?>
 				<!--button id="login-btn" type="submit" class="button submit">Log in</button-->
 
