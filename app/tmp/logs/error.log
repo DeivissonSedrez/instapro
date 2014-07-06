@@ -7030,3 +7030,54 @@ Stack Trace:
 #10 C:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(PessoasController), Object(CakeRequest), Object(CakeResponse))
 #11 C:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #12 {main}
+2014-07-06 21:22:02 Error: [MissingDatasourceConfigException] The datasource configuration "default" was not found in database.php
+Exception Attributes: array (
+  'config' => 'default',
+)
+Request URL: /instapro/pessoas/login
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\lib\Cake\Model\ConnectionManager.php(91): ConnectionManager::_getConnectionObject('default')
+#1 C:\xampp\htdocs\instapro\lib\Cake\Model\Model.php(3477): ConnectionManager::getDataSource('default')
+#2 C:\xampp\htdocs\instapro\lib\Cake\Model\Model.php(1126): Model->setDataSource('default')
+#3 C:\xampp\htdocs\instapro\lib\Cake\Model\Model.php(3499): Model->setSource('pessoas')
+#4 C:\xampp\htdocs\instapro\lib\Cake\Model\Model.php(2903): Model->getDataSource()
+#5 C:\xampp\htdocs\instapro\lib\Cake\Model\Model.php(2875): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\instapro\app\Controller\PessoasController.php(58): Model->find('all')
+#7 [internal function]: PessoasController->login()
+#8 C:\xampp\htdocs\instapro\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(PessoasController), Array)
+#9 C:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(PessoasController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-07-06 21:58:28 Error: [MissingActionException] Action PessoasController::favicon.png() could not be found.
+Exception Attributes: array (
+  'controller' => 'PessoasController',
+  'action' => 'favicon.png',
+)
+Request URL: /instapro/pessoas/favicon.png
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(PessoasController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-07-06 21:58:28 Error: [MissingActionException] Action PessoasController::favicon.png() could not be found.
+Exception Attributes: array (
+  'controller' => 'PessoasController',
+  'action' => 'favicon.png',
+)
+Request URL: /instapro/pessoas/favicon.png
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(PessoasController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-07-06 22:03:38 Error: Fatal Error (1): Call to undefined function to_string() in [C:\xampp\htdocs\instapro\app\Controller\PessoasController.php, line 63]
+2014-07-06 22:03:38 Error: [FatalErrorException] Call to undefined function to_string()
+Request URL: /instapro/pessoas/login
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\xampp\htdocs...', 63)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\xampp\htdocs...', 63, Array)
+#2 C:\xampp\htdocs\instapro\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\xampp\htdocs...', 63, Array)
+#3 C:\xampp\htdocs\instapro\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
