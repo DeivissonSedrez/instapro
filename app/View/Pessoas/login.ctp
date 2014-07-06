@@ -48,7 +48,7 @@
 
 				<div id="avatar"><img src="../img/login/avatars/alex.jpg" alt="Selected user avatar"><div id="av-overlay"></div></div>
 
-				<?php echo $this->Form->button('login-btn',  array('text'=>'Entrar', 'class'=>'button submit', 'id'=>'login-btn','type'=>'submit')); ?>
+				<?php echo $this->Form->button('Entrar',  array('class'=>'button submit', 'id'=>'login-btn','type'=>'submit')); ?>
 				<?php echo $this->Form->end(); ?>
 				<!--button id="login-btn" type="submit" class="button submit">Log in</button-->
 
@@ -74,6 +74,12 @@
 
 
 	<div id="load"><div id="spinner"></div><div id="load-inner"></div></div>
+
+	 <?php 
+    foreach($pessoascad as $pessoa){
+    	$pessoas[] = $pessoa['Pessoas']['login'];
+	} 
+	?>
 	<script type='text/javascript'>
     $('#login-body').hide();
     $(window).bind('load', function() {
@@ -122,7 +128,8 @@
         };
     });
 
-    var users = ["novalex","m1chael","Johnny 1337"];
+   
+    var users = <?php echo json_encode($pessoas); ?>;
     var username = $('#username');
     var typeDelay;
     $(username).keyup(function(){

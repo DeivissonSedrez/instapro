@@ -6722,6 +6722,7 @@ Request URL: /instapro/css/res/fonts/webhostinghub-glyphs.ttf
 Stack Trace:
 #0 D:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+<<<<<<< HEAD
 2014-06-29 19:04:52 Error: [MissingDatasourceConfigException] The datasource configuration "default" was not found in database.php
 Exception Attributes: array (
   'config' => 'default',
@@ -6766,3 +6767,266 @@ Stack Trace:
 #13 C:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(PessoasController), Object(CakeRequest), Object(CakeResponse))
 #14 C:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #15 {main}
+=======
+2014-06-30 09:10:30 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/css/res/fonts/roboto-b.woff
+Stack Trace:
+#0 D:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-30 09:10:30 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/css/res/fonts/roboto.woff
+Stack Trace:
+#0 D:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-30 09:10:30 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/css/res/fonts/arrows.woff
+Stack Trace:
+#0 D:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-30 09:10:30 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/css/img/login/bg.jpg
+Stack Trace:
+#0 D:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-30 09:10:30 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/css/res/fonts/webhostinghub-glyphs.ttf
+Stack Trace:
+#0 D:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-30 09:10:30 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/css/img/login/load.png
+Stack Trace:
+#0 D:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-30 09:10:30 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/css/img/login/logo.png
+Stack Trace:
+#0 D:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-30 09:10:30 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/css/res/fonts/roboto.ttf
+Stack Trace:
+#0 D:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-30 09:10:30 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/css/res/fonts/roboto.svg
+Stack Trace:
+#0 D:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-30 09:10:30 Error: [MissingActionException] Action PessoasController::favicon.png() could not be found.
+Exception Attributes: array (
+  'controller' => 'PessoasController',
+  'action' => 'favicon.png',
+)
+Request URL: /instapro/pessoas/favicon.png
+Stack Trace:
+#0 D:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 D:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(PessoasController), Object(CakeRequest), Object(CakeResponse))
+#2 D:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-06-30 09:10:30 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/css/res/fonts/arrows.ttf
+Stack Trace:
+#0 D:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-30 09:10:30 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/css/res/fonts/roboto-b.ttf
+Stack Trace:
+#0 D:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-30 09:10:30 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/css/res/fonts/arrows.svg
+Stack Trace:
+#0 D:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-30 09:10:30 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/css/res/fonts/roboto-b.svg
+Stack Trace:
+#0 D:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-04 22:15:13 Error: [MissingActionException] Action PessoasController::favicon.png() could not be found.
+Exception Attributes: array (
+  'controller' => 'PessoasController',
+  'action' => 'favicon.png',
+)
+Request URL: /instapro/pessoas/favicon.png
+Stack Trace:
+#0 D:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 D:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(PessoasController), Object(CakeRequest), Object(CakeResponse))
+#2 D:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-07-06 02:12:27 Error: Fatal Error (4): syntax error, unexpected '}' in [D:\xampp\htdocs\instapro\app\View\Pessoas\login.ctp, line 128]
+2014-07-06 02:12:27 Error: [FatalErrorException] syntax error, unexpected '}'
+Request URL: /instapro/pessoas/login
+Stack Trace:
+#0 D:\xampp\htdocs\instapro\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'D:\xampp\htdocs...', 128)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'D:\xampp\htdocs...', 128, Array)
+#2 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'D:\xampp\htdocs...', 128, Array)
+#3 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-07-06 02:13:20 Error: [MissingActionException] Action PessoasController::favicon.png() could not be found.
+Exception Attributes: array (
+  'controller' => 'PessoasController',
+  'action' => 'favicon.png',
+)
+Request URL: /instapro/pessoas/favicon.png
+Stack Trace:
+#0 D:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 D:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(PessoasController), Object(CakeRequest), Object(CakeResponse))
+#2 D:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-07-06 02:30:01 Error: Fatal Error (4): syntax error, unexpected ';' in [D:\xampp\htdocs\instapro\app\View\Pessoas\login.ctp, line 130]
+2014-07-06 02:30:01 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /instapro/pessoas/login
+Stack Trace:
+#0 D:\xampp\htdocs\instapro\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'D:\xampp\htdocs...', 130)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'D:\xampp\htdocs...', 130, Array)
+#2 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'D:\xampp\htdocs...', 130, Array)
+#3 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-07-06 02:30:02 Error: Fatal Error (4): syntax error, unexpected ';' in [D:\xampp\htdocs\instapro\app\View\Pessoas\login.ctp, line 130]
+2014-07-06 02:30:02 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /instapro/pessoas/login
+Stack Trace:
+#0 D:\xampp\htdocs\instapro\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'D:\xampp\htdocs...', 130)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'D:\xampp\htdocs...', 130, Array)
+#2 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'D:\xampp\htdocs...', 130, Array)
+#3 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-07-06 02:32:02 Error: [MissingActionException] Action PessoasController::favicon.png() could not be found.
+Exception Attributes: array (
+  'controller' => 'PessoasController',
+  'action' => 'favicon.png',
+)
+Request URL: /instapro/pessoas/favicon.png
+Stack Trace:
+#0 D:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 D:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(PessoasController), Object(CakeRequest), Object(CakeResponse))
+#2 D:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-07-06 02:33:07 Error: Fatal Error (1): Call to undefined function array_print() in [D:\xampp\htdocs\instapro\app\View\Pessoas\login.ctp, line 82]
+2014-07-06 02:33:07 Error: [FatalErrorException] Call to undefined function array_print()
+Request URL: /instapro/pessoas/login
+Stack Trace:
+#0 D:\xampp\htdocs\instapro\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'D:\xampp\htdocs...', 82)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'D:\xampp\htdocs...', 82, Array)
+#2 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'D:\xampp\htdocs...', 82, Array)
+#3 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-07-06 02:38:15 Error: [MissingActionException] Action PessoasController::favicon.png() could not be found.
+Exception Attributes: array (
+  'controller' => 'PessoasController',
+  'action' => 'favicon.png',
+)
+Request URL: /instapro/pessoas/favicon.png
+Stack Trace:
+#0 D:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 D:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(PessoasController), Object(CakeRequest), Object(CakeResponse))
+#2 D:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-07-06 02:38:47 Error: [MissingActionException] Action PessoasController::favicon.png() could not be found.
+Exception Attributes: array (
+  'controller' => 'PessoasController',
+  'action' => 'favicon.png',
+)
+Request URL: /instapro/pessoas/favicon.png
+Stack Trace:
+#0 D:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 D:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(PessoasController), Object(CakeRequest), Object(CakeResponse))
+#2 D:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+>>>>>>> 6436670c8076f055f2c518b5fd5ea53c7a1f4c6c
+2014-07-06 20:41:59 Error: [MissingDatasourceConfigException] The datasource configuration "default" was not found in database.php
+Exception Attributes: array (
+  'config' => 'default',
+)
+Request URL: /instapro/pessoas/login
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\lib\Cake\Model\ConnectionManager.php(91): ConnectionManager::_getConnectionObject('default')
+#1 C:\xampp\htdocs\instapro\lib\Cake\Model\Model.php(3477): ConnectionManager::getDataSource('default')
+#2 C:\xampp\htdocs\instapro\lib\Cake\Model\Model.php(1126): Model->setDataSource('default')
+#3 C:\xampp\htdocs\instapro\lib\Cake\Model\Model.php(3499): Model->setSource('pessoas')
+#4 C:\xampp\htdocs\instapro\lib\Cake\Model\Model.php(2903): Model->getDataSource()
+#5 C:\xampp\htdocs\instapro\lib\Cake\Model\Model.php(2875): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\instapro\app\Controller\PessoasController.php(58): Model->find('all')
+#7 [internal function]: PessoasController->login()
+#8 C:\xampp\htdocs\instapro\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(PessoasController), Array)
+#9 C:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(PessoasController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-07-06 20:42:00 Error: [MissingDatasourceConfigException] The datasource configuration "default" was not found in database.php
+Exception Attributes: array (
+  'config' => 'default',
+)
+Request URL: /instapro/pessoas/login
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\lib\Cake\Model\ConnectionManager.php(91): ConnectionManager::_getConnectionObject('default')
+#1 C:\xampp\htdocs\instapro\lib\Cake\Model\Model.php(3477): ConnectionManager::getDataSource('default')
+#2 C:\xampp\htdocs\instapro\lib\Cake\Model\Model.php(1126): Model->setDataSource('default')
+#3 C:\xampp\htdocs\instapro\lib\Cake\Model\Model.php(3499): Model->setSource('pessoas')
+#4 C:\xampp\htdocs\instapro\lib\Cake\Model\Model.php(2903): Model->getDataSource()
+#5 C:\xampp\htdocs\instapro\lib\Cake\Model\Model.php(2875): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\instapro\app\Controller\PessoasController.php(58): Model->find('all')
+#7 [internal function]: PessoasController->login()
+#8 C:\xampp\htdocs\instapro\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(PessoasController), Array)
+#9 C:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(PessoasController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
