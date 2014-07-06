@@ -55,6 +55,7 @@ class  PessoasController extends AppController{
 	}
 
 	public function login() {
+		$this->set('pessoascad', $this->Pessoas->find('all'));
 		$this->layout = 'login';
 	    if ($this->request->is('post')) {
 	        $username = $this->request->data['Pessoas']['username'];
