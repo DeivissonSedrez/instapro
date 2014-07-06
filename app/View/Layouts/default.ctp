@@ -17,21 +17,11 @@
 
 	<!-- Fonts -->
 	<link href='http://fonts.googleapis.com/css?family=Droid+Sans:regular,bold|PT+Sans+Narrow:regular,bold|Droid+Serif:i&amp;v1' rel='stylesheet' type='text/css' />
-
 	
 	<?php echo $this->Html->script(array('jquery-1.11.1.js')); ?>
-	<!-- Calendar -->
-
-	<?php //echo $this->Html->script(array('jquery.fullcalendar/fullcalendar.min.js'));?> 
 	
 	<!-- Scripts -->
-
-	<?php //echo $this->Html->script(array('custom.js'));?> 
 	<?php echo $this->Html->script(array('jquery.maskedinput.js')); ?>
-	<?php //echo $this->Html->scriptBlock('jQuery(function($){    $("addUserCpf").mask("999.999.999-99");  }); ');?>
-
-<?php //$this->Html->scriptStart(array('inline' => false)); ?>
-<?php //$this->Html->scriptEnd(); ?>
 
 </head>
 <body>
