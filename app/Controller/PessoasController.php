@@ -58,10 +58,10 @@ class  PessoasController extends AppController{
 		$this->set('pessoascad', $this->Pessoas->find('all'));
 		$this->layout = 'login';
 	    if ($this->request->is('post')) {
-	        $username = $this->request->data['Pessoas']['username'];
+	        $username = $this->request->data['login-form']['username'];
+	        die($this->request->data['login-form']['password']);
 	        $passwordHasher = new SimplePasswordHasher(array('hashType' => 'sha256'));
-            $password = $passwordHasher->hash($this->request->data['Pessoas']['password']);
-	        
+            $password = $passwordHasher->hash($this->request->data['login-form']['password']);
 	        if($data = $this->Pessoas->find('first' , array('conditions' => array('Pessoas.login' => $username, 'Pessoas.password' => $password)))){
                 if($dat = $this->registerSession($data)){
                     $this->redirect('/pessoas');
