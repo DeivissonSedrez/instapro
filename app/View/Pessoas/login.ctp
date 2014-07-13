@@ -17,7 +17,7 @@
 					<div id="login-user">
 						<div class="icon-user"><span class="arrow">"</span></div>
 						<!--input type="text" id="username" class="login-input required" placeholder="Username" value="novalex" autocomplete="off"-->
-						<?php echo $this->Form->input('', array('type'=>'text', 'id'=>'username','class'=>'login-input required','placeholder'=>'Usuário','autocomplete'=>'off','value'=>'')); ?>
+						<?php echo $this->Form->input('', array('type'=>'text', 'id'=>'name', 'id'=>'username','name'=>'username','class'=>'login-input required','placeholder'=>'Usuário','autocomplete'=>'off','value'=>'')); ?>
 						<div id="user-select">
 							<ul class="grad2">
 								<li class="sel">
@@ -40,7 +40,7 @@
 					<div id="login-pass">
 						<span class="icon-securityalt-shieldalt"></span>
                         <span id="forgot-psw" style="display: none">Esqueceu?</span>                        
-						<?php echo $this->Form->input('', array('type'=>'password','class'=>'login-input required passwf','placeholder'=>'Senha','id'=>'password')); ?>
+						<?php echo $this->Form->input('', array('type'=>'password','class'=>'login-input required passwf','placeholder'=>'Senha','id'=>'password', 'name'=>'password')); ?>
 						<!--input type="password" id="password" class="login-input required passwf" placeholder="Password"-->
 					</div>
 
@@ -51,8 +51,6 @@
 				<?php echo $this->Form->button('Entrar',  array('class'=>'button submit', 'id'=>'login-btn','type'=>'submit')); ?>
 				<?php echo $this->Form->end(); ?>
 				<!--button id="login-btn" type="submit" class="button submit">Log in</button-->
-
-			</form>
 
             <form id="register-form" action="http://amxui.novalx.com/dash.html">
                 <div id="register-inner">

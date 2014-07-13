@@ -6,12 +6,12 @@
 </div>
 
 <div class="panelcmd" style="display:in-line">
-<?php $sizes = array('s' => 'Small', 'm' => 'Medium', 'l' => 'Large'); ?>
+	<?php $sizes = array('s' => 'Small', 'm' => 'Medium', 'l' => 'Large'); ?>
 	<?php echo $this->Form->create('busca')?>
 	<?php echo $this->Html->link('Novo Usuário', array('controller'=> 'pessoas', 'action' => 'adicionar'), array('class' => 'button-blue'));?>
 	<div style="position:relative; float:right;">
-	<?php echo $this->Form->input('valor', array('label'=>false, 'type' => 'text', 'class'=>'small',              'maxlength'=>100, 'div'=>false));?>
-	<a href="#" class='button-grey arrow'>Buscar<span></span></a>
+		<?php echo $this->Form->input('valor', array('label'=>false, 'type' => 'text', 'class'=>'small',              'maxlength'=>100, 'div'=>false));?>
+		<a href="#" class='button-grey arrow'>Buscar<span></span></a>
 	</div>
 	<?php echo $this->Form->end();?>
 </div>
@@ -57,11 +57,17 @@
 			<li>0</li>
 		</ul>
 	</div>
-	<div>
-		<ul>
-			<?php foreach($pessoas as $pessoa){
-				echo "<li>".$pessoa['Pessoas']['nome']."</li>";
-			} ?>
-		</ul>
+	
+	<div id="wrapper-pessoas">
+		<?php foreach($pessoas as $pessoa){
+			echo "<div class='itm'>
+					<h3>".$pessoa['Pessoas']['nome']."</h3>
+						<div class='info'>
+							<span class='label'>".$pessoa['Pessoas']['login']."</span>
+							<span class='value'>".$pessoa['Pessoas']['tipo_pessoa']."</span>
+						</div>
+				</div>";			
+		} 
+		?>	
 	</div>
 </div>

@@ -440,7 +440,7 @@ html[xmlns] .clearfix, html[xmlns] .section, html[xmlns] .fixed, html[xmlns] .ro
 
 	#breadcrumbbox 																	{ margin: -10px 0px 10px 10px; position:relative; }
 	.panelcmd 																		{ position:relative;  min-width:770px; width:auto; height: 40px; padding: 10px;}
-	.frame-big 																		{ min-height: 400px; overflow:hidden; position:relative; min-width:770px; width:auto;  border:1px solid #b9c4cf;-webkit-box-shadow: 0 2px 4px rgba(5,22,52,.2), inset 0 1px 3px rgba(5,22,52,.2);-moz-box-shadow: 0 2px 4px rgba(5,22,52,.2), inset 0 1px 3px rgba(5,22,52,.2);box-shadow: 0 2px 4px rgba(5,22,52,.2), inset 0 1px 3px rgba(5,22,52,.2);border-radius:4px; }
+	.frame-big 																		{ min-height: 400px; overflow:hidden; position:relative; min-width:770px; width:770px;  border:1px solid #b9c4cf;-webkit-box-shadow: 0 2px 4px rgba(5,22,52,.2), inset 0 1px 3px rgba(5,22,52,.2);-moz-box-shadow: 0 2px 4px rgba(5,22,52,.2), inset 0 1px 3px rgba(5,22,52,.2);box-shadow: 0 2px 4px rgba(5,22,52,.2), inset 0 1px 3px rgba(5,22,52,.2);border-radius:4px; }
 	.frame-big.pad10 																{ padding: 10px;}
 	.listaalfabeto 																	{ cursor:pointer; height:23px; border-bottom: 1px solid #0163AC; width:100%; position: relative; width:792px; background-color: #6DBEE0; opacity:0.7; overflow: hidden;}
 	.listaalfabeto li 																{ border-right: 1px solid #0163AC; display: inline-block; text-align: center; width:19.4px; font-size:16px; margin:0px -1px 0px -1px; font-family: arial; color:#0163AC; font-weight: 600; vertical-align: middle; background-color: #6DBEE0; opacity:0.8}					
@@ -465,3 +465,6 @@ html[xmlns] .clearfix, html[xmlns] .section, html[xmlns] .fixed, html[xmlns] .ro
 
 																				      color: #1455a2;
 																					}
+#wrapper-pessoas																	{-moz-column-count: 3; -moz-column-gap: 1em; -webkit-column-count: 3; -webkit-column-gap: 1em; column-count: 3; column-gap: 1em; }
+.itm																				{ display:inline-block; width:100%; border-top:1px solid red; border-bottom:1px solid red; margin-bottom:1em; margin:15px;}
+.itm:nth-child(3n+1) 																{ clear:left;}
