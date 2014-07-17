@@ -3,6 +3,7 @@
 
 //echo $this->Html->script(array('jquery.maskedinput.js'));
 echo $this->Html->script("scripts");
+echo $this->Html->script("avatar");
 ?>
 <div id="breadcrumbbox">
 	<ul class="breadcrumb">
@@ -30,10 +31,10 @@ echo $this->Html->script("scripts");
 <div class="hr"></div>
 <?php 
 echo $this->Form->create('Pessoas');
-echo $this->Form->input('tipo_pessoa', array('label'=> array('text' => '<h4 style="display:inline">Tipo Usuário: </h4>', 'value'=> 3, 'class'=>'labelform'), 'class'=>'dropdown', 'type'=>'select', 'options' => $permissoes, 'css' => array('display'=>'inline'))); 
+echo $this->Form->input('tipo_pessoa', array('label'=> array('text' => '<h4 style="display:inline">Tipo Usuário: </h4>', 'enctype' => 'multipart/form-data', 'value'=> 3, 'class'=>'labelform'), 'class'=>'dropdown', 'type'=>'select', 'options' => $permissoes, 'css' => array('display'=>'inline'))); 
 echo $this->Form->input('login', array('label'=> array('text' => '<h4 style="display:inline">Login: </h4>', 'class'=>'labelform'), 'class'=>'small',  'css' => array('display'=>'inline')));
 echo $this->Form->input('password', array('label'=> array('text' => '<h4 style="display:inline">Senha: </h4>', 'class'=>'labelform'), 'class'=>'small', 'type'=>'password','css' => array('display'=>'inline')));
-echo $this->Form->input('PessoaAcesso.password2', array('label'=> array('text' => '<h4 style="display:inline">Confirme a senha: </h4>', 'class'=>'labelform'), 'class'=>'small','type'=>'password', 'css' => array('display'=>'inline')));
+echo $this->Form->input('password2', array('label'=> array('text' => '<h4 style="display:inline">Confirme a senha: </h4>', 'class'=>'labelform'), 'class'=>'small','type'=>'password', 'css' => array('display'=>'inline')));
 echo $this->Form->input('Vprocessos', array('label'=> array('text' => '<h4 style="display:inline">Visualiza Processos: </h4>', 'value'=> 1, 'class'=>'labelform'), 'class'=>'dropdown small', 'type'=>'select', 'options' => array('S' => 'Sim', 'N' => 'Não'), 'css' => array('display'=>'inline')));
 echo $this->Form->input('Cprocessos', array('label'=> array('text' => '<h4 style="display:inline">Cadastra Processos: </h4>', 'value'=> 1, 'class'=>'labelform'), 'class'=>'dropdown small', 'type'=>'select', 'options' => array('S' => 'Sim', 'N' => 'Não'), 'css' => array('display'=>'inline')));
 echo $this->Form->input('Vpessoas', array('label'=> array('text' => '<h4 style="display:inline">Visualiza Pessoas: </h4>', 'value'=> 2, 'class'=>'labelform'), 'class'=>'dropdown small', 'type'=>'select', 'options' => array('S' => 'Sim', 'N' => 'Não'), 'css' => array('display'=>'inline')));
@@ -57,8 +58,17 @@ echo $this->Form->input('PessoaFisica.rg', array('label'=> array('text' => '<h4 
 echo $this->Form->input('PessoaFisica.cpf', array('label'=> array('text' => '<h4 style="display:inline">CPF: </h4>', 'class'=>'labelform'), 'class'=>'small', 'type'=>'text', 'css' => array('display'=>'inline')));
 echo $this->Form->input('PessoaFisica.profissao', array('label'=> array('text' => '<h4 style="display:inline">Profissão/Ocupação: </h4>', 'class'=>'labelform'), 'class'=>'dropdown', 'type'=>'select', 'css' => array('display'=>'inline')));
 echo $this->Form->input('PessoaFisica.matricula_codigo', array('label'=> array('text' => '<h4 style="display:inline">Matrícula/Código: </h4>', 'class'=>'labelform'), 'class'=>'dropdown', 'type'=>'select', 'css' => array('display'=>'inline')));
+echo $this->Form->input('avatar', array( 'label' => array('text' => '', 'value'=> 2, 'class'=>'labelform'), 'style' => 'box-shadow: none; border: none; display:none;', 'class' => 'file', 'between' => '<br />','type' => 'file'));
+echo $this->Form->input('userAvatarAdded', array( 'label' => array('text' => '', 'value'=> 2, 'class'=>'labelform'), 'value' => 0, 'type' => 'hidden'));
+echo $this->Form->input('avatarPath', array( 'label' => array('text' => '', 'value'=> 2, 'class'=>'labelform'), 'value' => 0, 'type' => 'hidden'));
 ?>
-
+<h4 style="display:inline">Avatar: </h4>
+<ul class="gallery fixed">
+	<li>
+		<div><a rel="gallery" href="javascript:;" class="upload-avatar" style="background: none;"></a></div>
+		<img id="userAvatar" style="height:103px; width:103px;" src="<?php echo $this->Html->url('/img/avatar-m.jpg') ?>">
+	</li>
+</ul>
 <div class="hr"></div>
 <h1>Edereços e Telefones</h1>
 <div class="hr"></div>
