@@ -1,5 +1,7 @@
 <?php
 App::uses('SimplePasswordHasher', 'Controller/Component/Auth');
+App::uses('Folder', 'Utility');
+App::uses('File', 'Utility');
 
 class  PessoasController extends AppController{
 
@@ -21,12 +23,16 @@ class  PessoasController extends AppController{
 			// temporario enquanto falta os fields no form
 			$this->request->data['Pessoas']['tipo_acesso'] = 1;
 			// -------------------------------------------
-			if($this->Pessoas->save($this->request->data)){
-				$this->request->data['PessoaContato']['id_pessoa'] = $this->Pessoas->id;
-				$this->request->data['PessoaFisica']['id_pessoa'] = $this->Pessoas->id;
-				$this->Pessoas->PessoaContato->save($this->request->data);
-				$this->Pessoas->PessoaFisica->save($this->request->data);
-				$this->Session->setFlash('Pessoa salva com sucesso!');
+			if($this->Pessoas->PessoaContato->validates() && $this->Pessoas->PessoaFisica->validates()){
+				if($this->Pessoas->save($this->request->data)){
+					$this->request->data['PessoaContato']['id_pessoa'] = $this->Pessoas->id;
+					$this->request->data['PessoaFisica']['id_pessoa'] = $this->Pessoas->id;
+					$this->Pessoas->PessoaContato->save($this->request->data);
+					$this->Pessoas->PessoaFisica->save($this->request->data);
+					$this->Session->setFlash('Pessoa salva com sucesso!');
+				} else {
+					$this->Session->setFlash('Erro ao salvar pessoa!');
+				}
 			} else {
 				$this->Session->setFlash('Erro ao salvar pessoa!');
 			}
@@ -104,6 +110,20 @@ class  PessoasController extends AppController{
         $this->Session->delete('User');
         $this->Session->destroy();
         $this->redirect(array('controller' => 'home'));
+    }
+
+    public function previewAvatar(){
+    	$this->autoRender = false;
+    	$image = new File($_FILES['data']['tmp_name']['Pessoas']['avatar']);
+    	$cpName = rand(111111, 999999);
+    	$copy = $image->copy(TMP . "tmp_avatar" . DS . "avatar".$cpName.'.png');
+    	$copied = new File(TMP . "tmp_avatar" . DS . "avatar".$cpName.'.png');
+    	echo json_encode(array(
+	    		'status' => true,
+	    		'image' => base64_encode($image->read()),
+	    		'path' => $copied->path
+    		)
+    	);
     }
 }
 ?>
