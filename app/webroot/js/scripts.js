@@ -57,8 +57,6 @@ $(document).ready(function(){
 	$("#PessoaFisicaCpf").mask("999.999.999-99");
    	$("#PessoaContatoCep").mask("99999-999");
    	$("#PessoaFisicaDataNascimento").mask("99/99/9999");
-   	$("#PessoaFisicaRg").mask("999-99-9999");
-
    	$("#PessoaContatoIdPais").val(33);
    	$("#PessoaContatoIdPais").change();
 });

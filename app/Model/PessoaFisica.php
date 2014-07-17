@@ -22,5 +22,10 @@ class PessoaFisica extends AppModel{
 	        )
 	    )
     );
+
+    public function beforeSave($options = array()){
+    	$this->data['PessoaFisica']['data_nascimento'] = implode("-",array_reverse(explode("/", $this->data['PessoaFisica']['data_nascimento'])));
+    	return true;
+    }
 }
 ?>
