@@ -14,14 +14,27 @@
 	<?php echo $this->Html->css(array('style.css'));?> 
 	<?php echo $this->Html->css(array('jquery.fullcalendar/fullcalendar.css'));?> 
 	<?php echo $this->Html->css(array('jquery.fullcalendar/fullcalendar.print.css'));?> 
+	<?php echo $this->Html->css(array('jquery.fileupload.css'));?> 
 
 	<!-- Fonts -->
 	<link href='http://fonts.googleapis.com/css?family=Droid+Sans:regular,bold|PT+Sans+Narrow:regular,bold|Droid+Serif:i&amp;v1' rel='stylesheet' type='text/css' />
 	
 	<?php echo $this->Html->script(array('jquery-1.11.1.js')); ?>
+	<?php echo $this->Html->script(array('jquery.ui.widget.js')); ?>
 	
 	<!-- Scripts -->
 	<?php echo $this->Html->script(array('jquery.maskedinput.js')); ?>
+	<!-- The Load Image plugin is included for the preview images and image resizing functionality -->
+	<script src="http://blueimp.github.io/JavaScript-Load-Image/js/load-image.min.js"></script>
+	<!-- The Canvas to Blob plugin is included for image resizing functionality -->
+	<script src="http://blueimp.github.io/JavaScript-Canvas-to-Blob/js/canvas-to-blob.min.js"></script>
+
+	<?php echo $this->Html->script(array('fileupload/jquery.fileupload.js')); ?>
+	<?php echo $this->Html->script(array('fileupload/jquery.iframe-transport.js')); ?>
+	<?php echo $this->Html->script(array('fileupload/jquery.process.js')); ?>
+	<?php echo $this->Html->script(array('fileupload/jquery.image.js')); ?>
+
+</head>
 
 </head>
 <body>

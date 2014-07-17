@@ -8,5 +8,19 @@ class PessoaFisica extends AppModel{
 	        'foreignKey' => 'id_pessoa'
 	    )
     );
+
+    public $validate = array(
+    	'sexo' => array(
+	        'required' => array(
+	            'rule' => array('notEmpty'),
+	        )
+	    ),
+	    'cpf' => array(
+	        'required' => array(
+	            'rule' => array('notEmpty'),
+	            'message' => 'Preencha o CPF'
+	        )
+	    )
+    );
 }
 ?>

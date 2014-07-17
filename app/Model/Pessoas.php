@@ -13,12 +13,25 @@ class Pessoas extends AppModel{
 	        'foreignKey' => 'id_pessoa'
 		)
 	);
-	public $validation = array(
+	public $validate = array(
 		'nome' => array(
-			'notempty' => array(
-
-			)
-		)
+	        'required' => array(
+	            'rule' => array('notEmpty'),
+	            'message' => 'Preencha o nome'
+	        )
+	    ),
+	    'login' => array(
+	        'required' => array(
+	            'rule' => array('notEmpty'),
+	            'message' => 'Preencha o login'
+	        )
+	    ),
+	    'password' => array(
+	        'identicalFieldValues' => array(
+		        'rule' => array('identicalFieldValues', 'password2' ),
+		        'message' => 'Suas senhas não conferem, por favor verifique!'
+		    )
+        )
 	);
 
 	public function beforeSave($options = array()){
@@ -30,5 +43,38 @@ class Pessoas extends AppModel{
         }
         return true;
 	}
+
+	public function afterSave($created, $options = array()){
+		if($this->data['Pessoas']['avatarPath'] !== 0){
+			if($this->handleAvatar($this->data['Pessoas']['avatarPath'], WWW_ROOT. "uploads". DS . "avatars/".$this->data['Pessoas']['id'].".jpg")){
+				
+			}
+			return false;
+		}
+		return true;
+	}
+
+	public function handleAvatar($path, $destination){
+		$tmp = new File($path);
+		if($tmp->copy($destination)){
+			$tmp->delete();
+			$tmp->close();
+			return true;
+		}
+	}
+
+	function identicalFieldValues( $field=array(), $compare_field=null ) 
+    {
+        foreach( $field as $key => $value ){
+            $v1 = $value;
+            $v2 = $this->data[$this->name][ $compare_field ];                 
+            if($v1 !== $v2) {
+                return FALSE;
+            } else {
+                continue;
+            }
+        }
+        return TRUE;
+    } 
 }
 ?>

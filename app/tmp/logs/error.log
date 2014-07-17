@@ -7081,3 +7081,1395 @@ Stack Trace:
 #3 C:\xampp\htdocs\instapro\lib\Cake\Core\App.php(902): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2014-07-06 22:44:50 Error: [MissingDatasourceConfigException] The datasource configuration "default" was not found in database.php
+Exception Attributes: array (
+  'config' => 'default',
+)
+Request URL: /instapro/pessoas/login
+Stack Trace:
+#0 /home/aschmechel/www/instapro/lib/Cake/Model/ConnectionManager.php(91): ConnectionManager::_getConnectionObject('default')
+#1 /home/aschmechel/www/instapro/lib/Cake/Model/Model.php(3477): ConnectionManager::getDataSource('default')
+#2 /home/aschmechel/www/instapro/lib/Cake/Model/Model.php(1126): Model->setDataSource('default')
+#3 /home/aschmechel/www/instapro/lib/Cake/Model/Model.php(3499): Model->setSource('pessoas')
+#4 /home/aschmechel/www/instapro/lib/Cake/Model/Model.php(2903): Model->getDataSource()
+#5 /home/aschmechel/www/instapro/lib/Cake/Model/Model.php(2875): Model->_readDataSource('all', Array)
+#6 /home/aschmechel/www/instapro/app/Controller/PessoasController.php(58): Model->find('all')
+#7 [internal function]: PessoasController->login()
+#8 /home/aschmechel/www/instapro/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(PessoasController), Array)
+#9 /home/aschmechel/www/instapro/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#10 /home/aschmechel/www/instapro/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(PessoasController), Object(CakeRequest), Object(CakeResponse))
+#11 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-07-06 22:44:51 Error: [MissingDatasourceConfigException] The datasource configuration "default" was not found in database.php
+Exception Attributes: array (
+  'config' => 'default',
+)
+Request URL: /instapro/pessoas/login
+Stack Trace:
+#0 /home/aschmechel/www/instapro/lib/Cake/Model/ConnectionManager.php(91): ConnectionManager::_getConnectionObject('default')
+#1 /home/aschmechel/www/instapro/lib/Cake/Model/Model.php(3477): ConnectionManager::getDataSource('default')
+#2 /home/aschmechel/www/instapro/lib/Cake/Model/Model.php(1126): Model->setDataSource('default')
+#3 /home/aschmechel/www/instapro/lib/Cake/Model/Model.php(3499): Model->setSource('pessoas')
+#4 /home/aschmechel/www/instapro/lib/Cake/Model/Model.php(2903): Model->getDataSource()
+#5 /home/aschmechel/www/instapro/lib/Cake/Model/Model.php(2875): Model->_readDataSource('all', Array)
+#6 /home/aschmechel/www/instapro/app/Controller/PessoasController.php(58): Model->find('all')
+#7 [internal function]: PessoasController->login()
+#8 /home/aschmechel/www/instapro/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(PessoasController), Array)
+#9 /home/aschmechel/www/instapro/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#10 /home/aschmechel/www/instapro/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(PessoasController), Object(CakeRequest), Object(CakeResponse))
+#11 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-07-06 22:47:08 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'Selected driver is not enabled',
+  'enabled' => false,
+)
+Request URL: /instapro/pessoas/login
+Stack Trace:
+#0 /home/aschmechel/www/instapro/lib/Cake/Model/ConnectionManager.php(105): DboSource->__construct(Array)
+#1 /home/aschmechel/www/instapro/lib/Cake/Model/Model.php(3477): ConnectionManager::getDataSource('default')
+#2 /home/aschmechel/www/instapro/lib/Cake/Model/Model.php(1126): Model->setDataSource('default')
+#3 /home/aschmechel/www/instapro/lib/Cake/Model/Model.php(3499): Model->setSource('pessoas')
+#4 /home/aschmechel/www/instapro/lib/Cake/Model/Model.php(2903): Model->getDataSource()
+#5 /home/aschmechel/www/instapro/lib/Cake/Model/Model.php(2875): Model->_readDataSource('all', Array)
+#6 /home/aschmechel/www/instapro/app/Controller/PessoasController.php(58): Model->find('all')
+#7 [internal function]: PessoasController->login()
+#8 /home/aschmechel/www/instapro/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(PessoasController), Array)
+#9 /home/aschmechel/www/instapro/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#10 /home/aschmechel/www/instapro/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(PessoasController), Object(CakeRequest), Object(CakeResponse))
+#11 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-07-06 22:47:25 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'Selected driver is not enabled',
+  'enabled' => false,
+)
+Request URL: /instapro/pessoas/login
+Stack Trace:
+#0 /home/aschmechel/www/instapro/lib/Cake/Model/ConnectionManager.php(105): DboSource->__construct(Array)
+#1 /home/aschmechel/www/instapro/lib/Cake/Model/Model.php(3477): ConnectionManager::getDataSource('default')
+#2 /home/aschmechel/www/instapro/lib/Cake/Model/Model.php(1126): Model->setDataSource('default')
+#3 /home/aschmechel/www/instapro/lib/Cake/Model/Model.php(3499): Model->setSource('pessoas')
+#4 /home/aschmechel/www/instapro/lib/Cake/Model/Model.php(2903): Model->getDataSource()
+#5 /home/aschmechel/www/instapro/lib/Cake/Model/Model.php(2875): Model->_readDataSource('all', Array)
+#6 /home/aschmechel/www/instapro/app/Controller/PessoasController.php(58): Model->find('all')
+#7 [internal function]: PessoasController->login()
+#8 /home/aschmechel/www/instapro/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(PessoasController), Array)
+#9 /home/aschmechel/www/instapro/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#10 /home/aschmechel/www/instapro/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(PessoasController), Object(CakeRequest), Object(CakeResponse))
+#11 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-07-06 22:48:35 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[28000] [1045] Access denied for user \'root\'@\'localhost\' (using password: NO)',
+  'enabled' => true,
+)
+Request URL: /instapro/pessoas/login
+Stack Trace:
+#0 /home/aschmechel/www/instapro/lib/Cake/Model/Datasource/DboSource.php(260): Mysql->connect()
+#1 /home/aschmechel/www/instapro/lib/Cake/Model/ConnectionManager.php(105): DboSource->__construct(Array)
+#2 /home/aschmechel/www/instapro/lib/Cake/Model/Model.php(3477): ConnectionManager::getDataSource('default')
+#3 /home/aschmechel/www/instapro/lib/Cake/Model/Model.php(1126): Model->setDataSource('default')
+#4 /home/aschmechel/www/instapro/lib/Cake/Model/Model.php(3499): Model->setSource('pessoas')
+#5 /home/aschmechel/www/instapro/lib/Cake/Model/Model.php(2903): Model->getDataSource()
+#6 /home/aschmechel/www/instapro/lib/Cake/Model/Model.php(2875): Model->_readDataSource('all', Array)
+#7 /home/aschmechel/www/instapro/app/Controller/PessoasController.php(58): Model->find('all')
+#8 [internal function]: PessoasController->login()
+#9 /home/aschmechel/www/instapro/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(PessoasController), Array)
+#10 /home/aschmechel/www/instapro/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#11 /home/aschmechel/www/instapro/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(PessoasController), Object(CakeRequest), Object(CakeResponse))
+#12 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-07-06 22:48:52 Error: [MissingActionException] Action PessoasController::favicon.png() could not be found.
+Exception Attributes: array (
+  'controller' => 'PessoasController',
+  'action' => 'favicon.png',
+)
+Request URL: /instapro/pessoas/favicon.png
+Stack Trace:
+#0 /home/aschmechel/www/instapro/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /home/aschmechel/www/instapro/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(PessoasController), Object(CakeRequest), Object(CakeResponse))
+#2 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-07-16 19:44:24 Error: [MissingActionException] Action PessoasController::favicon.png() could not be found.
+Exception Attributes: array (
+  'controller' => 'PessoasController',
+  'action' => 'favicon.png',
+)
+Request URL: /instapro/pessoas/favicon.png
+Stack Trace:
+#0 /home/aschmechel/www/instapro/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /home/aschmechel/www/instapro/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(PessoasController), Object(CakeRequest), Object(CakeResponse))
+#2 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-07-16 19:55:28 Error: Fatal Error (4): syntax error, unexpected '?>' in [/home/aschmechel/www/instapro/app/View/Pessoas/adicionar.ctp, line 44]
+2014-07-16 19:55:28 Error: [FatalErrorException] syntax error, unexpected '?>'
+Request URL: /instapro/pessoas/adicionar
+Stack Trace:
+#0 /home/aschmechel/www/instapro/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/aschmeche...', 44)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/aschmeche...', 44, Array)
+#2 /home/aschmechel/www/instapro/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/aschmeche...', 44, Array)
+#3 /home/aschmechel/www/instapro/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-07-16 19:55:35 Error: Fatal Error (4): syntax error, unexpected '?>' in [/home/aschmechel/www/instapro/app/View/Pessoas/adicionar.ctp, line 44]
+2014-07-16 19:55:35 Error: [FatalErrorException] syntax error, unexpected '?>'
+Request URL: /instapro/pessoas/adicionar
+Stack Trace:
+#0 /home/aschmechel/www/instapro/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/aschmeche...', 44)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/aschmeche...', 44, Array)
+#2 /home/aschmechel/www/instapro/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/aschmeche...', 44, Array)
+#3 /home/aschmechel/www/instapro/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-07-16 19:55:48 Error: Fatal Error (4): syntax error, unexpected ';' in [/home/aschmechel/www/instapro/app/View/Pessoas/adicionar.ctp, line 43]
+2014-07-16 19:55:48 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /instapro/pessoas/adicionar
+Stack Trace:
+#0 /home/aschmechel/www/instapro/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/aschmeche...', 43)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/aschmeche...', 43, Array)
+#2 /home/aschmechel/www/instapro/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/aschmeche...', 43, Array)
+#3 /home/aschmechel/www/instapro/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-07-16 20:32:11 Error: [MissingActionException] Action PessoasController::saveAvatar() could not be found.
+Exception Attributes: array (
+  'controller' => 'PessoasController',
+  'action' => 'saveAvatar',
+)
+Request URL: /instapro/pessoas/saveAvatar
+Stack Trace:
+#0 /home/aschmechel/www/instapro/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /home/aschmechel/www/instapro/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(PessoasController), Object(CakeRequest), Object(CakeResponse))
+#2 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-07-16 20:41:51 Error: [MissingActionException] Action PessoasController::_content() could not be found.
+Exception Attributes: array (
+  'controller' => 'PessoasController',
+  'action' => '_content',
+)
+Request URL: /instapro/pessoas/_content/gallery-img6.png
+Stack Trace:
+#0 /home/aschmechel/www/instapro/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /home/aschmechel/www/instapro/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(PessoasController), Object(CakeRequest), Object(CakeResponse))
+#2 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-07-16 20:53:16 Error: [MissingActionException] Action PessoasController::_content() could not be found.
+Exception Attributes: array (
+  'controller' => 'PessoasController',
+  'action' => '_content',
+)
+Request URL: /instapro/pessoas/_content/gallery-img6-original.png
+Stack Trace:
+#0 /home/aschmechel/www/instapro/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /home/aschmechel/www/instapro/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(PessoasController), Object(CakeRequest), Object(CakeResponse))
+#2 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-07-16 20:54:18 Error: [MissingActionException] Action PessoasController::_content() could not be found.
+Exception Attributes: array (
+  'controller' => 'PessoasController',
+  'action' => '_content',
+)
+Request URL: /instapro/pessoas/_content/gallery-img6-original.png
+Stack Trace:
+#0 /home/aschmechel/www/instapro/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /home/aschmechel/www/instapro/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(PessoasController), Object(CakeRequest), Object(CakeResponse))
+#2 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-07-16 20:54:22 Error: [MissingActionException] Action PessoasController::_content() could not be found.
+Exception Attributes: array (
+  'controller' => 'PessoasController',
+  'action' => '_content',
+)
+Request URL: /instapro/pessoas/_content/gallery-img6-original.png
+Stack Trace:
+#0 /home/aschmechel/www/instapro/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /home/aschmechel/www/instapro/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(PessoasController), Object(CakeRequest), Object(CakeResponse))
+#2 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-07-16 21:04:24 Error: [MissingViewException] View file "/home/aschmechel/www/instapro/app/View/Pessoas/preview_avatar.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/home/aschmechel/www/instapro/app/View/Pessoas/preview_avatar.ctp',
+)
+Request URL: /instapro/pessoas/previewAvatar
+Stack Trace:
+#0 /home/aschmechel/www/instapro/lib/Cake/View/View.php(463): View->_getViewFileName(NULL)
+#1 /home/aschmechel/www/instapro/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /home/aschmechel/www/instapro/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#3 /home/aschmechel/www/instapro/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(PessoasController), Object(CakeRequest), Object(CakeResponse))
+#4 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-07-16 21:27:36 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 21:27:37 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 21:28:13 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 21:28:13 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 21:29:18 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 21:29:18 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 21:29:51 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 21:29:51 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 21:30:54 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 21:30:55 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 21:36:11 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 21:36:12 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 21:36:27 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 21:36:27 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 21:36:47 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 21:36:47 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 21:37:10 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 21:37:10 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 21:38:08 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 21:38:08 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 21:38:37 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 21:38:37 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 21:38:48 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 21:38:49 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 21:38:52 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 21:38:52 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 21:39:29 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 21:39:30 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 21:40:10 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 21:40:10 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 21:40:19 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 21:40:19 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 21:41:13 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 21:41:14 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 21:41:14 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 21:41:16 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 21:41:16 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 21:46:10 Error: Fatal Error (4): syntax error, unexpected ';', expecting ')' in [/home/aschmechel/www/instapro/app/Controller/PessoasController.php, line 113]
+2014-07-16 21:46:10 Error: [FatalErrorException] syntax error, unexpected ';', expecting ')'
+Request URL: /instapro/pessoas/adicionar
+Stack Trace:
+#0 /home/aschmechel/www/instapro/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/aschmeche...', 113)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/aschmeche...', 113, Array)
+#2 /home/aschmechel/www/instapro/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/aschmeche...', 113, Array)
+#3 /home/aschmechel/www/instapro/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-07-16 21:46:25 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 21:46:26 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 21:53:24 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 21:53:25 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 21:57:01 Error: Fatal Error (4): syntax error, unexpected '}' in [/home/aschmechel/www/instapro/app/Model/Pessoas.php, line 38]
+2014-07-16 21:57:01 Error: [FatalErrorException] syntax error, unexpected '}'
+Request URL: /instapro/pessoas/adicionar
+Stack Trace:
+#0 /home/aschmechel/www/instapro/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/aschmeche...', 38)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/aschmeche...', 38, Array)
+#2 /home/aschmechel/www/instapro/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/aschmeche...', 38, Array)
+#3 /home/aschmechel/www/instapro/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-07-16 21:57:17 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 21:57:17 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 22:03:49 Error: Fatal Error (4): syntax error, unexpected '"/uploads/avatars/"' (T_CONSTANT_ENCAPSED_STRING) in [/home/aschmechel/www/instapro/app/Model/Pessoas.php, line 36]
+2014-07-16 22:03:49 Error: [FatalErrorException] syntax error, unexpected '"/uploads/avatars/"' (T_CONSTANT_ENCAPSED_STRING)
+Request URL: /instapro/pessoas/adicionar
+Stack Trace:
+#0 /home/aschmechel/www/instapro/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/aschmeche...', 36)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/aschmeche...', 36, Array)
+#2 /home/aschmechel/www/instapro/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/aschmeche...', 36, Array)
+#3 /home/aschmechel/www/instapro/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-07-16 22:04:10 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 22:04:11 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 22:05:29 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 22:05:30 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 22:06:47 Error: Fatal Error (4): syntax error, unexpected ',' in [/home/aschmechel/www/instapro/app/Model/Pessoas.php, line 37]
+2014-07-16 22:06:47 Error: [FatalErrorException] syntax error, unexpected ','
+Request URL: /instapro/pessoas/adicionar
+Stack Trace:
+#0 /home/aschmechel/www/instapro/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/aschmeche...', 37)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/aschmeche...', 37, Array)
+#2 /home/aschmechel/www/instapro/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/aschmeche...', 37, Array)
+#3 /home/aschmechel/www/instapro/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-07-16 22:07:07 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 22:07:07 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 22:07:19 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 22:07:20 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 22:10:18 Error: Fatal Error (4): syntax error, unexpected '}' in [/home/aschmechel/www/instapro/app/Model/Pessoas.php, line 40]
+2014-07-16 22:10:18 Error: [FatalErrorException] syntax error, unexpected '}'
+Request URL: /instapro/pessoas/adicionar
+Stack Trace:
+#0 /home/aschmechel/www/instapro/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/aschmeche...', 40)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/aschmeche...', 40, Array)
+#2 /home/aschmechel/www/instapro/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/aschmeche...', 40, Array)
+#3 /home/aschmechel/www/instapro/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-07-16 22:10:29 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 22:10:30 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 22:11:49 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 22:11:49 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 22:12:08 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 22:12:08 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 22:12:50 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 22:12:50 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 22:13:28 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 22:13:29 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 22:30:37 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 22:30:37 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 22:31:25 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 22:31:25 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 22:31:48 Error: Fatal Error (4): syntax error, unexpected ';', expecting ')' in [/home/aschmechel/www/instapro/app/Controller/PessoasController.php, line 114]
+2014-07-16 22:31:48 Error: [FatalErrorException] syntax error, unexpected ';', expecting ')'
+Request URL: /instapro/pessoas/adicionar
+Stack Trace:
+#0 /home/aschmechel/www/instapro/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/aschmeche...', 114)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/aschmeche...', 114, Array)
+#2 /home/aschmechel/www/instapro/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/aschmeche...', 114, Array)
+#3 /home/aschmechel/www/instapro/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-07-16 22:31:56 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 22:31:56 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 22:31:59 Error: Fatal Error (1): Call to a member function path() on a non-object in [/home/aschmechel/www/instapro/app/Controller/PessoasController.php, line 114]
+2014-07-16 22:31:59 Error: [FatalErrorException] Call to a member function path() on a non-object
+Request URL: /instapro/pessoas/previewAvatar
+Stack Trace:
+#0 /home/aschmechel/www/instapro/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/aschmeche...', 114)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/aschmeche...', 114, Array)
+#2 /home/aschmechel/www/instapro/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/aschmeche...', 114, Array)
+#3 /home/aschmechel/www/instapro/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-07-16 22:33:17 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 22:33:17 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 22:35:27 Error: Fatal Error (4): syntax error, unexpected ')' in [/home/aschmechel/www/instapro/app/Model/Pessoas.php, line 47]
+2014-07-16 22:35:27 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /instapro/pessoas/adicionar
+Stack Trace:
+#0 /home/aschmechel/www/instapro/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/aschmeche...', 47)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/aschmeche...', 47, Array)
+#2 /home/aschmechel/www/instapro/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/aschmeche...', 47, Array)
+#3 /home/aschmechel/www/instapro/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-07-16 22:43:20 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 22:43:21 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 22:44:47 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 22:44:47 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 22:44:56 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 22:44:56 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 22:48:13 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 22:48:13 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 22:48:16 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 22:48:17 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 22:50:06 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 22:50:06 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 22:50:12 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 22:50:13 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 22:52:35 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 22:52:35 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 22:52:38 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 22:52:38 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 22:52:45 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 22:52:45 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 22:55:00 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 22:55:00 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 22:55:09 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 22:55:10 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 22:55:56 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 22:55:56 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 22:55:59 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 22:55:59 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 23:02:58 Error: Fatal Error (4): syntax error, unexpected '}', expecting ',' or ';' in [/home/aschmechel/www/instapro/app/Model/PessoaFisica.php, line 24]
+2014-07-16 23:02:58 Error: [FatalErrorException] syntax error, unexpected '}', expecting ',' or ';'
+Request URL: /instapro/pessoas/adicionar
+Stack Trace:
+#0 /home/aschmechel/www/instapro/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/aschmeche...', 24)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/aschmeche...', 24, Array)
+#2 /home/aschmechel/www/instapro/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/aschmeche...', 24, Array)
+#3 /home/aschmechel/www/instapro/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-07-16 23:03:19 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 23:03:20 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 23:09:32 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 23:09:33 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 23:09:35 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 23:09:35 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 23:09:36 Error: Fatal Error (4): syntax error, unexpected ';', expecting ')' in [/home/aschmechel/www/instapro/app/Model/Pessoas.php, line 32]
+2014-07-16 23:09:36 Error: [FatalErrorException] syntax error, unexpected ';', expecting ')'
+Request URL: /instapro/pessoas
+Stack Trace:
+#0 /home/aschmechel/www/instapro/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/aschmeche...', 32)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/aschmeche...', 32, Array)
+#2 /home/aschmechel/www/instapro/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/aschmeche...', 32, Array)
+#3 /home/aschmechel/www/instapro/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-07-16 23:10:21 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 23:10:22 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 23:10:24 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 23:10:24 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 23:11:04 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 23:11:05 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 23:11:43 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 23:11:44 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 23:11:52 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 23:11:52 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 23:12:55 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 23:12:56 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 23:12:59 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 23:12:59 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 23:13:34 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-16 23:13:34 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery-file-upload/jquery.image.js
+Stack Trace:
+#0 /home/aschmechel/www/instapro/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
