@@ -39,6 +39,11 @@ class  PessoasController extends AppController{
 		}
 	}
 
+	public function editar($id){
+		$this->set('pessoas', $this->Pessoas->find($id));	
+	}
+
+
 	public function getCities(){
 		$this->autoRender = false;
 		$findCities = $this->Cidade->find('list', array(
