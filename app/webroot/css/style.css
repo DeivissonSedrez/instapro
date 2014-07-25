@@ -114,21 +114,21 @@ html[xmlns] .clearfix, html[xmlns] .section, html[xmlns] .fixed, html[xmlns] .ro
 	
 	#launcher-wrapper .launcher li:hover 											{ opacity:0.7; }
 	
-	#sidebar 																		{ width:259px;background:#f0f2f5;float:left; }
+	#sidebar 																		{ width:239px;background:#f0f2f5;float:left; }
 	#content 																		{ width:940px; width:auto ! important; float:left; position:relative; min-height:540px;padding:30px; }
 	
-	#navigation 																	{ margin-top:-1px;border-top:1px solid #B9C4CF;border-left:1px solid #B9C4CF;border-radius:4px 0 0 0;border-right:1px solid #B9C4CF;overflow:visible; }
-	#navigation li 																	{ display:block;height:50px;padding:1px 1px 0 1px;background:#B9C4CF;position:relative;background-color: #ff2b2b;background-image: -webkit-linear-gradient(bottom, #d9dee3 11%, #ebeef1 94%, #edf0f2 99%, #fafbfb);background-image: -moz-linear-gradient(bottom, #d9dee3 11%, #ebeef1 94%, #edf0f2 99%, #fafbfb);background-image: -o-linear-gradient(bottom, #d9dee3 11%, #ebeef1 94%, #edf0f2 99%, #fafbfb);background-image: -ms-linear-gradient(bottom, #d9dee3 11%, #ebeef1 94%, #edf0f2 99%, #fafbfb);background-image: linear-gradient(to top, #d9dee3 11%, #ebeef1 94%, #edf0f2 99%, #fafbfb);border-bottom:1px solid #B9C4CF; }
+	#navigation 																	{ margin-top:-1px;  width:239px; border-top:1px solid #B9C4CF;border-left:1px solid #B9C4CF;border-radius:4px 0 0 0;border-right:1px solid #B9C4CF;overflow:visible; }
+	#navigation li 																	{ display:block;height:45px;padding:1px 1px 0 1px;background:#B9C4CF;position:relative;background-color: #ff2b2b;background-image: -webkit-linear-gradient(bottom, #d9dee3 11%, #ebeef1 94%, #edf0f2 99%, #fafbfb);background-image: -moz-linear-gradient(bottom, #d9dee3 11%, #ebeef1 94%, #edf0f2 99%, #fafbfb);background-image: -o-linear-gradient(bottom, #d9dee3 11%, #ebeef1 94%, #edf0f2 99%, #fafbfb);background-image: -ms-linear-gradient(bottom, #d9dee3 11%, #ebeef1 94%, #edf0f2 99%, #fafbfb);background-image: linear-gradient(to top, #d9dee3 11%, #ebeef1 94%, #edf0f2 99%, #fafbfb);border-bottom:1px solid #B9C4CF; }
 	#navigation li.last 															{ padding-bottom:1px; }
 	#navigation a 																	{ display:block;height:50px;-moz-transition: all 0.3s ease-out;-webkit-transition: all 0.3s ease-out;background:transparent;font-size:14px;color:#757f8c;font-family:Arial;font-weight:bold;text-shadow:0 1px #fff;line-height:50px;padding-left:40px; } 
 
-	#navigation .back 																{ display:block;height:50px;-moz-transition: opacity 0.3s ease-out;-webkit-transition: opacity 0.3s ease-out;background-color: #ff2b2b;background-image: -webkit-linear-gradient(bottom, #0163ac 11%, #43a6da 99%, #73bde4);background-image: -moz-linear-gradient(bottom, #0163ac 11%, #43a6da 99%, #73bde4);background-image: -o-linear-gradient(bottom, #0163ac 11%, #43a6da 99%, #73bde4);background-image: -ms-linear-gradient(bottom, #0163ac 11%, #43a6da 99%, #73bde4);background-image: linear-gradient(to top, #0163ac 11%, #43a6da 99%, #73bde4);color:#fff;text-shadow:0 1px #11517b;line-height:50px;position:absolute;z-index:5;width:255px;opacity:0;border:1px solid #035491;top:-1px;left:-1px;padding:0 1px; }
+	#navigation .back 																{ display:block;height:50px;-moz-transition: opacity 0.3s ease-out;-webkit-transition: opacity 0.3s ease-out;background-color: #ff2b2b;background-image: -webkit-linear-gradient(bottom, #0163ac 11%, #43a6da 99%, #73bde4);background-image: -moz-linear-gradient(bottom, #0163ac 11%, #43a6da 99%, #73bde4);background-image: -o-linear-gradient(bottom, #0163ac 11%, #43a6da 99%, #73bde4);background-image: -ms-linear-gradient(bottom, #0163ac 11%, #43a6da 99%, #73bde4);background-image: linear-gradient(to top, #0163ac 11%, #43a6da 99%, #73bde4);color:#fff;text-shadow:0 1px #11517b;line-height:50px;position:absolute;z-index:5;width:235px;opacity:0;border:1px solid #035491;top:-1px;left:-1px;padding:0 1px; }
 	
 	#navigation li.active div,
-	#navigation li:hover div  														{ position:relative;z-index:10;left:0;top:0;width:255px; }
+	#navigation li:hover div  														{ position:relative;z-index:10;left:0;top:0;width:239px; }
 	
 	#navigation li.active div.back,
-	#navigation li:hover div.back 													{ opacity:1;z-index:5;left:-1px;top:-1px;width:255px;padding:0 1px; }
+	#navigation li:hover div.back 													{ opacity:1;z-index:5;left:-1px;top:-1px;width:239px;padding:0 1px; }
 	
 	#navigation li.first ,
 	#navigation li.first a,
@@ -144,7 +144,7 @@ html[xmlns] .clearfix, html[xmlns] .section, html[xmlns] .fixed, html[xmlns] .ro
 	
 	
 	#navigation li:hover div,
-	#navigation li.active div 														{ position:absolute;height:50px;padding:1px;width:257px;top:0;left:0;-webkit-box-shadow: 0 2px 2px rgba(0,0,0,.15), inset 0 1px rgba(255,255,255,.25);-moz-box-shadow: 0 2px 2px rgba(0,0,0,.15), inset 0 1px rgba(255,255,255,.25);box-shadow: 0 2px 2px rgba(0,0,0,.15), inset 0 1px rgba(255,255,255,.25); }
+	#navigation li.active div 														{ position:absolute;height:45px;padding:1px;width:237px;top:0;left:0;-webkit-box-shadow: 0 2px 2px rgba(0,0,0,.15), inset 0 1px rgba(255,255,255,.25);-moz-box-shadow: 0 2px 2px rgba(0,0,0,.15), inset 0 1px rgba(255,255,255,.25);box-shadow: 0 2px 2px rgba(0,0,0,.15), inset 0 1px rgba(255,255,255,.25); }
 	
 	
 	
