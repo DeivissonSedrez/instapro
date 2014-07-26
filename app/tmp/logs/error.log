@@ -13645,3 +13645,101 @@ Request URL: /instapro/js/fileupload/jquery.image.js
 Stack Trace:
 #0 D:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2014-07-26 06:46:03 Error: [MissingActionException] Action PessoasController::favicon.png() could not be found.
+Exception Attributes: array (
+  'controller' => 'PessoasController',
+  'action' => 'favicon.png',
+)
+Request URL: /instapro/pessoas/favicon.png
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(PessoasController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-07-26 06:46:03 Error: [MissingActionException] Action PessoasController::favicon.png() could not be found.
+Exception Attributes: array (
+  'controller' => 'PessoasController',
+  'action' => 'favicon.png',
+)
+Request URL: /instapro/pessoas/favicon.png
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(PessoasController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-07-26 06:46:26 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/fileupload/jquery.image.js
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-26 06:46:26 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/fileupload/jquery.image.js
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-26 07:03:39 Error: [MissingActionException] Action PessoasController::favicon.png() could not be found.
+Exception Attributes: array (
+  'controller' => 'PessoasController',
+  'action' => 'favicon.png',
+)
+Request URL: /instapro/pessoas/favicon.png
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(PessoasController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-07-26 07:03:39 Error: [MissingActionException] Action PessoasController::favicon.png() could not be found.
+Exception Attributes: array (
+  'controller' => 'PessoasController',
+  'action' => 'favicon.png',
+)
+Request URL: /instapro/pessoas/favicon.png
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(PessoasController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-07-26 07:03:55 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/fileupload/jquery.image.js
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-26 07:03:55 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/fileupload/jquery.image.js
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-26 07:04:04 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/fileupload/jquery.image.js
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-26 07:04:04 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/fileupload/jquery.image.js
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
