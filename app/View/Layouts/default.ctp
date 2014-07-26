@@ -1,6 +1,6 @@
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html dir="ltr" lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -15,14 +15,17 @@
 	<?php echo $this->Html->css(array('jquery.fullcalendar/fullcalendar.css'));?> 
 	<?php echo $this->Html->css(array('jquery.fullcalendar/fullcalendar.print.css'));?> 
 	<?php echo $this->Html->css(array('jquery.fileupload.css'));?> 
+	<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/themes/base/jquery-ui.css" type="text/css" media="all" />
 
 	<!-- Fonts -->
 	<link href='http://fonts.googleapis.com/css?family=Droid+Sans:regular,bold|PT+Sans+Narrow:regular,bold|Droid+Serif:i&amp;v1' rel='stylesheet' type='text/css' />
 	
 	<?php echo $this->Html->script(array('jquery-1.11.1.js')); ?>
 	<?php echo $this->Html->script(array('jquery.ui.widget.js')); ?>
+	<?php echo $this->Html->script(array('custom.js')); ?>
 	
 	<!-- Scripts -->
+	
 	<?php echo $this->Html->script(array('jquery.maskedinput.js')); ?>
 	<!-- The Load Image plugin is included for the preview images and image resizing functionality -->
 	<script src="http://blueimp.github.io/JavaScript-Load-Image/js/load-image.min.js"></script>
@@ -40,31 +43,31 @@
 <body>
 	<?php echo $this->Form->input('base', array('id' => 'base', 'value' => $this->base, 'type' => 'hidden')) ?>
 	<div id="layout">
-	<div id="header-wrapper">
-				<div id="header">
-					<div id="user-wrapper" class="fixed">
-						<div class="color-scheme">
-							<!--<a href="#" class="button">Dropdown suggestion</a>-->
-						</div>
-						<div class="user">
-							<!--<img src="_content/user-img.png" alt="" />-->
-							<span>Bem Vindo <a href="#"><?php echo CakeSession::read('User.login'); ?> !</a></span>
-							<span class="logout"><a href="<?php echo $this->Html->url('/pessoas/logout') ?>">Sair</a></span>
-						</div>
+		<div id="header-wrapper">
+			<div id="header">
+				<div id="user-wrapper" class="fixed">
+					<div class="color-scheme">
+						<!--<a href="#" class="button">Dropdown suggestion</a>-->
 					</div>
-					<div id="launcher-wrapper" class="fixed">
-						<div class="logo">
+					<div class="user">
+						<!--<img src="_content/user-img.png" alt="" />-->
+						<span>Bem Vindo <a href="#"><?php echo CakeSession::read('User.login'); ?> !</a></span>
+						<span class="logout"><a href="<?php echo $this->Html->url('/pessoas/logout') ?>">Sair</a></span>
+					</div>
+				</div>
+				<div id="launcher-wrapper" class="fixed">
+					<div class="logo">
 							<!--?php echo $this->Html->link(
 							$this->Html->image("back-logo.png",array("alt"=> "InstaPro Portal Jurídico", "border" => "0")), 
 							array(
 								'controller' => 'home', 
 								'action' => 'index','comments' => 'false'));?-->
-							<a href="/instapro/home"><?php echo $this->Html->image('back-logo.png',array('alt' => 'InstaPro Portal Jurídico', 'border' => '0'));?> </a>
-						</div>
-						
-						<div class="launcher">
-							<ul class="fixed">
-								<li class="users"><?php echo $this->Html->link('Usuários', array('controller' => 'pessoas', 'action' => 'index'));?></li>
+								<a href="/instapro/home"><?php echo $this->Html->image('back-logo.png',array('alt' => 'InstaPro Portal Jurídico', 'border' => '0'));?> </a>
+							</div>
+							
+							<div class="launcher">
+								<ul class="fixed">
+									<li class="users"><?php echo $this->Html->link('Usuários', array('controller' => 'pessoas', 'action' => 'index'));?></li>
 								<!--li class="mailbox">
 									<a href="#">Mailbox</a>
 									<span class="red-bullet"></span>
@@ -79,7 +82,7 @@
 			<div class="page">
 				<div id="sidebar">
 					<ul id="navigation">
-						<li class="first active">
+						<li class="first">
 							<div><?php echo $this->Html->link('DashBoard', array('controller' => 'home', 'action' => 'index'));?><span class="icon-nav dashboard"></span></div>
 							<div class="back"></div>
 						</li>				
@@ -120,7 +123,7 @@
 				</div>			
 				
 				<div id="content">
-				<?php echo $content_for_layout; ?>
+					<?php echo $content_for_layout; ?>
 					<!--<div class="fixed index-large-icon">
 						<a href="#" class="large-icon one"><span></span></a>
 						<a href="#" class="large-icon two"><span></span></a>
@@ -261,9 +264,9 @@
 					<a href="#" class="button-green arrow">Le Button<span></span></a>&nbsp;&nbsp;&nbsp;
 					<a href="#" class="button-brown arrow">Le Button<span></span></a>
 					<a href="#" class="button-grey arrow m-top-15">Le Button<span></span></a>
-					-->
-				</div>
-		
-	</div>
-</body>
-</html>
+				-->
+			</div>
+			
+		</div>
+	</body>
+	</html>

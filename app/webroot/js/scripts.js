@@ -21,42 +21,69 @@ $(document).ready(function(){
 			});
 		});
 	});
-    $('#PessoaContatoTelefone1').focusout(function(){
-        var phone, element;
-        element = $(this);
-        element.unmask();
-        phone = element.val().replace(/\D/g, '');
-        if(phone.length > 10) {
-            element.mask('(99) 99999-999?9');
-        } else {
-            element.mask('(99) 9999-9999?9');
-        }
-    }).trigger('focusout');
+	$('#PessoaContatoTelefone1').focusout(function(){
+		var phone, element;
+		element = $(this);
+		element.unmask();
+		phone = element.val().replace(/\D/g, '');
+		if(phone.length > 10) {
+			element.mask('(99) 99999-999?9');
+		} else {
+			element.mask('(99) 9999-9999?9');
+		}
+	}).trigger('focusout');
 	$('#PessoaContatoTelefone2').focusout(function(){
-	        var phone, element;
-	        element = $(this);
-	        element.unmask();
-	        phone = element.val().replace(/\D/g, '');
-	        if(phone.length > 10) {
-	            element.mask('(99) 99999-999?9');
-	        } else {
-	            element.mask('(99) 9999-9999?9');
-	        }
-	    }).trigger('focusout');
+		var phone, element;
+		element = $(this);
+		element.unmask();
+		phone = element.val().replace(/\D/g, '');
+		if(phone.length > 10) {
+			element.mask('(99) 99999-999?9');
+		} else {
+			element.mask('(99) 9999-9999?9');
+		}
+	}).trigger('focusout');
 	$('#PessoaContatoTelefone3').focusout(function(){
-	        var phone, element;
-	        element = $(this);
-	        element.unmask();
-	        phone = element.val().replace(/\D/g, '');
-	        if(phone.length > 10) {
-	            element.mask('(99) 99999-999?9');
-	        } else {
-	            element.mask('(99) 9999-9999?9');
-	        }
-	    }).trigger('focusout');
+		var phone, element;
+		element = $(this);
+		element.unmask();
+		phone = element.val().replace(/\D/g, '');
+		if(phone.length > 10) {
+			element.mask('(99) 99999-999?9');
+		} else {
+			element.mask('(99) 9999-9999?9');
+		}
+	}).trigger('focusout');
 	$("#PessoaFisicaCpf").mask("999.999.999-99");
-   	$("#PessoaContatoCep").mask("99999-999");
-   	$("#PessoaFisicaDataNascimento").mask("99/99/9999");
-   	$("#PessoaContatoIdPais").val(33);
-   	$("#PessoaContatoIdPais").change();
+	$("#PessoaContatoCep").mask("99999-999");
+	$("#PessoaFisicaDataNascimento").mask("99/99/9999");
+	$("#PessoaContatoIdPais").val(33);
+	$("#PessoaContatoIdPais").change();
+
+	$("#buscaProcValor").keyup(function(){   		
+		var letras = $(this).val();
+		if(letras != "")
+		{
+			$("#div-result").html('');
+			$("#div-result").slideDown(400, function(){
+
+			});
+		}
+		if(letras == "")
+		{
+			$("#div-result").html('');
+			$("#div-result").slideUp(400,function(){
+
+			});
+		}
+	});
+
+	$("#btnLimparProc").on('click',function(){   				
+			$("#div-result").html('');
+			$("#div-result").slideUp(400,function(){
+				$("#buscaProcValor").val("") 
+			});
+	});
+
+
 });
