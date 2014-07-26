@@ -9,14 +9,14 @@ echo $this->Html->script("scripts");
 </div>
 <div class="panelcmd">
 	<?php echo $this->Form->create('buscaProc')?>
-		<?php echo $this->Html->link('Incluir', array('controller'=> 'processos', 'action' => 'adicionar'), array('class' => 'button-blue'));?>&nbsp;&nbsp;
-		<?php echo $this->Html->link('Alterar', array('controller'=> 'processos', 'action' => '#'), array('class' => 'button-grey', 'disabled' => 'disabled'));?>
-		<div style="position:relative; float:right;">
-			<?php echo $this->Form->input('valor', array('label'=>false, 'type' => 'text', 'class'=>'small', 'maxlength'=>100, 'div'=>false));?>&nbsp;&nbsp;
-			<a href="#" class='button-grey arrow'>Buscar<span></span></a>
-			<a href="#" id="btnLimparProc" class='button-grey'>Limpar<span></span></a>
-		</div>
-		<?php echo $this->Form->end();?>
+	<?php echo $this->Html->link('Incluir', array('controller'=> 'processos', 'action' => 'adicionar'), array('class' => 'button-blue'));?>&nbsp;&nbsp;
+	<?php echo $this->Html->link('Alterar', array('controller'=> 'processos', 'action' => '#'), array('class' => 'button-grey', 'disabled' => 'disabled'));?>
+	<div style="position:relative; float:right;">
+		<?php echo $this->Form->input('valor', array('label'=>false, 'type' => 'text', 'class'=>'small', 'maxlength'=>100, 'div'=>false));?>&nbsp;&nbsp;
+		<a href="#" class='button-grey arrow'>Buscar<span></span></a>
+		<a href="#" id="btnLimparProc" class='button-grey'>Limpar<span></span></a>
+	</div>
+	<?php echo $this->Form->end();?>
 </div>
 <div id="div-result" class="result-search">
 	
@@ -55,5 +55,29 @@ echo $this->Html->script("scripts");
 				<td>Status: </td><td>Data Decisão: </td>
 			</tr>			
 		</table>
+	</div>
+	<div class="panel">
+		<div class="tabs">
+			<ul>
+				<li class="active">
+					<a rel="tab-01-content" href="#">Acompanhamento</a>
+				</li>
+				<li class="">
+					<a rel="tab-02-content" href="#">Tab 2</a>
+				</li>
+				<li class="last">
+					<a rel="tab-03-content" href="#">Tab 3</a>
+				</li>
+			</ul>
+		</div>
+		<div class="tabs-content first-tab">
+			<div id="tab-01-content" class="active" style="display: block;">
+				<p>Sed lobortis, metus quis elementum egestas, inmagna lacus pharetra risus, a tincidunt elit lacus sed neque. Phasellus quam ante, hendrerit eget vulputate ac, iaculis in orci. Donec at sapien est, non congue nulla. Vestibulum ac mauris at augue volutpat euismod. tiam ultrices, purus quis setardignissim gravida lorem ipsum.</p>
+			</div>
+			<div id="tab-02-content" class="" style="display: none;">
+				<div id="tab-03-content" class="" style="display: none;">
+				</div>
+			</div>
+		</div>
 	</div>
 </div>

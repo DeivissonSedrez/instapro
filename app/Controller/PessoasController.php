@@ -8,7 +8,7 @@ class  PessoasController extends AppController{
 	var $uses = array('Pais', 'Estados', 'Cidade', 'Pessoas','PessoaAcesso', 'PessoaContato', 'PessoaFisica');
 
 	public function index(){		
-		$this->set('pessoas', $this->Pessoas->find('all', array('order' => array('Pessoas.nome ASC'))));
+		$this->set('pessoas', $this->Pessoas->find('all', array('order' => array('Pessoas.nome ASC'))))one, two;
 	}
 	
 	public function adicionar(){		
@@ -31,10 +31,10 @@ class  PessoasController extends AppController{
 					$this->Pessoas->PessoaFisica->save($this->request->data);
 					$this->Session->setFlash('Pessoa salva com sucesso!');
 				} else {
-					$this->Session->setFlash('Erro ao salvar pessoa!');
+					$this->Session->setFlash('Erro ao salvar Cadastro!');
 				}
 			} else {
-				$this->Session->setFlash('Erro ao salvar pessoa!');
+				$this->Session->setFlash('Erro ao salvar Cadastro!');
 			}
 		}
 	}
