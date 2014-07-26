@@ -63,20 +63,70 @@ echo $this->Html->script("scripts");
 					<a rel="tab-01-content" href="#">Acompanhamento</a>
 				</li>
 				<li class="">
-					<a rel="tab-02-content" href="#">Tab 2</a>
+					<a rel="tab-02-content" href="#">Compromissos</a>
+				</li>
+				<li class="">
+					<a rel="tab-03-content" href="#">Documentos</a>
 				</li>
 				<li class="last">
-					<a rel="tab-03-content" href="#">Tab 3</a>
+					<a rel="tab-04-content" href="#">Envolvidos</a>
 				</li>
 			</ul>
 		</div>
 		<div class="tabs-content first-tab">
 			<div id="tab-01-content" class="active" style="display: block;">
+			<div class="panel2">
+		<div class="tabs2">
+			<ul>
+				<li class="active2">
+					<a rel="tab-05-content" href="#">1ª Instância</a>
+				</li>
+				<li class="">
+					<a rel="tab-06-content" href="#">2ª Instância</a>
+				</li>
+				<li class="">
+					<a rel="tab-07-content" href="#">3ª Instância</a>
+				</li>
+				<li class="last">
+					<a rel="tab-08-content" href="#">4ª Instância</a>
+				</li>
+				<li class="last">
+					<a rel="tab-09-content" href="#">Todas</a>
+				</li>
+			</ul>
+		</div>
+		<div class="tabs-content2 first-tab2">
+			<div id="tab-05-content" class="active2" style="display: block;">
 				<p>Sed lobortis, metus quis elementum egestas, inmagna lacus pharetra risus, a tincidunt elit lacus sed neque. Phasellus quam ante, hendrerit eget vulputate ac, iaculis in orci. Donec at sapien est, non congue nulla. Vestibulum ac mauris at augue volutpat euismod. tiam ultrices, purus quis setardignissim gravida lorem ipsum.</p>
 			</div>
+			<div id="tab-06-content" class="" style="display: none;">
+				<p>Sed lobortis, metus quis elementum egestas, inmagna lacus pharetra risus, a tincidunt elit lacus sed neque. Phasellus quam ante, hendrerit eget vulputate ac, iaculis in orci. Donec at sapien est, non congue nulla. Vestibulum ac mauris at augue volutpat euismod. tiam ultrices, purus quis setardignissim gravida lorem ipsum.</p>
+			</div>
+			<div id="tab-07-content" class="" style="display: none;">
+			<p>Sed lobortis, metus quis elementum egestas, inmagna lacus pharetra risus, a tincidunt elit lacus sed neque. Phasellus quam ante, hendrerit eget vulputate ac, iaculis in orci. Donec at sapien est, non congue nulla. Vestibulum ac mauris at augue volutpat euismod. tiam ultrices, purus quis setardignissim gravida lorem ipsum.</p>
+			</div>
+			<div id="tab-08-content" class="" style="display: none;">
+			<p>Sed lobortis, metus quis elementum egestas, inmagna lacus pharetra risus, a tincidunt elit lacus sed neque. Phasellus quam ante, hendrerit eget vulputate ac, iaculis in orci. Donec at sapien est, non congue nulla. Vestibulum ac mauris at augue volutpat euismod. tiam ultrices, purus quis setardignissim gravida lorem ipsum.</p>
+			</div>
+			<div id="tab-09-content" class="" style="display: none;">
+			<p>Sed lobortis, metus quis elementum egestas, inmagna lacus pharetra risus, a tincidunt elit lacus sed neque. Phasellus quam ante, hendrerit eget vulputate ac, iaculis in orci. Donec at sapien est, non congue nulla. Vestibulum ac mauris at augue volutpat euismod. tiam ultrices, purus quis setardignissim gravida lorem ipsum.</p>
+			</div>
+		</div>
+	</div>
+				<p>Sed lobortis, metus quis elementum egestas, inmagna lacus pharetra risus, a tincidunt elit lacus sed neque. Phasellus quam ante, hendrerit eget vulputate ac, iaculis in orci. Donec at sapien est, non congue nulla. Vestibulum ac mauris at augue volutpat euismod. tiam ultrices, purus quis setardignissim gravida lorem ipsum.
+				Sed lobortis, metus quis elementum egestas, inmagna lacus pharetra risus, a tincidunt elit lacus sed neque. Phasellus quam ante, hendrerit eget vulputate ac, iaculis in orci. Donec at sapien est, non congue nulla. Vestibulum ac mauris at augue volutpat euismod. tiam ultrices, purus quis setardignissim gravida lorem ipsum.</p>
+			</div>
 			<div id="tab-02-content" class="" style="display: none;">
-				<div id="tab-03-content" class="" style="display: none;">
-				</div>
+				<p>Sed lobortis, metus quis elementum egestas, inmagna lacus pharetra risus, a tincidunt elit lacus sed neque. Phasellus quam ante, hendrerit eget vulputate ac, iaculis in orci. Donec at sapien est, non congue nulla. Vestibulum ac mauris at augue volutpat euismod. tiam ultrices, purus quis setardignissim gravida lorem ipsum.
+				Sed lobortis, metus quis elementum egestas, inmagna lacus pharetra risus, a tincidunt elit lacus sed neque. Phasellus quam ante, hendrerit eget vulputate ac, iaculis in orci. Donec at sapien est, non congue nulla. Vestibulum ac mauris at augue volutpat euismod. tiam ultrices, purus quis setardignissim gravida lorem ipsum.</p>
+			</div>
+			<div id="tab-03-content" class="" style="display: none;">
+			<p>Sed lobortis, metus quis elementum egestas, inmagna lacus pharetra risus, a tincidunt elit lacus sed neque. Phasellus quam ante, hendrerit eget vulputate ac, iaculis in orci. Donec at sapien est, non congue nulla. Vestibulum ac mauris at augue volutpat euismod. tiam ultrices, purus quis setardignissim gravida lorem ipsum.
+			Sed lobortis, metus quis elementum egestas, inmagna lacus pharetra risus, a tincidunt elit lacus sed neque. Phasellus quam ante, hendrerit eget vulputate ac, iaculis in orci. Donec at sapien est, non congue nulla. Vestibulum ac mauris at augue volutpat euismod. tiam ultrices, purus quis setardignissim gravida lorem ipsum.</p>
+			</div>
+			<div id="tab-04-content" class="" style="display: none;">
+			<p>Sed lobortis, metus quis elementum egestas, inmagna lacus pharetra risus, a tincidunt elit lacus sed neque. Phasellus quam ante, hendrerit eget vulputate ac, iaculis in orci. Donec at sapien est, non congue nulla. Vestibulum ac mauris at augue volutpat euismod. tiam ultrices, purus quis setardignissim gravida lorem ipsum.
+			Sed lobortis, metus quis elementum egestas, inmagna lacus pharetra risus, a tincidunt elit lacus sed neque. Phasellus quam ante, hendrerit eget vulputate ac, iaculis in orci. Donec at sapien est, non congue nulla. Vestibulum ac mauris at augue volutpat euismod. tiam ultrices, purus quis setardignissim gravida lorem ipsum.</p>
 			</div>
 		</div>
 	</div>

@@ -68,9 +68,39 @@
 			return false;
 		});
 		
-	}
-	
-	
+	$('.tabs-content2').each(function(){
+			var tabs2 = $(this).closest('.panel2').find('.tabs2');
+						
+			if ($('li:eq(0)', tabs2).hasClass('active2')){
+				$(this).closest('.panel2').find('.tabs-content2').addClass('first-tab2');
+			}
+		});
+
+$('.panel2 .tabs2 li').click(function(){
+			var parent2 = $(this).closest('.panel2');
+			var content2 = $('a', this).attr('rel');
+			
+			if ($(this).index()==0){
+				$(this).closest('.panel2').find('.tabs-content2').addClass('first-tab2');
+			}else{
+				$(this).closest('.panel2').find('.tabs-content2').removeClass('first-tab2');
+			}
+			
+			$('.tabs2 .active2', parent2).removeClass('active2');
+			$(this).addClass('active2');
+			
+			$('.tabs-content2 > .active2', parent2).slideUp('fast', function(){
+				$(this).removeClass('active2');
+				
+				$('#'+content2).slideDown('fast', function(){
+					$(this).addClass('active2');
+				});
+			});
+			
+			return false;
+		});
+		
+	}	
 	/***** Feature - accordion *************************************************/	
 		function init_accordion() { 
 			

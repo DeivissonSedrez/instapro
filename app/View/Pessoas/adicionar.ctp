@@ -24,10 +24,10 @@ echo $this->Html->script("avatar");
 	<?php echo $this->Form->end();?>
 </div>
 
-<h2 style="margin-left: 40%;"><?php echo $this->Session->flash(); ?></h2>
+<h3 style="margin-left: 40%;"><?php echo $this->Session->flash(); ?></h3>
 
 <div  class="frame-big pad10">
-<h1>Dados de Login</h1>
+<h3>Dados de Login</h3>
 <div class="hr"></div>
 <?php 
 echo $this->Form->create('Pessoas');
@@ -41,7 +41,7 @@ echo $this->Form->input('Vpessoas', array('label'=> array('text' => '<h4 style="
 echo $this->Form->input('Cpessoas', array('label'=> array('text' => '<h4 style="display:inline">Cadastra Pessoas: </h4>', 'value'=> 2, 'class'=>'labelform'), 'class'=>'dropdown small', 'type'=>'select', 'options' => array('S' => 'Sim', 'N' => 'Não'), 'css' => array('display'=>'inline')));
 ?>
 <div class="hr"></div>
-<h1>Dados Pessoais</h1>
+<h3>Dados Pessoais</h3>
 <div class="hr"></div>
 <?php 
 echo $this->Form->input('nome', array('label'=> array('text' => '<h4 style="display:inline">Nome: </h4>', 'class'=>'labelform'), 'class'=>'normal', 'css' => array('display'=>'inline')));
@@ -70,7 +70,7 @@ echo $this->Form->input('avatarPath', array( 'label' => array('text' => '', 'val
 	</li>
 </ul>
 <div class="hr"></div>
-<h1>Edereços e Telefones</h1>
+<h3>Edereços e Telefones</h3>
 <div class="hr"></div>
 <?php
 echo $this->Form->input('PessoaContato.endereco', array('label'=> array('text' => '<h4 style="display:inline">Endereço: </h4>', 'class'=>'labelform'), 'class'=>'normal', 'css' => array('display'=>'inline')));

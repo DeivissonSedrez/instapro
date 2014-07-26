@@ -8,7 +8,7 @@ class  PessoasController extends AppController{
 	var $uses = array('Pais', 'Estados', 'Cidade', 'Pessoas','PessoaAcesso', 'PessoaContato', 'PessoaFisica');
 
 	public function index(){		
-		$this->set('pessoas', $this->Pessoas->find('all', array('order' => array('Pessoas.nome ASC'))))one, two;
+		$this->set('pessoas', $this->Pessoas->find('all', array('order' => array('Pessoas.nome ASC'))));
 	}
 	
 	public function adicionar(){		
