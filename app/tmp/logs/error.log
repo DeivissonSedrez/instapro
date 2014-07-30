@@ -13645,3 +13645,13 @@ Request URL: /instapro/js/fileupload/jquery.image.js
 Stack Trace:
 #0 D:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2014-07-30 14:25:47 Error: Fatal Error (4): syntax error, unexpected 'one' (T_STRING) in [D:\xampp\htdocs\instapro\app\Controller\PessoasController.php, line 11]
+2014-07-30 14:25:47 Error: [FatalErrorException] syntax error, unexpected 'one' (T_STRING)
+Request URL: /instapro/pessoas/login
+Stack Trace:
+#0 D:\xampp\htdocs\instapro\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'D:\xampp\htdocs...', 11)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'D:\xampp\htdocs...', 11, Array)
+#2 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'D:\xampp\htdocs...', 11, Array)
+#3 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
