@@ -77,9 +77,12 @@
 		</div>
 
 		<div id="wrapper-pessoas">
-			<?php foreach($pessoas as $pessoa){
+			<?php 
+			$cont=0;
+			foreach($pessoas as $pessoa){
+				//$cont =$cont+1;
 				echo "<div class='itm' id='".$pessoa['Pessoas']['id']."'>
-				<div class='itm_nome'><h3>".$pessoa['Pessoas']['nome']."</h3></div><div class='itm_image'>". $this->Html->image('avatar-m.jpg',array('width' => '100%', 'height' => '100%','border' => '0'))."</div>
+				<div class='itm_nome'><h3>".$pessoa['Pessoas']['nome']."</h3></div>
 				<div class='info'>
 					<span class='label'>Login: ".$pessoa['Pessoas']['login']."</span></br>
 					<span class='label'>e-Mail: ".$pessoa['Pessoas']['tipo_pessoa']."</span></br>
@@ -90,3 +93,4 @@
 		?>	
 	</div>
 </div>
+<!--div class='itm_image'>". $this->Html->image('avatar-m.jpg',array('width' => '100%', 'height' => '100%','border' => '0'))."</div--->
