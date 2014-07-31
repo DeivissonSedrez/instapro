@@ -14750,3 +14750,21 @@ Request URL: /instapro/favicon.png
 Stack Trace:
 #0 C:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2014-07-31 21:56:04 Error: [MissingControllerException] Controller class Favicon.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.pngController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/favicon.png
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-07-31 21:56:04 Error: [MissingControllerException] Controller class Favicon.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.pngController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/favicon.png
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
