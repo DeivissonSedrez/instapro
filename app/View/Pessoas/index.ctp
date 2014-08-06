@@ -28,12 +28,18 @@
 		<?php echo $this->Form->create('busca')?>
 		<?php echo $this->Html->link('Novo Usuário', array('controller'=> 'pessoas', 'action' => 'adicionar'), array('class' => 'button-blue'));?>
 		<div style="position:relative; float:right;">
+
+		<a href="#" class='button-grey'>9 por página<span></span></a>
+
+		<a href="#" class='button-grey'>16 por página<span></span></a>
+
+		<a href="#" class='button-grey'>20 por Página<span></span></a>&nbsp;
 			<?php echo $this->Form->input('valor', array('label'=>false, 'type' => 'text', 'class'=>'small',              'maxlength'=>100, 'div'=>false));?>
 			<a href="#" class='button-grey arrow'>Buscar<span></span></a>
 		</div>
 		<?php echo $this->Form->end();?>
 	</div>
-	<div class="frame-big">
+	<div class="frame-big cards">
 		<div class="listaalfabeto">
 			<ul>
 				<li>A</li>

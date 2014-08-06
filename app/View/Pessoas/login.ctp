@@ -21,11 +21,11 @@
 						<div id="user-select">
 							<ul class="grad2">
 								<li class="sel">
-									<img src="../img/login/avatars/alex.jpg" alt="User avatar">
+									<img src="img/login/avatars/alex.jpg" alt="User avatar">
 									<div class="av-overlay"></div><span>novalex</span></li>
-								<li><img src="../img/login/avatars/michael.jpg" alt="User avatar">
+								<li><img src="img/login/avatars/michael.jpg" alt="User avatar">
 									<div class="av-overlay"></div><span>m1chael</span></li>
-								<li><img src="../img/login/avatars/johnny.jpg" alt="User avatar">
+								<li><img src="img/login/avatars/johnny.jpg" alt="User avatar">
 									<div class="av-overlay"></div><span>Johnny 1337</span></li>
 							</ul>
 						</div>
@@ -46,7 +46,7 @@
 
 				</div>
 
-				<div id="avatar"><img src="../img/login/avatars/alex.jpg" alt="Selected user avatar"><div id="av-overlay"></div></div>
+				<div id="avatar"><img src="img/login/avatars/alex.jpg" alt="Selected user avatar"><div id="av-overlay"></div></div>
 
 				<?php echo $this->Form->button('Entrar',  array('class'=>'button submit', 'id'=>'login-btn','type'=>'submit')); ?>
 				<?php echo $this->Form->end(); ?>
