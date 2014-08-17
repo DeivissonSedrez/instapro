@@ -15,6 +15,7 @@
 	<?php echo $this->Html->css(array('jquery.fullcalendar/fullcalendar.css'));?> 
 	<?php echo $this->Html->css(array('jquery.fullcalendar/fullcalendar.print.css'));?> 
 	<?php echo $this->Html->css(array('jquery.fileupload.css'));?> 
+	<?php echo $this->Html->css(array('nanoscroller.css'));?> 
 	<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/themes/base/jquery-ui.css" type="text/css" media="all" />
 
 	<!-- Fonts -->
@@ -23,7 +24,8 @@
 	<?php echo $this->Html->script(array('jquery-ui.min.js')); ?>
 	<?php echo $this->Html->script(array('jquery.ui.widget.js')); ?>
 	<?php echo $this->Html->script(array('custom.js')); ?>
-	
+	<?php echo $this->Html->script(array('jquery.nanoscroller.min.js')); ?>
+		
 	<!-- Scripts -->
 	
 	<?php echo $this->Html->script(array('jquery.maskedinput.js')); ?>

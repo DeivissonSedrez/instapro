@@ -1,15 +1,18 @@
+<?php
+echo $this->Html->script("scripts");
+?>
 <script>
 	$(function() {
 		$('.itm_image').hover(function() {
-			$('.frame-big').css('overflow', 'visible');
+			$('.frame-big cards').css('overflow', 'visible');
 		}, function() {
     // on mouseout, reset the background colour
-    $('.frame-big').css('overflow', 'hidden');
+    $('.frame-big cards').css('overflow', 'hidden');
 });
 
 		$('.itm').click(function() {
 			var id = $(this).attr('id');
-			$( "#frame-big" ).load( "/instapro/pessoas/editar/id", function() {
+			$( "#frame-big cards" ).load( "/instapro/pessoas/editar/id", function() {
 
 			});
 });
@@ -39,7 +42,7 @@
 		</div>
 		<?php echo $this->Form->end();?>
 	</div>
-	<div class="frame-big">
+	<div class="frame-big cards">
 		<div class="listaalfabeto">
 			<ul>
 				<li>A</li>
@@ -83,20 +86,7 @@
 		</div>
 
 		<div id="wrapper-pessoas">
-			<?php 
-			$cont=0;
-			foreach($pessoas as $pessoa){
-				//$cont =$cont+1;
-				echo "<div class='itm' id='".$pessoa['Pessoas']['id']."'>
-				<div class='itm_nome'><h3>".$pessoa['Pessoas']['nome']."</h3></div>
-				<div class='info'>
-					<span class='label'>Login: ".$pessoa['Pessoas']['login']."</span></br>
-					<span class='label'>e-Mail: ".$pessoa['Pessoas']['tipo_pessoa']."</span></br>
-					<span class='value'>Perfil: ".$pessoa['Pessoas']['tipo_acesso']."</span>
-				</div>
-			</div>";			
-		} 
-		?>	
+			<?php echo $pessoas ?>	
 	</div>
 </div>
 <!--div class='itm_image'>". $this->Html->image('avatar-m.jpg',array('width' => '100%', 'height' => '100%','border' => '0'))."</div--->

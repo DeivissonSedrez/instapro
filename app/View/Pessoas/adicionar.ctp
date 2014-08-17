@@ -13,17 +13,7 @@ echo $this->Html->script("avatar");
 	</ul>
 </div>
 
-<div class="panelcmd" style="display:in-line">
-	<?php $sizes = array('s' => 'Small', 'm' => 'Medium', 'l' => 'Large'); ?>
-	<?php echo $this->Form->create('busca')?>
-	<?php echo $this->Html->link('Novo Usuário', array('controller'=> 'pessoas', 'action' => 'adicionar'), array('class' => 'button-blue'));?>
-	<div style="position:relative; float:right;">
 
-		<?php echo $this->Form->input('valor', array('label'=>false, 'type' => 'text', 'class'=>'small', 'maxlength'=>100, 'div'=>false, 'css'=> array('height'=>30) ));?>
-		<a href="#" class='button-grey arrow'>Buscar<span></span></a>
-	</div>
-	<?php echo $this->Form->end();?>
-</div>
 
 <h3 style="margin-left: 40%;"><?php echo $this->Session->flash(); ?></h3>
 
@@ -37,7 +27,7 @@ echo $this->Html->script("avatar");
 		<tr>
 			<td width="395" style="border-right:1px solid #ccc;">
 				<?php
-				echo $this->Form->input('tipo_pessoa', array('label'=> array('text' => '<h4 style="display:inline">Tipo Usuário: </h4>', 'enctype' => 'multipart/form-data', 'value'=> 3, 'class'=>'labelform'), 'class'=>'dropdown small', 'type'=>'select', 'options' => $permissoes, 'css' => array('display'=>'inline'))); 
+				echo $this->Form->input('tipo_acesso', array('label'=> array('text' => '<h4 style="display:inline">Tipo Usuário: </h4>', 'enctype' => 'multipart/form-data', 'value'=> 3, 'class'=>'labelform'), 'class'=>'dropdown small', 'type'=>'select', 'options' => $permissoes, 'css' => array('display'=>'inline'))); 
 				echo $this->Form->input('login', array('label'=> array('text' => '<h4 style="display:inline">Login: </h4>', 'class'=>'labelform'), 'class'=>'small',  'css' => array('display'=>'inline')));
 				echo $this->Form->input('password', array('label'=> array('text' => '<h4 style="display:inline">Senha: </h4>', 'class'=>'labelform'), 'class'=>'small', 'type'=>'password','css' => array('display'=>'inline')));
 				echo $this->Form->input('password2', array('label'=> array('text' => '<h4 style="display:inline">Confirme a senha: </h4>', 'class'=>'labelform'), 'class'=>'small','type'=>'password', 'css' => array('display'=>'inline')));
