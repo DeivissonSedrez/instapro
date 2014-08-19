@@ -86,4 +86,23 @@ $(document).ready(function(){
 	});
 
 
+	$("#buscaValor").keyup(function(){   		
+		var letras = $(this).val();
+		var base = $("#base").val();
+		if(letras != "")
+		{
+			//$("#wrapper-pessoas").html('');
+			$.post(base+"/pessoas/searchPessoa", {string : letras}, function(response){
+				$("#wrapper-pessoas").html(response);
+			});
+		}
+		if(letras == "")
+		{
+			//$("#wrapper-pessoas").html('');
+			$.post(base+"/pessoas/searchPessoa", {string : letras}, function(response){
+				$("#wrapper-pessoas").html(response);		
+			});
+		}
+	});
+	
 });

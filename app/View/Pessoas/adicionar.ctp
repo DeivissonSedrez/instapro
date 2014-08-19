@@ -13,17 +13,7 @@ echo $this->Html->script("avatar");
 	</ul>
 </div>
 
-<div class="panelcmd" style="display:in-line">
-	<?php $sizes = array('s' => 'Small', 'm' => 'Medium', 'l' => 'Large'); ?>
-	<?php echo $this->Form->create('busca')?>
-	<?php echo $this->Html->link('Novo Usuário', array('controller'=> 'pessoas', 'action' => 'adicionar'), array('class' => 'button-blue'));?>
-	<div style="position:relative; float:right;">
 
-		<?php echo $this->Form->input('valor', array('label'=>false, 'type' => 'text', 'class'=>'small', 'maxlength'=>100, 'div'=>false, 'css'=> array('height'=>30) ));?>
-		<a href="#" class='button-grey arrow'>Buscar<span></span></a>
-	</div>
-	<?php echo $this->Form->end();?>
-</div>
 
 <h3 style="margin-left: 40%;"><?php echo $this->Session->flash(); ?></h3>
 

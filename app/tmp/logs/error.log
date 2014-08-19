@@ -14828,6 +14828,7 @@ Request URL: /instapro/favicon.png
 Stack Trace:
 #0 D:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+<<<<<<< HEAD
 2014-08-17 22:15:15 Error: [MissingControllerException] Controller class Favicon.pngController could not be found.
 Exception Attributes: array (
   'class' => 'Favicon.pngController',
@@ -14846,3 +14847,108 @@ Request URL: /instapro/favicon.png
 Stack Trace:
 #0 D:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+=======
+2014-08-06 08:24:34 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\xampp\htdocs\instapro\app\Controller\PessoasController.php, line 63]
+2014-08-06 08:24:34 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /instapro/pessoas
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 63)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 63, Array)
+#2 C:\xampp\htdocs\instapro\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\xampp\htdocs...', 63, Array)
+#3 C:\xampp\htdocs\instapro\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-08-06 08:24:57 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\xampp\htdocs\instapro\app\Controller\PessoasController.php, line 62]
+2014-08-06 08:24:57 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /instapro/pessoas
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 62)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 62, Array)
+#2 C:\xampp\htdocs\instapro\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\xampp\htdocs...', 62, Array)
+#3 C:\xampp\htdocs\instapro\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-08-06 08:27:18 Error: [MissingControllerException] Controller class [objectHTMLInputElement]Controller could not be found.
+Exception Attributes: array (
+  'class' => '[objectHTMLInputElement]Controller',
+  'plugin' => NULL,
+)
+Request URL: /instapro/%5Bobject%20HTMLInputElement%5D/pessoas/searchPessoas
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-06 08:29:15 Error: [MissingControllerException] Controller class [objectHTMLInputElement]Controller could not be found.
+Exception Attributes: array (
+  'class' => '[objectHTMLInputElement]Controller',
+  'plugin' => NULL,
+)
+Request URL: /instapro/%5Bobject%20HTMLInputElement%5D/pessoas/searchPessoas
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-06 08:29:20 Error: [MissingActionException] Action PessoasController::searchPessoas() could not be found.
+Exception Attributes: array (
+  'controller' => 'PessoasController',
+  'action' => 'searchPessoas',
+)
+Request URL: /instapro/pessoas/searchPessoas
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(PessoasController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-08-06 08:29:29 Error: [MissingActionException] Action PessoasController::searchPessoas() could not be found.
+Exception Attributes: array (
+  'controller' => 'PessoasController',
+  'action' => 'searchPessoas',
+)
+Request URL: /instapro/pessoas/searchPessoas
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(PessoasController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-08-06 08:29:31 Error: [MissingActionException] Action PessoasController::searchPessoas() could not be found.
+Exception Attributes: array (
+  'controller' => 'PessoasController',
+  'action' => 'searchPessoas',
+)
+Request URL: /instapro/pessoas/searchPessoas
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(PessoasController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-08-06 08:29:34 Error: [MissingActionException] Action PessoasController::searchPessoas() could not be found.
+Exception Attributes: array (
+  'controller' => 'PessoasController',
+  'action' => 'searchPessoas',
+)
+Request URL: /instapro/pessoas/searchPessoas
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(PessoasController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-08-06 08:31:39 Error: Fatal Error (4): syntax error, unexpected ')' in [C:\xampp\htdocs\instapro\app\Controller\PessoasController.php, line 63]
+2014-08-06 08:31:39 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /instapro/pessoas
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 63)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 63, Array)
+#2 C:\xampp\htdocs\instapro\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\xampp\htdocs...', 63, Array)
+#3 C:\xampp\htdocs\instapro\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-08-06 08:31:54 Error: [MissingActionException] Action PessoasController::searchPessoas() could not be found.
+Exception Attributes: array (
+  'controller' => 'PessoasController',
+  'action' => 'searchPessoas',
+)
+Request URL: /instapro/pessoas/searchPessoas
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(PessoasController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+>>>>>>> cb63155e9a38529543c11bad7dd012721d93f364
