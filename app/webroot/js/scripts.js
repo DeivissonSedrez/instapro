@@ -104,5 +104,37 @@ $(document).ready(function(){
 			});
 		}
 	});
+	$(".listaalfabeto").on('click','li',function(){   
+		var letras = $(this).text();
+		var base = $("#base").val();
+		if(letras != "")
+		{
+			//$("#wrapper-pessoas").html('');
+			$.post(base+"/pessoas/searchPessoaInicial", {string : letras}, function(response){
+
+				$("#wrapper-pessoas").html(response);
+			});
+		}
+		if(letras == "")
+		{
+			//$("#wrapper-pessoas").html('');
+			$.post(base+"/pessoas/searchPessoaInicial", {string : letras}, function(response){
+				$("#wrapper-pessoas").html(response);		
+			});
+		}
+	});
+	$(".itm").on('click',function(){   		
+		var id = $(this).attr("id");
+		var base = $("#base").val();
+		$("#frame-big cards").html();/*
+		$( "#frame-big cards" ).load( "/instapro/pessoas/editar/"+id, function() {
+
+		});*/
+
+			$.post(base+"/pessoas/editar/"+id, function(response){
+				$("#frame-big cards").html(response);
+			});
+	
+	});
 	
 });

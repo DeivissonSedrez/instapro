@@ -52,7 +52,9 @@ class  PessoasController extends AppController{
 	}
 
 	public function editar($id){
-		$this->set('pessoas', $this->Pessoas->find($id));	
+		echo $this->Pessoas->find($id);
+		$this->set('pessoa', $this->Pessoas->find($id));	
+
 	}
 
 	public function searchPessoa(){
@@ -62,19 +64,50 @@ class  PessoasController extends AppController{
 		
 		$allPessoas =  $this->Pessoas->find('all', array('conditions'=> $conditions ));
 		$conteudo = "";
-		foreach($allPessoas as $pessoa){
-			$conteudo .= "<div class='itm' id='".$pessoa['Pessoas']['id']."'>
-			<div class='itm_nome'><h3>".$pessoa['Pessoas']['nome']."</h3></div>
-			<div class='info'>
-				<span class='label'>Login: ".$pessoa['Pessoas']['login']."</span></br>
-				<span class='label'>e-Mail: ".$pessoa['Pessoas']['tipo_pessoa']."</span></br>
-				<span class='value'>Perfil: ".$pessoa['Pessoas']['tipo_acesso']."</span>
-			</div>
-		</div>";			
-		} 
+
+		if(count($allPessoas) >0){
+			foreach($allPessoas as $pessoa){
+				$conteudo .= "<div class='itm' id='".$pessoa['Pessoas']['id']."'>
+				<div class='itm_nome'><h3>".$pessoa['Pessoas']['nome']."</h3></div>
+				<div class='info'>
+					<span class='label'>Login: ".$pessoa['Pessoas']['login']."</span></br>
+					<span class='label'>e-Mail: ".$pessoa['Pessoas']['tipo_pessoa']."</span></br>
+					<span class='value'>Perfil: ".$pessoa['Pessoas']['tipo_acesso']."</span>
+				</div>
+			</div>";			
+			} 
+		}else{
+			$conteudo ="<div class='itm'>Nenhum registro correponde a esta busca.</div>";
+		}
 		return $conteudo;
 	}
-	
+	public function searchPessoaInicial(){
+		$this->autoRender = false;
+		$conditions = 'Pessoas.nome LIKE "'. $this->request->data['string'].'%"'; 
+		//$conditions .= ' OR Practitioner.surname LIKE "%'.$surname.'%"'; 		
+		
+		$allPessoas =  $this->Pessoas->find('all', array('conditions'=> $conditions ));
+		$conteudo = "";
+
+		if(count($allPessoas) >0){
+			foreach($allPessoas as $pessoa){
+				$conteudo .= "<div class='itm' id='".$pessoa['Pessoas']['id']."'>
+				<div class='itm_nome'><h3>".$pessoa['Pessoas']['nome']."</h3></div>
+				<div class='info'>
+					<span class='label'>Login: ".$pessoa['Pessoas']['login']."</span></br>
+					<span class='label'>e-Mail: ".$pessoa['Pessoas']['tipo_pessoa']."</span></br>
+					<span class='value'>Perfil: ".$pessoa['Pessoas']['tipo_acesso']."</span>
+				</div>
+			</div>";			
+			} 
+		}else{
+			$conteudo = "<div class='itm-NFound'>
+				<div class='itm_nome'><h3>Nenhum registro correponde a esta busca</h3></div>
+				
+			</div>";		
+		}
+		return $conteudo;
+	}
 	public function getCities(){
 		$this->autoRender = false;
 		$findCities = $this->Cidade->find('list', array(
