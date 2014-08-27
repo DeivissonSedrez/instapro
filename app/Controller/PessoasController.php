@@ -11,7 +11,8 @@ class  PessoasController extends AppController{
 		$allPessoas = $this->Pessoas->find('all', array('order' => array('Pessoas.nome ASC')));
 		$conteudo = "";
 		foreach($allPessoas as $pessoa){
-			$conteudo .= "<div class='itm' id='".$pessoa['Pessoas']['id']."'>
+			$link = Router::url("/pessoas/editar/".$pessoa['Pessoas']['id']);
+            $conteudo .= "<a href='{$link}'><div class='itm' id='".$pessoa['Pessoas']['id']."'>
 			<div class='itm_nome'><h3>".$pessoa['Pessoas']['nome']."</h3></div>
 			<div class='info'>
 				<span class='label'>Login: ".$pessoa['Pessoas']['login']."</span></br>
@@ -52,9 +53,14 @@ class  PessoasController extends AppController{
 	}
 
 	public function editar($id){
-		echo $this->Pessoas->find($id);
-		$this->set('pessoa', $this->Pessoas->find($id));	
-
+		$this->set('permissoes',$this->PessoaAcesso->find('list', array(
+        	'fields' => array('PessoaAcesso.id', 'PessoaAcesso.tipo')
+        ))); 
+		$this->set('paises',$this->Pais->find('list'));
+		$this->set('estados',$this->Estados->find('list', array(
+        	'fields' => array('Estados.id', 'Estados.nome')
+        ))); 
+		$this->set('pessoa', $this->Pessoas->findById($id));	
 	}
 
 	public function searchPessoa(){
@@ -67,7 +73,8 @@ class  PessoasController extends AppController{
 
 		if(count($allPessoas) >0){
 			foreach($allPessoas as $pessoa){
-				$conteudo .= "<div class='itm' id='".$pessoa['Pessoas']['id']."'>
+			$link = Router::url("/pessoas/editar/".$pessoa['Pessoas']['id']);
+            $conteudo .= "<a href='{$link}'><div class='itm' id='".$pessoa['Pessoas']['id']."'>
 				<div class='itm_nome'><h3>".$pessoa['Pessoas']['nome']."</h3></div>
 				<div class='info'>
 					<span class='label'>Login: ".$pessoa['Pessoas']['login']."</span></br>
@@ -91,7 +98,8 @@ class  PessoasController extends AppController{
 
 		if(count($allPessoas) >0){
 			foreach($allPessoas as $pessoa){
-				$conteudo .= "<div class='itm' id='".$pessoa['Pessoas']['id']."'>
+			$link = Router::url("/pessoas/editar/".$pessoa['Pessoas']['id']);
+            $conteudo .= "<a href='{$link}'><div class='itm' id='".$pessoa['Pessoas']['id']."'>
 				<div class='itm_nome'><h3>".$pessoa['Pessoas']['nome']."</h3></div>
 				<div class='info'>
 					<span class='label'>Login: ".$pessoa['Pessoas']['login']."</span></br>

@@ -122,19 +122,17 @@ $(document).ready(function(){
 				$("#wrapper-pessoas").html(response);		
 			});
 		}
-	});
+	});/*
 	$(".itm").on('click',function(){   		
 		var id = $(this).attr("id");
 		var base = $("#base").val();
-		$("#frame-big cards").html();/*
-		$( "#frame-big cards" ).load( "/instapro/pessoas/editar/"+id, function() {
-
-		});*/
-
-			$.post(base+"/pessoas/editar/"+id, function(response){
-				$("#frame-big cards").html(response);
-			});
+		$("#frame-big cards").html();
+		 $.get(base+"/pessoas/editar/"+id);
+    
+		$.post(base+"/pessoas/editar/"+id, function(response){
+			$("#frame-big cards").html(response);
+		});
 	
-	});
+	});*/
 	
 });
