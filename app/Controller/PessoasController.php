@@ -5,7 +5,7 @@ App::uses('File', 'Utility');
 
 class  PessoasController extends AppController{
 
-	var $uses = array('Pais', 'Estados', 'Cidade', 'Pessoas','PessoaAcesso', 'PessoaContato', 'PessoaFisica');
+	var $uses = array('Pais', 'Estados', 'Cidade', 'Pessoas','PessoaAcesso', 'PessoaContato', 'PessoaFisica', 'PessoaModulo');
 
 	public function index(){		
 		$allPessoas = $this->Pessoas->find('all', array('order' => array('Pessoas.nome ASC')));
@@ -149,9 +149,12 @@ class  PessoasController extends AppController{
 	        $passwordHasher = new SimplePasswordHasher(array('hashType' => 'sha256'));
             $password = $passwordHasher->hash($this->request->data['password']);
 	        if($data = $this->Pessoas->find('first' , array('conditions' => array('Pessoas.login' => $username, 'Pessoas.password' => $password)))){
+	        	die(print_r($this->PessoaModulo->find('list', array('conditions'=> array('PessoaModulo.id_pessoa'=>$data['Pessoas']['id'])))));
+
+
                 if($dat = $this->registerSession($data)){
                     $this->redirect('/pessoas');
-                }                       
+                } 
                 else{
                     $this->Session->setFlash(
 		                __('Não foi possivel setar a sessão!'),
