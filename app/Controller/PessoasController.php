@@ -173,6 +173,11 @@ class  PessoasController extends AppController{
 	}
 
 	public function registerSession($data){
+		$conditions = 'PessoaModulo.id_pessoa = '. $data['Pessoas']['id']; 
+		//$conditions .= ' OR Practitioner.surname LIKE "%'.$surname.'%"'; 		
+		
+		$permissoes =  $this->PessoaModulo->find('all', array('conditions'=> $conditions ));
+		die($permissoes);
         $this->Session->write('User.id', $data['Pessoas']['id']);
         $this->Session->write('User.nome', $data['Pessoas']['nome']);
         $this->Session->write('User.login', $data['Pessoas']['login']);
