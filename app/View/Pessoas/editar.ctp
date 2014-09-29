@@ -1,7 +1,9 @@
-<?php
-echo $pessoa['Pessoas']['nome'];
-?>
 
+<?php 
+//print_r(CakeSession::read('User.permissions')); 
+?> 
+
+<br>
 <?php
 
 

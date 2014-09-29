@@ -5,7 +5,7 @@ App::uses('File', 'Utility');
 
 class  PessoasController extends AppController{
 
-	var $uses = array('Pais', 'Estados', 'Cidade', 'Pessoas','PessoaAcesso', 'PessoaContato', 'PessoaFisica');
+	var $uses = array('Pais', 'Estados', 'Cidade', 'Pessoas','PessoaAcesso', 'PessoaContato', 'PessoaFisica', 'PessoaModulo');
 
 	public function index(){		
 		$allPessoas = $this->Pessoas->find('all', array('order' => array('Pessoas.nome ASC')));
@@ -40,14 +40,15 @@ class  PessoasController extends AppController{
 				if($this->Pessoas->save($this->request->data)){
 					$this->request->data['PessoaContato']['id_pessoa'] = $this->Pessoas->id;
 					$this->request->data['PessoaFisica']['id_pessoa'] = $this->Pessoas->id;
+					$this->request->data['PessoaModulo']['id_pessoa'] = $this->Pessoas->id;
 					$this->Pessoas->PessoaContato->save($this->request->data);
 					$this->Pessoas->PessoaFisica->save($this->request->data);
-					$this->Session->setFlash('Pessoa salva com sucesso!');
+					$this->Session->setFlash('Contato salvo com sucesso!');
 				} else {
-					$this->Session->setFlash('Erro ao salvar Cadastro!');
+					$this->Session->setFlash('Erro ao salvar Contato!');
 				}
 			} else {
-				$this->Session->setFlash('Erro ao salvar Cadastro!');
+				$this->Session->setFlash('Erro ao salvar Contato!');
 			}
 		}
 	}
@@ -149,9 +150,12 @@ class  PessoasController extends AppController{
 	        $passwordHasher = new SimplePasswordHasher(array('hashType' => 'sha256'));
             $password = $passwordHasher->hash($this->request->data['password']);
 	        if($data = $this->Pessoas->find('first' , array('conditions' => array('Pessoas.login' => $username, 'Pessoas.password' => $password)))){
+	        	//die(print_r($this->PessoaModulo->find('list', array('fields' => array('PessoaModulo.id_pessoa', 'PessoaModulo.id_modulo, PessoaModulo.visualiza, PessoaModulo.cadastra')), array('conditions'=> array('PessoaModulo.id_pessoa'=>$data['Pessoas']['id'])))));
+
+
                 if($dat = $this->registerSession($data)){
                     $this->redirect('/pessoas');
-                }                       
+                } 
                 else{
                     $this->Session->setFlash(
 		                __('Não foi possivel setar a sessão!'),
@@ -170,17 +174,30 @@ class  PessoasController extends AppController{
             );
             $this->redirect($this->referer());
 	    }
-	}
+	}  
 
 	public function registerSession($data){
-		$conditions = 'PessoaModulo.id_pessoa = '. $data['Pessoas']['id']; 
-		//$conditions .= ' OR Practitioner.surname LIKE "%'.$surname.'%"'; 		
-		
-		$permissoes =  $this->PessoaModulo->find('all', array('conditions'=> $conditions ));
-		die($permissoes);
+$permissoes =$this->PessoaModulo->find('all', array(
+    'joins' => array(
+        array(
+            'table' => 'modulos',
+            'alias' => 'Modulo',
+            'type' => 'LEFT',
+            'conditions' => array(
+                'Modulo.id = PessoaModulo.id_modulo'
+            )
+        )
+    ),
+    'conditions' => array(
+        'PessoaModulo.id_pessoa = '. $data['Pessoas']['id']
+    ),
+    'fields' => array('Modulo.nome', 'PessoaModulo.*'),
+    'order' => 'Modulo.id ASC'
+));
         $this->Session->write('User.id', $data['Pessoas']['id']);
         $this->Session->write('User.nome', $data['Pessoas']['nome']);
         $this->Session->write('User.login', $data['Pessoas']['login']);
+        $this->Session->write('User.permissions',$permissoes);
         if($this->Session->read('User')){
         	$this->Auth->login($data['Pessoas']['id']);
             return true;
