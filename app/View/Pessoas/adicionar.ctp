@@ -4,10 +4,10 @@
 //echo $this->Html->script(array('jquery.maskedinput.js'));
 echo $this->Html->script("scripts");
 echo $this->Html->script("avatar");
-$permite=CakeSession::read('User.permissions');
-		if(CakeSession::read('User.processos')==0)
-		    echo "<li class='last'><a href='/instapro/pessoas/adicionar'>Adicionar</a></li>";
-		?>
+//$permite=CakeSession::read('User.permissions');
+//		if(CakeSession::read('User.processos')==0)
+//		    echo "<li class='last'><a href='/instapro/pessoas/adicionar'>Adicionar</a></li>";
+//		
 ?>
 <div id="breadcrumbbox">
 	<ul class="breadcrumb">

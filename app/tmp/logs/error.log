@@ -642,3 +642,44 @@ Stack Trace:
 #3 C:\xampp\htdocs\instapro\lib\Cake\Core\App.php(902): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2014-09-29 23:20:33 Error: Fatal Error (4): syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ')' in [C:\xampp\htdocs\instapro\app\View\Pessoas\editar.ctp, line 42]
+2014-09-29 23:20:33 Error: [FatalErrorException] syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ')'
+Request URL: /instapro/pessoas/editar/1
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 42)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 42, Array)
+#2 C:\xampp\htdocs\instapro\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\xampp\htdocs...', 42, Array)
+#3 C:\xampp\htdocs\instapro\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-09-29 23:25:52 Error: Fatal Error (4): syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ')' in [C:\xampp\htdocs\instapro\app\View\Pessoas\editar.ctp, line 41]
+2014-09-29 23:25:52 Error: [FatalErrorException] syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ')'
+Request URL: /instapro/pessoas/editar/1
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 41)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 41, Array)
+#2 C:\xampp\htdocs\instapro\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\xampp\htdocs...', 41, Array)
+#3 C:\xampp\htdocs\instapro\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-09-29 23:28:26 Error: Fatal Error (4): syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ')' in [C:\xampp\htdocs\instapro\app\View\Pessoas\editar.ctp, line 35]
+2014-09-29 23:28:26 Error: [FatalErrorException] syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ')'
+Request URL: /instapro/pessoas/editar/1
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 35)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 35, Array)
+#2 C:\xampp\htdocs\instapro\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\xampp\htdocs...', 35, Array)
+#3 C:\xampp\htdocs\instapro\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-09-30 01:16:52 Error: [MissingActionException] Action ProcessosController::adicionar() could not be found.
+Exception Attributes: array (
+  'controller' => 'ProcessosController',
+  'action' => 'adicionar',
+)
+Request URL: /instapro/processos/adicionar
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(ProcessosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}

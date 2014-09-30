@@ -34,7 +34,7 @@ class  PessoasController extends AppController{
         ))); 
 		if($this->request->is('post')){
 			// temporario enquanto falta os fields no form
-			$this->request->data['Pessoas']['tipo_acesso'] = 1;
+			//$this->request->data['Pessoas']['tipo_acesso'] = 1;
 			// -------------------------------------------
 			if($this->Pessoas->PessoaContato->validates() && $this->Pessoas->PessoaFisica->validates()){
 				if($this->Pessoas->save($this->request->data)){
@@ -42,7 +42,8 @@ class  PessoasController extends AppController{
 					$this->request->data['PessoaFisica']['id_pessoa'] = $this->Pessoas->id;
 					$this->request->data['PessoaModulo']['id_pessoa'] = $this->Pessoas->id;
 					$this->Pessoas->PessoaContato->save($this->request->data);
-					$this->Pessoas->PessoaFisica->save($this->request->data);
+					$this->Pessoas->PessoaFisica->save($this->request->data);					
+					$this->Pessoas->PessoaModulo->save($this->request->data);
 					$this->Session->setFlash('Contato salvo com sucesso!');
 				} else {
 					$this->Session->setFlash('Erro ao salvar Contato!');
@@ -224,5 +225,29 @@ $permissoes =$this->PessoaModulo->find('all', array(
     		)
     	);
     }
+    public function atualizar(){		
+		
+		if($this->request->is('post')){
+			// temporario enquanto falta os fields no form
+			//$this->request->data['Pessoas']['tipo_acesso'] = 1;
+			// -------------------------------------------
+			if($this->Pessoas->PessoaContato->validates() && $this->Pessoas->PessoaFisica->validates()){
+				if($this->Pessoas->updateAll($this->request->data)){
+					$this->request->data['PessoaContato']['id_pessoa'] = $this->Pessoas->id;
+					$this->request->data['PessoaFisica']['id_pessoa'] = $this->Pessoas->id;
+					$this->request->data['PessoaModulo']['id_pessoa'] = $this->Pessoas->id;
+					$this->Pessoas->PessoaContato->updateAll($this->request->data);
+					$this->Pessoas->PessoaFisica->updateAll($this->request->data);					
+					$this->Pessoas->PessoaModulo->updateAll($this->request->data);
+					$this->Session->setFlash('Contato salvo com sucesso!');
+				} else {
+					$this->Session->setFlash('Erro ao salvar Contato!');
+				}
+			} else {
+				$this->Session->setFlash('Erro ao salvar Contato!');
+			}
+		}
+	}
+
 }
 ?>
