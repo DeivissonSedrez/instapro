@@ -25,23 +25,26 @@ echo $this->Html->script("avatar");
 	<h3>Dados de Login</h3>
 	<div class="hr"></div>
 	<?php 
-	echo $this->Form->create('Pessoas');
+	echo $this->Form->create('Pessoas', array('enctype' => 'multipart/form-data'));
 	?>
 	<TABLE>
 		<tr>
 			<td width="395" style="border-right:1px solid #ccc;">
 				<?php
-				echo $this->Form->input('tipo_acesso', array('label'=> array('text' => '<h4 style="display:inline">Tipo Usuário: </h4>', 'enctype' => 'multipart/form-data', 'value'=> 3, 'class'=>'labelform'), 'class'=>'dropdown small', 'type'=>'select', 'options' => $permissoes, 'css' => array('display'=>'inline'))); 
+				echo $this->Form->input('tipo_acesso', array('label'=> array('text' => '<h4 style="display:inline">Tipo Usuário: </h4>',  'value'=> 3, 'class'=>'labelform'), 'class'=>'dropdown small', 'type'=>'select', 'options' => $permissoes, 'css' => array('display'=>'inline'))); 
 				echo $this->Form->input('login', array('label'=> array('text' => '<h4 style="display:inline">Login: </h4>', 'class'=>'labelform'), 'class'=>'small',  'css' => array('display'=>'inline')));
 				echo $this->Form->input('password', array('label'=> array('text' => '<h4 style="display:inline">Senha: </h4>', 'class'=>'labelform'), 'class'=>'small', 'type'=>'password','css' => array('display'=>'inline')));
 				echo $this->Form->input('password2', array('label'=> array('text' => '<h4 style="display:inline">Confirme a senha: </h4>', 'class'=>'labelform'), 'class'=>'small','type'=>'password', 'css' => array('display'=>'inline')));
 				?>
 			</td>
 			<td style="padding: 0px 0px 0px 25px;"><?php
-				echo $this->Form->input('Vprocessos', array('label'=> array('text' => '<h4 style="display:inline">Visualiza Processos: </h4>', 'value'=> 1, 'class'=>'labelform'), 'class'=>'dropdown small', 'type'=>'select', 'options' => array('S' => 'Sim', 'N' => 'Não'), 'css' => array('display'=>'inline')));
-				echo $this->Form->input('Cprocessos', array('label'=> array('text' => '<h4 style="display:inline">Cadastra Processos: </h4>', 'value'=> 1, 'class'=>'labelform'), 'class'=>'dropdown small', 'type'=>'select', 'options' => array('S' => 'Sim', 'N' => 'Não'), 'css' => array('display'=>'inline')));
-				echo $this->Form->input('Vpessoas', array('label'=> array('text' => '<h4 style="display:inline">Visualiza Pessoas: </h4>', 'value'=> 2, 'class'=>'labelform'), 'class'=>'dropdown small', 'type'=>'select', 'options' => array('S' => 'Sim', 'N' => 'Não'), 'css' => array('display'=>'inline')));
-				echo $this->Form->input('Cpessoas', array('label'=> array('text' => '<h4 style="display:inline">Cadastra Pessoas: </h4>', 'value'=> 2, 'class'=>'labelform'), 'class'=>'dropdown small', 'type'=>'select', 'options' => array('S' => 'Sim', 'N' => 'Não'), 'css' => array('display'=>'inline')));
+				echo $this->Form->input('PessoaModulo.0.visualiza', array('label'=> array('text' => '<h4 style="display:inline">Visualiza Processos: </h4>',  'class'=>'labelform'), 'class'=>'dropdown small', 'type'=>'select', 'options' => array('1' => 'Sim', '0' => 'Não'), 'css' => array('display'=>'inline')));
+				
+				echo $this->Form->input('PessoaModulo.0.cadastra', array('label'=> array('text' => '<h4 style="display:inline">Cadastra Processos: </h4>',  'class'=>'labelform'), 'class'=>'dropdown small', 'type'=>'select', 'options' => array('1' => 'Sim', '0' => 'Não'), 'css' => array('display'=>'inline')));
+				echo "<input type='hidden' id='' value='2'  name='data[PessoaModulo][0][id_modulo]'";
+				echo $this->Form->input('PessoaModulo.1.visualiza', array('label'=> array('text' => '<h4 style="display:inline">Visualiza Pessoas: </h4>',  'class'=>'labelform'), 'class'=>'dropdown small', 'type'=>'select', 'options' => array('1' => 'Sim', '0' => 'Não'), 'css' => array('display'=>'inline')));
+				echo $this->Form->input('PessoaModulo.1.cadastra', array('label'=> array('text' => '<h4 style="display:inline">Cadastra Pessoas: </h4>',  'class'=>'labelform'), 'class'=>'dropdown small', 'type'=>'select', 'options' => array('1' => 'Sim', '0' => 'Não'), 'css' => array('display'=>'inline')));
+				echo "<input type='hidden' id='' value='1'  name='data[PessoaModulo][1][id_modulo]'";
 				?>
 			</td>
 		</tr>
