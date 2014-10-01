@@ -683,3 +683,361 @@ Stack Trace:
 #1 C:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(ProcessosController), Object(CakeRequest), Object(CakeResponse))
 #2 C:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
+2014-10-01 02:29:06 Error: [MissingControllerException] Controller class Favicon.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.pngController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/favicon.png
+Stack Trace:
+#0 D:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-01 02:29:06 Error: [MissingControllerException] Controller class Favicon.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.pngController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/favicon.png
+Stack Trace:
+#0 D:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-01 02:37:04 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`instapro`.`pessoas`, CONSTRAINT `FK_pessoas_tipo` FOREIGN KEY (`tipo_pessoa`) REFERENCES `pessoa_tipo` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+Request URL: /instapro/pessoas/adicionar
+Stack Trace:
+#0 D:\xampp\htdocs\instapro\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 D:\xampp\htdocs\instapro\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('INSERT INTO `in...', Array)
+#2 D:\xampp\htdocs\instapro\lib\Cake\Model\Datasource\DboSource.php(1004): DboSource->execute('INSERT INTO `in...')
+#3 D:\xampp\htdocs\instapro\lib\Cake\Model\Model.php(1832): DboSource->create(Object(Pessoas), Array, Array)
+#4 D:\xampp\htdocs\instapro\app\Controller\PessoasController.php(40): Model->save(Array)
+#5 [internal function]: PessoasController->adicionar()
+#6 D:\xampp\htdocs\instapro\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(PessoasController), Array)
+#7 D:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#8 D:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(PessoasController), Object(CakeRequest), Object(CakeResponse))
+#9 D:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-10-01 03:39:54 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`instapro`.`pessoas`, CONSTRAINT `FK_pessoas_tipo` FOREIGN KEY (`tipo_pessoa`) REFERENCES `pessoa_tipo` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+Request URL: /instapro/pessoas/adicionar
+Stack Trace:
+#0 D:\xampp\htdocs\instapro\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 D:\xampp\htdocs\instapro\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('INSERT INTO `in...', Array)
+#2 D:\xampp\htdocs\instapro\lib\Cake\Model\Datasource\DboSource.php(1004): DboSource->execute('INSERT INTO `in...')
+#3 D:\xampp\htdocs\instapro\lib\Cake\Model\Model.php(1832): DboSource->create(Object(Pessoas), Array, Array)
+#4 D:\xampp\htdocs\instapro\app\Controller\PessoasController.php(40): Model->save(Array)
+#5 [internal function]: PessoasController->adicionar()
+#6 D:\xampp\htdocs\instapro\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(PessoasController), Array)
+#7 D:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#8 D:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(PessoasController), Object(CakeRequest), Object(CakeResponse))
+#9 D:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-10-01 04:02:43 Error: [MissingControllerException] Controller class Favicon.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.pngController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/favicon.png
+Stack Trace:
+#0 D:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-01 04:02:43 Error: [MissingControllerException] Controller class Favicon.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.pngController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/favicon.png
+Stack Trace:
+#0 D:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-01 04:48:31 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`instapro`.`pessoas`, CONSTRAINT `FK_pessoas_tipo` FOREIGN KEY (`tipo_pessoa`) REFERENCES `pessoa_tipo` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+Request URL: /instapro/pessoas/adicionar
+Stack Trace:
+#0 D:\xampp\htdocs\instapro\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 D:\xampp\htdocs\instapro\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('INSERT INTO `in...', Array)
+#2 D:\xampp\htdocs\instapro\lib\Cake\Model\Datasource\DboSource.php(1004): DboSource->execute('INSERT INTO `in...')
+#3 D:\xampp\htdocs\instapro\lib\Cake\Model\Model.php(1832): DboSource->create(Object(Pessoas), Array, Array)
+#4 D:\xampp\htdocs\instapro\app\Controller\PessoasController.php(40): Model->save(Array)
+#5 [internal function]: PessoasController->adicionar()
+#6 D:\xampp\htdocs\instapro\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(PessoasController), Array)
+#7 D:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#8 D:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(PessoasController), Object(CakeRequest), Object(CakeResponse))
+#9 D:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-10-01 05:19:19 Error: Fatal Error (1): Call to a member function save() on a non-object in [D:\xampp\htdocs\instapro\app\Controller\PessoasController.php, line 46]
+2014-10-01 05:19:19 Error: [FatalErrorException] Call to a member function save() on a non-object
+Request URL: /instapro/pessoas/adicionar
+Stack Trace:
+#0 D:\xampp\htdocs\instapro\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'D:\xampp\htdocs...', 46)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'D:\xampp\htdocs...', 46, Array)
+#2 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'D:\xampp\htdocs...', 46, Array)
+#3 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-01 05:50:35 Error: Fatal Error (1): Call to a member function save() on a non-object in [D:\xampp\htdocs\instapro\app\Controller\PessoasController.php, line 46]
+2014-10-01 05:50:35 Error: [FatalErrorException] Call to a member function save() on a non-object
+Request URL: /instapro/pessoas/adicionar
+Stack Trace:
+#0 D:\xampp\htdocs\instapro\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'D:\xampp\htdocs...', 46)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'D:\xampp\htdocs...', 46, Array)
+#2 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'D:\xampp\htdocs...', 46, Array)
+#3 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-01 05:59:06 Error: Fatal Error (4): syntax error, unexpected 'public' (T_PUBLIC) in [D:\xampp\htdocs\instapro\app\Controller\PessoasController.php, line 75]
+2014-10-01 05:59:06 Error: [FatalErrorException] syntax error, unexpected 'public' (T_PUBLIC)
+Request URL: /instapro/pessoas/adicionar
+Stack Trace:
+#0 D:\xampp\htdocs\instapro\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'D:\xampp\htdocs...', 75)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'D:\xampp\htdocs...', 75, Array)
+#2 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'D:\xampp\htdocs...', 75, Array)
+#3 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-01 06:02:38 Error: Fatal Error (1): Call to a member function save() on a non-object in [D:\xampp\htdocs\instapro\app\Controller\PessoasController.php, line 56]
+2014-10-01 06:02:38 Error: [FatalErrorException] Call to a member function save() on a non-object
+Request URL: /instapro/pessoas/adicionar
+Stack Trace:
+#0 D:\xampp\htdocs\instapro\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'D:\xampp\htdocs...', 56)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'D:\xampp\htdocs...', 56, Array)
+#2 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'D:\xampp\htdocs...', 56, Array)
+#3 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-01 06:07:05 Error: Fatal Error (1): Call to a member function save() on a non-object in [D:\xampp\htdocs\instapro\app\Controller\PessoasController.php, line 57]
+2014-10-01 06:07:05 Error: [FatalErrorException] Call to a member function save() on a non-object
+Request URL: /instapro/pessoas/adicionar
+Stack Trace:
+#0 D:\xampp\htdocs\instapro\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'D:\xampp\htdocs...', 57)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'D:\xampp\htdocs...', 57, Array)
+#2 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'D:\xampp\htdocs...', 57, Array)
+#3 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-01 06:14:30 Error: Fatal Error (1): Call to a member function save() on a non-object in [D:\xampp\htdocs\instapro\app\Controller\PessoasController.php, line 57]
+2014-10-01 06:14:30 Error: [FatalErrorException] Call to a member function save() on a non-object
+Request URL: /instapro/pessoas/adicionar
+Stack Trace:
+#0 D:\xampp\htdocs\instapro\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'D:\xampp\htdocs...', 57)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'D:\xampp\htdocs...', 57, Array)
+#2 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'D:\xampp\htdocs...', 57, Array)
+#3 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-01 06:19:34 Error: Fatal Error (1): Call to a member function saveAll() on a non-object in [D:\xampp\htdocs\instapro\app\Controller\PessoasController.php, line 57]
+2014-10-01 06:19:34 Error: [FatalErrorException] Call to a member function saveAll() on a non-object
+Request URL: /instapro/pessoas/adicionar
+Stack Trace:
+#0 D:\xampp\htdocs\instapro\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'D:\xampp\htdocs...', 57)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'D:\xampp\htdocs...', 57, Array)
+#2 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'D:\xampp\htdocs...', 57, Array)
+#3 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-01 06:21:44 Error: Fatal Error (1): Call to a member function saveAll() on a non-object in [D:\xampp\htdocs\instapro\app\Controller\PessoasController.php, line 57]
+2014-10-01 06:21:44 Error: [FatalErrorException] Call to a member function saveAll() on a non-object
+Request URL: /instapro/pessoas/adicionar
+Stack Trace:
+#0 D:\xampp\htdocs\instapro\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'D:\xampp\htdocs...', 57)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'D:\xampp\htdocs...', 57, Array)
+#2 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'D:\xampp\htdocs...', 57, Array)
+#3 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-01 06:37:46 Error: Fatal Error (64): Cannot use try without catch or finally in [D:\xampp\htdocs\instapro\app\Controller\PessoasController.php, line 52]
+2014-10-01 06:37:46 Error: [FatalErrorException] Cannot use try without catch or finally
+Request URL: /instapro/pessoas/adicionar
+Stack Trace:
+#0 D:\xampp\htdocs\instapro\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(64, 'Cannot use try ...', 'D:\xampp\htdocs...', 52)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot use try ...', 'D:\xampp\htdocs...', 52, Array)
+#2 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 64, 'Cannot use try ...', 'D:\xampp\htdocs...', 52, Array)
+#3 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-01 06:50:36 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [D:\xampp\htdocs\instapro\app\Controller\PessoasController.php, line 51]
+2014-10-01 06:50:36 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /instapro/pessoas/adicionar
+Stack Trace:
+#0 D:\xampp\htdocs\instapro\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'D:\xampp\htdocs...', 51)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'D:\xampp\htdocs...', 51, Array)
+#2 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'D:\xampp\htdocs...', 51, Array)
+#3 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-01 06:50:39 Error: Fatal Error (1): Call to a member function saveAll() on a non-object in [D:\xampp\htdocs\instapro\app\Controller\PessoasController.php, line 66]
+2014-10-01 06:50:39 Error: [FatalErrorException] Call to a member function saveAll() on a non-object
+Request URL: /instapro/pessoas/adicionar
+Stack Trace:
+#0 D:\xampp\htdocs\instapro\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'D:\xampp\htdocs...', 66)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'D:\xampp\htdocs...', 66, Array)
+#2 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'D:\xampp\htdocs...', 66, Array)
+#3 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-01 21:00:02 Error: Fatal Error (1): Call to a member function saveAll() on a non-object in [D:\xampp\htdocs\instapro\app\Controller\PessoasController.php, line 64]
+2014-10-01 21:00:02 Error: [FatalErrorException] Call to a member function saveAll() on a non-object
+Request URL: /instapro/pessoas/adicionar
+Stack Trace:
+#0 D:\xampp\htdocs\instapro\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'D:\xampp\htdocs...', 64)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'D:\xampp\htdocs...', 64, Array)
+#2 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'D:\xampp\htdocs...', 64, Array)
+#3 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-01 21:02:38 Error: Fatal Error (1): Call to a member function saveAll() on a non-object in [D:\xampp\htdocs\instapro\app\Controller\PessoasController.php, line 64]
+2014-10-01 21:02:38 Error: [FatalErrorException] Call to a member function saveAll() on a non-object
+Request URL: /instapro/pessoas/adicionar
+Stack Trace:
+#0 D:\xampp\htdocs\instapro\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'D:\xampp\htdocs...', 64)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'D:\xampp\htdocs...', 64, Array)
+#2 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'D:\xampp\htdocs...', 64, Array)
+#3 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-01 21:03:58 Error: Fatal Error (1): Call to a member function saveAll() on a non-object in [D:\xampp\htdocs\instapro\app\Controller\PessoasController.php, line 64]
+2014-10-01 21:03:58 Error: [FatalErrorException] Call to a member function saveAll() on a non-object
+Request URL: /instapro/pessoas/adicionar
+Stack Trace:
+#0 D:\xampp\htdocs\instapro\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'D:\xampp\htdocs...', 64)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'D:\xampp\htdocs...', 64, Array)
+#2 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'D:\xampp\htdocs...', 64, Array)
+#3 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-01 21:08:56 Error: Fatal Error (1): Call to a member function saveAll() on a non-object in [D:\xampp\htdocs\instapro\app\Controller\PessoasController.php, line 64]
+2014-10-01 21:08:56 Error: [FatalErrorException] Call to a member function saveAll() on a non-object
+Request URL: /instapro/pessoas/adicionar
+Stack Trace:
+#0 D:\xampp\htdocs\instapro\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'D:\xampp\htdocs...', 64)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'D:\xampp\htdocs...', 64, Array)
+#2 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'D:\xampp\htdocs...', 64, Array)
+#3 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-01 21:16:33 Error: Fatal Error (1): Call to a member function save() on a non-object in [D:\xampp\htdocs\instapro\app\Controller\PessoasController.php, line 64]
+2014-10-01 21:16:33 Error: [FatalErrorException] Call to a member function save() on a non-object
+Request URL: /instapro/pessoas/adicionar
+Stack Trace:
+#0 D:\xampp\htdocs\instapro\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'D:\xampp\htdocs...', 64)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'D:\xampp\htdocs...', 64, Array)
+#2 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'D:\xampp\htdocs...', 64, Array)
+#3 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-01 21:20:13 Error: Fatal Error (1): Call to a member function saveAll() on a non-object in [D:\xampp\htdocs\instapro\app\Controller\PessoasController.php, line 64]
+2014-10-01 21:20:13 Error: [FatalErrorException] Call to a member function saveAll() on a non-object
+Request URL: /instapro/pessoas/adicionar
+Stack Trace:
+#0 D:\xampp\htdocs\instapro\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'D:\xampp\htdocs...', 64)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'D:\xampp\htdocs...', 64, Array)
+#2 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'D:\xampp\htdocs...', 64, Array)
+#3 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-01 21:21:05 Error: Fatal Error (1): Call to a member function saveAll() on a non-object in [D:\xampp\htdocs\instapro\app\Controller\PessoasController.php, line 64]
+2014-10-01 21:21:05 Error: [FatalErrorException] Call to a member function saveAll() on a non-object
+Request URL: /instapro/pessoas/adicionar
+Stack Trace:
+#0 D:\xampp\htdocs\instapro\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'D:\xampp\htdocs...', 64)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'D:\xampp\htdocs...', 64, Array)
+#2 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'D:\xampp\htdocs...', 64, Array)
+#3 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-01 21:23:38 Error: Fatal Error (1): Call to a member function saveAll() on a non-object in [D:\xampp\htdocs\instapro\app\Controller\PessoasController.php, line 64]
+2014-10-01 21:23:38 Error: [FatalErrorException] Call to a member function saveAll() on a non-object
+Request URL: /instapro/pessoas/adicionar
+Stack Trace:
+#0 D:\xampp\htdocs\instapro\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'D:\xampp\htdocs...', 64)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'D:\xampp\htdocs...', 64, Array)
+#2 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'D:\xampp\htdocs...', 64, Array)
+#3 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-01 21:24:09 Error: Fatal Error (1): Call to a member function save() on a non-object in [D:\xampp\htdocs\instapro\app\Controller\PessoasController.php, line 64]
+2014-10-01 21:24:09 Error: [FatalErrorException] Call to a member function save() on a non-object
+Request URL: /instapro/pessoas/adicionar
+Stack Trace:
+#0 D:\xampp\htdocs\instapro\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'D:\xampp\htdocs...', 64)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'D:\xampp\htdocs...', 64, Array)
+#2 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'D:\xampp\htdocs...', 64, Array)
+#3 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-01 21:27:53 Error: Fatal Error (4): syntax error, unexpected ',' in [D:\xampp\htdocs\instapro\app\Controller\PessoasController.php, line 64]
+2014-10-01 21:27:53 Error: [FatalErrorException] syntax error, unexpected ','
+Request URL: /instapro/pessoas/adicionar
+Stack Trace:
+#0 D:\xampp\htdocs\instapro\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'D:\xampp\htdocs...', 64)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'D:\xampp\htdocs...', 64, Array)
+#2 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'D:\xampp\htdocs...', 64, Array)
+#3 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-01 21:28:15 Error: Fatal Error (1): Call to a member function saveAll() on a non-object in [D:\xampp\htdocs\instapro\app\Controller\PessoasController.php, line 64]
+2014-10-01 21:28:15 Error: [FatalErrorException] Call to a member function saveAll() on a non-object
+Request URL: /instapro/pessoas/adicionar
+Stack Trace:
+#0 D:\xampp\htdocs\instapro\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'D:\xampp\htdocs...', 64)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'D:\xampp\htdocs...', 64, Array)
+#2 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'D:\xampp\htdocs...', 64, Array)
+#3 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-01 21:28:25 Error: Fatal Error (1): Call to a member function saveMany() on a non-object in [D:\xampp\htdocs\instapro\app\Controller\PessoasController.php, line 64]
+2014-10-01 21:28:25 Error: [FatalErrorException] Call to a member function saveMany() on a non-object
+Request URL: /instapro/pessoas/adicionar
+Stack Trace:
+#0 D:\xampp\htdocs\instapro\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'D:\xampp\htdocs...', 64)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'D:\xampp\htdocs...', 64, Array)
+#2 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'D:\xampp\htdocs...', 64, Array)
+#3 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-01 21:30:13 Error: Fatal Error (1): Call to a member function saveAssociated() on a non-object in [D:\xampp\htdocs\instapro\app\Controller\PessoasController.php, line 64]
+2014-10-01 21:30:13 Error: [FatalErrorException] Call to a member function saveAssociated() on a non-object
+Request URL: /instapro/pessoas/adicionar
+Stack Trace:
+#0 D:\xampp\htdocs\instapro\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'D:\xampp\htdocs...', 64)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'D:\xampp\htdocs...', 64, Array)
+#2 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'D:\xampp\htdocs...', 64, Array)
+#3 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-01 21:32:02 Error: Fatal Error (1): Call to a member function saveAssociated() on a non-object in [D:\xampp\htdocs\instapro\app\Controller\PessoasController.php, line 64]
+2014-10-01 21:32:02 Error: [FatalErrorException] Call to a member function saveAssociated() on a non-object
+Request URL: /instapro/pessoas/adicionar
+Stack Trace:
+#0 D:\xampp\htdocs\instapro\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'D:\xampp\htdocs...', 64)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'D:\xampp\htdocs...', 64, Array)
+#2 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'D:\xampp\htdocs...', 64, Array)
+#3 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-01 21:33:32 Error: Fatal Error (1): Call to a member function validates() on a non-object in [D:\xampp\htdocs\instapro\app\Controller\PessoasController.php, line 39]
+2014-10-01 21:33:32 Error: [FatalErrorException] Call to a member function validates() on a non-object
+Request URL: /instapro/pessoas/adicionar
+Stack Trace:
+#0 D:\xampp\htdocs\instapro\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'D:\xampp\htdocs...', 39)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'D:\xampp\htdocs...', 39, Array)
+#2 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'D:\xampp\htdocs...', 39, Array)
+#3 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-01 21:48:08 Error: Fatal Error (1): Call to a member function validates() on a non-object in [D:\xampp\htdocs\instapro\app\Controller\PessoasController.php, line 39]
+2014-10-01 21:48:08 Error: [FatalErrorException] Call to a member function validates() on a non-object
+Request URL: /instapro/pessoas/adicionar
+Stack Trace:
+#0 D:\xampp\htdocs\instapro\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'D:\xampp\htdocs...', 39)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'D:\xampp\htdocs...', 39, Array)
+#2 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'D:\xampp\htdocs...', 39, Array)
+#3 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-01 22:10:18 Error: Fatal Error (1): Call to a member function validates() on a non-object in [D:\xampp\htdocs\instapro\app\Controller\PessoasController.php, line 39]
+2014-10-01 22:10:18 Error: [FatalErrorException] Call to a member function validates() on a non-object
+Request URL: /instapro/pessoas/adicionar
+Stack Trace:
+#0 D:\xampp\htdocs\instapro\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'D:\xampp\htdocs...', 39)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'D:\xampp\htdocs...', 39, Array)
+#2 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'D:\xampp\htdocs...', 39, Array)
+#3 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

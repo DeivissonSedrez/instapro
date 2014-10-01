@@ -22,7 +22,6 @@ echo $this->Html->script("scripts");
 	<?php $sizes = array('s' => 'Small', 'm' => 'Medium', 'l' => 'Large'); ?>
 	<?php echo $this->Form->create('busca')?>
 	<?php 
-	
 		if(CakeSession::read('User.processos'))
 		    echo $this->Html->link('Novo Usuário', array('controller'=> 'pessoas', 'action' => 'adicionar'), array('class' => 'button-blue'));
 		?>
