@@ -1041,3 +1041,509 @@ Stack Trace:
 #3 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(902): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2014-10-02 00:20:46 Error: [MissingControllerException] Controller class Favicon.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.pngController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/favicon.png
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-02 00:23:35 Error: Fatal Error (1): Call to a member function validates() on a non-object in [C:\xampp\htdocs\instapro\app\Controller\PessoasController.php, line 39]
+2014-10-02 00:23:35 Error: [FatalErrorException] Call to a member function validates() on a non-object
+Request URL: /instapro/pessoas/adicionar
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 39)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 39, Array)
+#2 C:\xampp\htdocs\instapro\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\xampp\htdocs...', 39, Array)
+#3 C:\xampp\htdocs\instapro\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-03 00:31:53 Error: Fatal Error (1): Call to a member function saveAll() on a non-object in [C:\xampp\htdocs\instapro\app\Controller\PessoasController.php, line 64]
+2014-10-03 00:31:53 Error: [FatalErrorException] Call to a member function saveAll() on a non-object
+Request URL: /instapro/pessoas/adicionar
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 64)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 64, Array)
+#2 C:\xampp\htdocs\instapro\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\xampp\htdocs...', 64, Array)
+#3 C:\xampp\htdocs\instapro\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-03 00:45:00 Error: [MissingControllerException] Controller class Favicon.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.pngController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/favicon.png
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-03 00:57:23 Error: Fatal Error (4): syntax error, unexpected $end in [C:\xampp\htdocs\instapro\app\View\Processos\index.ctp, line 137]
+2014-10-03 00:57:23 Error: [FatalErrorException] syntax error, unexpected $end
+Request URL: /instapro/processos
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 137)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 137, Array)
+#2 C:\xampp\htdocs\instapro\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\xampp\htdocs...', 137, Array)
+#3 C:\xampp\htdocs\instapro\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-03 01:42:05 Error: Fatal Error (4): syntax error, unexpected T_DOUBLE_ARROW, expecting ',' or ';' in [C:\xampp\htdocs\instapro\app\View\Pessoas\editar.ctp, line 35]
+2014-10-03 01:42:05 Error: [FatalErrorException] syntax error, unexpected T_DOUBLE_ARROW, expecting ',' or ';'
+Request URL: /instapro/pessoas/editar/11
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 35)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 35, Array)
+#2 C:\xampp\htdocs\instapro\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\xampp\htdocs...', 35, Array)
+#3 C:\xampp\htdocs\instapro\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-03 02:33:44 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery.nanoscroller.min.map
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-03 02:37:01 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery.nanoscroller.min.map
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-03 17:48:16 Error: [MissingControllerException] Controller class Favicon.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.pngController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/favicon.png
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-03 23:41:13 Error: [MissingControllerException] Controller class Favicon.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.pngController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/favicon.png
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-07 02:51:11 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery.nanoscroller.min.map
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-07 03:40:14 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery.nanoscroller.min.map
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-07 03:40:14 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery.qtip.min.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-07 03:44:47 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery.nanoscroller.min.map
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-07 03:44:47 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery.qtip.min.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-07 03:48:28 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery.nanoscroller.min.map
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-07 03:48:28 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery.qtip.min.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-07 03:49:22 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery.qtip.min.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-07 03:49:22 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery.nanoscroller.min.map
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-07 03:51:34 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery.nanoscroller.min.map
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-07 03:51:34 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery.qtip.min.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-07 03:57:59 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\xampp\htdocs\instapro\app\Controller\PessoasController.php, line 14]
+2014-10-07 03:57:59 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /instapro/pessoas
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 14)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 14, Array)
+#2 C:\xampp\htdocs\instapro\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\xampp\htdocs...', 14, Array)
+#3 C:\xampp\htdocs\instapro\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-07 03:58:19 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery.nanoscroller.min.map
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-07 03:58:19 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery.qtip.min.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-07 03:58:35 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery.nanoscroller.min.map
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-07 03:58:35 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery.qtip.min.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-07 03:59:01 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery.nanoscroller.min.map
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-07 03:59:01 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/js/jquery.qtip.min.js.map
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-07 04:21:31 Error: [MissingControllerException] Controller class Favicon.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.pngController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/favicon.png
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-07 04:21:31 Error: [MissingControllerException] Controller class Favicon.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.pngController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/favicon.png
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-08 03:49:49 Error: [MissingControllerException] Controller class Favicon.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.pngController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/favicon.png
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-08 04:06:59 Error: Fatal Error (1): Call to undefined function prinr_r() in [C:\xampp\htdocs\instapro\app\Controller\PessoasController.php, line 12]
+2014-10-08 04:06:59 Error: [FatalErrorException] Call to undefined function prinr_r()
+Request URL: /instapro/pessoas
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\xampp\htdocs...', 12)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\xampp\htdocs...', 12, Array)
+#2 C:\xampp\htdocs\instapro\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\xampp\htdocs...', 12, Array)
+#3 C:\xampp\htdocs\instapro\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-08 04:10:05 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'PessoaAcesso.id_tipo_acesso' in 'on clause'
+Request URL: /instapro/pessoas
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\instapro\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT `Pessoas...', Array)
+#2 C:\xampp\htdocs\instapro\lib\Cake\Model\Datasource\DboSource.php(665): DboSource->execute('SELECT `Pessoas...', Array, Array)
+#3 C:\xampp\htdocs\instapro\lib\Cake\Model\Datasource\DboSource.php(1077): DboSource->fetchAll('SELECT `Pessoas...', false)
+#4 C:\xampp\htdocs\instapro\lib\Cake\Model\Model.php(2903): DboSource->read(Object(Pessoas), Array)
+#5 C:\xampp\htdocs\instapro\lib\Cake\Model\Model.php(2875): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\instapro\app\Controller\PessoasController.php(11): Model->find('all', Array)
+#7 [internal function]: PessoasController->index()
+#8 C:\xampp\htdocs\instapro\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(PessoasController), Array)
+#9 C:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(PessoasController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-10-08 04:15:36 Error: Fatal Error (1): Call to undefined function prinr_r() in [C:\xampp\htdocs\instapro\app\Controller\PessoasController.php, line 12]
+2014-10-08 04:15:36 Error: [FatalErrorException] Call to undefined function prinr_r()
+Request URL: /instapro/pessoas
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\xampp\htdocs...', 12)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\xampp\htdocs...', 12, Array)
+#2 C:\xampp\htdocs\instapro\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\xampp\htdocs...', 12, Array)
+#3 C:\xampp\htdocs\instapro\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-08 04:17:56 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Pessoas.pessoa_acesso_id' in 'on clause'
+Request URL: /instapro/pessoas
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\instapro\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT `Pessoas...', Array)
+#2 C:\xampp\htdocs\instapro\lib\Cake\Model\Datasource\DboSource.php(665): DboSource->execute('SELECT `Pessoas...', Array, Array)
+#3 C:\xampp\htdocs\instapro\lib\Cake\Model\Datasource\DboSource.php(1077): DboSource->fetchAll('SELECT `Pessoas...', false)
+#4 C:\xampp\htdocs\instapro\lib\Cake\Model\Model.php(2903): DboSource->read(Object(Pessoas), Array)
+#5 C:\xampp\htdocs\instapro\lib\Cake\Model\Model.php(2875): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\instapro\app\Controller\PessoasController.php(11): Model->find('all', Array)
+#7 [internal function]: PessoasController->index()
+#8 C:\xampp\htdocs\instapro\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(PessoasController), Array)
+#9 C:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(PessoasController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-10-08 04:48:27 Error: Fatal Error (1): Call to undefined function prinr_r() in [C:\xampp\htdocs\instapro\app\Controller\PessoasController.php, line 12]
+2014-10-08 04:48:27 Error: [FatalErrorException] Call to undefined function prinr_r()
+Request URL: /instapro/pessoas
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\xampp\htdocs...', 12)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\xampp\htdocs...', 12, Array)
+#2 C:\xampp\htdocs\instapro\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\xampp\htdocs...', 12, Array)
+#3 C:\xampp\htdocs\instapro\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-08 05:18:39 Error: Fatal Error (4): syntax error, unexpected ')' in [C:\xampp\htdocs\instapro\app\Model\PessoaContato.php, line 36]
+2014-10-08 05:18:39 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /instapro/pessoas/adicionar
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 36)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 36, Array)
+#2 C:\xampp\htdocs\instapro\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\xampp\htdocs...', 36, Array)
+#3 C:\xampp\htdocs\instapro\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-12 19:46:20 Error: Fatal Error (4): syntax error, unexpected '<' in [C:\xampp\htdocs\instapro\app\View\Pessoas\editar.ctp, line 41]
+2014-10-12 19:46:20 Error: [FatalErrorException] syntax error, unexpected '<'
+Request URL: /instapro/pessoas/editar/5
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 41)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 41, Array)
+#2 C:\xampp\htdocs\instapro\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\xampp\htdocs...', 41, Array)
+#3 C:\xampp\htdocs\instapro\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-12 21:27:13 Error: Fatal Error (4): syntax error, unexpected T_PUBLIC in [C:\xampp\htdocs\instapro\app\Controller\PessoasController.php, line 145]
+2014-10-12 21:27:13 Error: [FatalErrorException] syntax error, unexpected T_PUBLIC
+Request URL: /instapro/pessoas/editar/4
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 145)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 145, Array)
+#2 C:\xampp\htdocs\instapro\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\xampp\htdocs...', 145, Array)
+#3 C:\xampp\htdocs\instapro\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-12 21:51:08 Error: Fatal Error (4): syntax error, unexpected T_DOUBLE_ARROW in [C:\xampp\htdocs\instapro\app\View\Pessoas\editar.ctp, line 43]
+2014-10-12 21:51:08 Error: [FatalErrorException] syntax error, unexpected T_DOUBLE_ARROW
+Request URL: /instapro/pessoas/editar/4
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 43)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 43, Array)
+#2 C:\xampp\htdocs\instapro\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\xampp\htdocs...', 43, Array)
+#3 C:\xampp\htdocs\instapro\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-12 21:51:53 Error: Fatal Error (4): syntax error, unexpected T_DOUBLE_ARROW in [C:\xampp\htdocs\instapro\app\View\Pessoas\editar.ctp, line 43]
+2014-10-12 21:51:53 Error: [FatalErrorException] syntax error, unexpected T_DOUBLE_ARROW
+Request URL: /instapro/pessoas/editar/4
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 43)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 43, Array)
+#2 C:\xampp\htdocs\instapro\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\xampp\htdocs...', 43, Array)
+#3 C:\xampp\htdocs\instapro\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-12 21:51:59 Error: Fatal Error (4): syntax error, unexpected T_DOUBLE_ARROW in [C:\xampp\htdocs\instapro\app\View\Pessoas\editar.ctp, line 43]
+2014-10-12 21:51:59 Error: [FatalErrorException] syntax error, unexpected T_DOUBLE_ARROW
+Request URL: /instapro/pessoas/editar/4
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 43)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 43, Array)
+#2 C:\xampp\htdocs\instapro\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\xampp\htdocs...', 43, Array)
+#3 C:\xampp\htdocs\instapro\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-15 17:47:26 Error: Fatal Error (4): syntax error, unexpected '[', expecting ')' in [C:\xampp\htdocs\instapro\app\Controller\PessoasController.php, line 97]
+2014-10-15 17:47:26 Error: [FatalErrorException] syntax error, unexpected '[', expecting ')'
+Request URL: /instapro/pessoas/editar/19
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 97)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 97, Array)
+#2 C:\xampp\htdocs\instapro\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\xampp\htdocs...', 97, Array)
+#3 C:\xampp\htdocs\instapro\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-15 17:51:52 Error: [MissingViewException] View file "C:\xampp\htdocs\instapro\app\View\Pessoas\visualizar.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\xampp\\htdocs\\instapro\\app\\View\\Pessoas\\visualizar.ctp',
+)
+Request URL: /instapro/pessoas/visualizar/4
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\lib\Cake\View\View.php(463): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\instapro\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(192): Controller->render()
+#3 C:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(PessoasController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-10-16 00:18:32 Error: Fatal Error (4): syntax error, unexpected '}', expecting ')' in [C:\xampp\htdocs\instapro\app\Controller\PessoasController.php, line 100]
+2014-10-16 00:18:32 Error: [FatalErrorException] syntax error, unexpected '}', expecting ')'
+Request URL: /instapro/pessoas/visualizar/5
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 100)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 100, Array)
+#2 C:\xampp\htdocs\instapro\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\xampp\htdocs...', 100, Array)
+#3 C:\xampp\htdocs\instapro\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-16 00:18:47 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\xampp\htdocs\instapro\app\Controller\PessoasController.php, line 98]
+2014-10-16 00:18:47 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /instapro/pessoas/visualizar/5
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 98)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 98, Array)
+#2 C:\xampp\htdocs\instapro\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\xampp\htdocs...', 98, Array)
+#3 C:\xampp\htdocs\instapro\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-16 00:19:22 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Pessoas.' in 'field list'
+Request URL: /instapro/pessoas/visualizar/5
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\instapro\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT DISTINCT...', Array)
+#2 C:\xampp\htdocs\instapro\lib\Cake\Model\Datasource\DboSource.php(665): DboSource->execute('SELECT DISTINCT...', Array, Array)
+#3 C:\xampp\htdocs\instapro\lib\Cake\Model\Datasource\DboSource.php(1077): DboSource->fetchAll('SELECT DISTINCT...', false)
+#4 C:\xampp\htdocs\instapro\lib\Cake\Model\Model.php(2903): DboSource->read(Object(Pessoas), Array)
+#5 C:\xampp\htdocs\instapro\lib\Cake\Model\Model.php(2875): Model->_readDataSource('first', Array)
+#6 C:\xampp\htdocs\instapro\lib\Cake\Model\Datasource\DboSource.php(597): Model->find('first', Array)
+#7 C:\xampp\htdocs\instapro\lib\Cake\Model\Model.php(800): DboSource->query('findById', Array, Object(Pessoas))
+#8 C:\xampp\htdocs\instapro\app\Controller\PessoasController.php(97): Model->__call('findById', Array)
+#9 C:\xampp\htdocs\instapro\app\Controller\PessoasController.php(97): Pessoas->findById('all', Array)
+#10 [internal function]: PessoasController->visualizar('5')
+#11 C:\xampp\htdocs\instapro\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(PessoasController), Array)
+#12 C:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#13 C:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(PessoasController), Object(CakeRequest), Object(CakeResponse))
+#14 C:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2014-10-16 00:19:24 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Pessoas.' in 'field list'
+Request URL: /instapro/pessoas/visualizar/5
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\instapro\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT DISTINCT...', Array)
+#2 C:\xampp\htdocs\instapro\lib\Cake\Model\Datasource\DboSource.php(665): DboSource->execute('SELECT DISTINCT...', Array, Array)
+#3 C:\xampp\htdocs\instapro\lib\Cake\Model\Datasource\DboSource.php(1077): DboSource->fetchAll('SELECT DISTINCT...', false)
+#4 C:\xampp\htdocs\instapro\lib\Cake\Model\Model.php(2903): DboSource->read(Object(Pessoas), Array)
+#5 C:\xampp\htdocs\instapro\lib\Cake\Model\Model.php(2875): Model->_readDataSource('first', Array)
+#6 C:\xampp\htdocs\instapro\lib\Cake\Model\Datasource\DboSource.php(597): Model->find('first', Array)
+#7 C:\xampp\htdocs\instapro\lib\Cake\Model\Model.php(800): DboSource->query('findById', Array, Object(Pessoas))
+#8 C:\xampp\htdocs\instapro\app\Controller\PessoasController.php(97): Model->__call('findById', Array)
+#9 C:\xampp\htdocs\instapro\app\Controller\PessoasController.php(97): Pessoas->findById('all', Array)
+#10 [internal function]: PessoasController->visualizar('5')
+#11 C:\xampp\htdocs\instapro\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(PessoasController), Array)
+#12 C:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#13 C:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(PessoasController), Object(CakeRequest), Object(CakeResponse))
+#14 C:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2014-10-16 00:22:45 Error: Fatal Error (4): syntax error, unexpected '}' in [C:\xampp\htdocs\instapro\app\Controller\PessoasController.php, line 100]
+2014-10-16 00:22:45 Error: [FatalErrorException] syntax error, unexpected '}'
+Request URL: /instapro/pessoas/visualizar/3
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 100)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 100, Array)
+#2 C:\xampp\htdocs\instapro\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\xampp\htdocs...', 100, Array)
+#3 C:\xampp\htdocs\instapro\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-16 00:25:36 Error: Fatal Error (1): Cannot use object of type Pessoas as array in [C:\xampp\htdocs\instapro\app\Controller\PessoasController.php, line 98]
+2014-10-16 00:25:36 Error: [FatalErrorException] Cannot use object of type Pessoas as array
+Request URL: /instapro/pessoas/visualizar/3
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Cannot use obje...', 'C:\xampp\htdocs...', 98)
+#1 [internal function]: ErrorHandler::handleError(1, 'Cannot use obje...', 'C:\xampp\htdocs...', 98, Array)
+#2 C:\xampp\htdocs\instapro\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Cannot use obje...', 'C:\xampp\htdocs...', 98, Array)
+#3 C:\xampp\htdocs\instapro\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

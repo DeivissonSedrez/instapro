@@ -1,5 +1,5 @@
 <?php
-echo $this->Html->script("scripts");
+echo $this->Html->script("scripts.js");
 ?>
 <script>
 	$(function() {
@@ -9,6 +9,22 @@ echo $this->Html->script("scripts");
 		    // on mouseout, reset the background colour
 		    $('.frame-big cards').css('overflow', 'hidden');
 		});
+
+		$('.itm[title]').qtip({
+            position: {
+                 my: 'center left',  // Position my top left...
+                 at: 'center right', // at the bottom right of...
+                 //target: $(this).// my target
+            },
+            show: {
+                effect: function(offset) {
+                    $(this).slideDown(100); // "this" refers to the tooltip7
+                }
+            },
+            style: {
+                classes: 'qtip-blue qtip-shadow qtip-rounded'
+            }        
+        });
 	});
 </script>
 <div id="breadcrumbbox">
@@ -28,11 +44,11 @@ echo $this->Html->script("scripts");
  
 	<div style="position:relative; float:right;">
 
-	<a href="#" class='button-grey'>9 por página<span></span></a>
+	<!--a href="#" class='button-grey'>9 por página<span></span></a>
 
 	<a href="#" class='button-grey'>16 por página<span></span></a>
 
-	<a href="#" class='button-grey'>20 por Página<span></span></a>&nbsp;
+	<a href="#" class='button-grey'>20 por Página<span></span--></a>&nbsp;
 		<?php echo $this->Form->input('valor', array('label'=>false, 'type' => 'text', 'class'=>'small',              'maxlength'=>100, 'div'=>false));?>
 		<a href="#" class='button-grey arrow'>Buscar<span></span></a>
 	</div>

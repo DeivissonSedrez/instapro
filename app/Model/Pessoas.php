@@ -3,6 +3,12 @@ App::uses('SimplePasswordHasher', 'Controller/Component/Auth');
 class Pessoas extends AppModel{
 	var $name = 'Pessoas';
 	public $useTable = 'pessoas'; 	
+	public $belongsTo = array(
+		'PessoaAcesso' => array(
+	        'className' => 'PessoaAcesso',
+	        'foreignKey'=> 'tipo_acesso'
+	    )
+    );
 	public $hasOne = array(
 		'PessoaContato' => array(
 			'className' => 'PessoaContato',
@@ -41,6 +47,7 @@ class Pessoas extends AppModel{
                 $this->data['Pessoas']['password']
             );
         }
+       
         return true;
 	}
 

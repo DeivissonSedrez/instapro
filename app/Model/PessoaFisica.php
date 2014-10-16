@@ -25,6 +25,12 @@ class PessoaFisica extends AppModel{
 
     public function beforeSave($options = array()){
     	$this->data['PessoaFisica']['data_nascimento'] = implode("-",array_reverse(explode("/", $this->data['PessoaFisica']['data_nascimento'])));
+    	
+        if(!empty($this->data['PessoaFisica']['cpf'])){
+            $cpf=str_replace("-", "", $this->data['PessoaFisica']['cpf']);
+            $cpf=str_replace(".", "", $cpf);
+            $this->data['PessoaFisica']['cpf']=$cpf;
+        }
     	return true;
     }
 }

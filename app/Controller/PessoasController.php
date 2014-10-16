@@ -11,65 +11,65 @@ class  PessoasController extends AppController{
 		$allPessoas = $this->Pessoas->find('all', array('order' => array('Pessoas.nome ASC')));
 		$conteudo = "";
 		foreach($allPessoas as $pessoa){
-			$link = Router::url("/pessoas/editar/".$pessoa['Pessoas']['id']);
-            $conteudo .= "<a href='{$link}'><div class='itm' id='".$pessoa['Pessoas']['id']."'>
+			$tooltip = "<table><tr><td>Perfil:".$pessoa['PessoaAcesso']['tipo']."</td></tr><tr><td>e-Mail:".$pessoa['PessoaContato']['email']."</td></tr><tr><td> Telefone :".$pessoa['PessoaContato']['telefone_1']."</td></tr></table>";
+			$link = Router::url("/pessoas/visualizar/".$pessoa['Pessoas']['id']);
+			$conteudo .= "<a href='{$link}'><div class='itm' id='".$pessoa['Pessoas']['id']."' title='".$tooltip."' >
 			<div class='itm_nome'><h3>".$pessoa['Pessoas']['nome']."</h3></div>
 			<div class='info'>
 				<span class='label'>Login: ".$pessoa['Pessoas']['login']."</span></br>
-				<span class='label'>e-Mail: ".$pessoa['Pessoas']['tipo_pessoa']."</span></br>
-				<span class='value'>Perfil: ".$pessoa['Pessoas']['tipo_acesso']."</span>
+				<span class='label'>e-Mail: ".$pessoa['PessoaContato']['email']."</span></br>
 			</div>
 		</div>";			
-		} 
-		$this->set('pessoas', $conteudo);
-	}
-	
-	public function adicionar(){		
-		$this->set('permissoes',$this->PessoaAcesso->find('list', array(
-        	'fields' => array('PessoaAcesso.id', 'PessoaAcesso.tipo')
-        ))); 
-		$this->set('paises',$this->Pais->find('list'));
-		$this->set('estados',$this->Estados->find('list', array(
-        	'fields' => array('Estados.id', 'Estados.nome')
-        ))); 
-		if($this->request->is('post')){
+	} 
+	$this->set('pessoas', $conteudo);
+}
+
+public function adicionar(){		
+	$this->set('permissoes',$this->PessoaAcesso->find('list', array(
+		'fields' => array('PessoaAcesso.id', 'PessoaAcesso.tipo')
+		))); 
+	$this->set('paises',$this->Pais->find('list'));
+	$this->set('estados',$this->Estados->find('list', array(
+		'fields' => array('Estados.id', 'Estados.nome')
+		))); 
+	if($this->request->is('post')){
 			// temporario enquanto falta os fields no form
-			$this->request->data['Pessoas']['tipo_pessoa'] = 1;
+		$this->request->data['Pessoas']['tipo_pessoa'] = 1;
 			// -------------------------------------------
-			if($this->Pessoas->PessoaContato->validates() && $this->Pessoas->PessoaFisica->validates()  && $this->Pessoas->PessoaModulo->validates()){
-				ini_set('memory_limit', '-1');
-				$datasource = $this->Pessoas->getDataSource();
-				try{
-					$datasource->begin();
+		if($this->Pessoas->PessoaContato->validates() && $this->Pessoas->PessoaFisica->validates()  && $this->PessoaModulo->validates()){
+			ini_set('memory_limit', '-1');
+			$datasource = $this->Pessoas->getDataSource();
+			try{
+				$datasource->begin();
 
-					if($this->Pessoas->save($this->request->data)){
-						$this->request->data['PessoaContato']['id_pessoa'] = $this->Pessoas->id;
-						$this->request->data['PessoaFisica']['id_pessoa'] = $this->Pessoas->id;
+				if($this->Pessoas->save($this->request->data)){
+					$this->request->data['PessoaContato']['id_pessoa'] = $this->Pessoas->id;
+					$this->request->data['PessoaFisica']['id_pessoa'] = $this->Pessoas->id;
 
-						for($x=0; $x<count($this->request->data['PessoaModulo']);$x++){
-							$this->request->data['PessoaModulo'][$x]['id_pessoa'] = $this->Pessoas->id;		
-							
-						}
+					for($x=0; $x<count($this->request->data['PessoaModulo']);$x++){
+						$this->request->data['PessoaModulo'][$x]['id_pessoa'] = $this->Pessoas->id;		
+
+					}
 						//die(print_r($this->request->data['PessoaModulo']));
-					}else{
-						 throw new Exception();
-					}
+				}else{
+					throw new Exception();
+				}
 
-					    if(!$this->Pessoas->PessoaContato->save($this->request->data))
-					        throw new Exception();
+				if(!$this->Pessoas->PessoaContato->save($this->request->data))
+					throw new Exception();
 
-					    if(!$this->Pessoas->PessoaFisica->save($this->request->data))
-					        throw new Exception();
+				if(!$this->Pessoas->PessoaFisica->save($this->request->data))
+					throw new Exception();
 
-					    if(!$this->Pessoas->PessoaModulo->saveAll($this->request->data))
-					        throw new Exception();
+				if(!$this->PessoaModulo->saveAll($this->request->data['PessoaModulo']))
+					throw new Exception();
 
-					    $datasource->commit();
-					    $this->Session->setFlash('Contato salvo com sucesso!');
-					} catch(Exception $e) {
-					    $datasource->rollback();
-					    $this->Session->setFlash('Erro ao salvar Contato!');
-					}
+				$datasource->commit();
+				$this->Session->setFlash('Contato salvo com sucesso!');
+			} catch(Exception $e) {
+				$datasource->rollback();
+				$this->Session->setFlash('Erro ao salvar Contato!');
+			}
 
 				// 	$this->Pessoas->PessoaContato->save($this->request->data);
 				// 	$this->Pessoas->PessoaFisica->save($this->request->data);					
@@ -78,184 +78,224 @@ class  PessoasController extends AppController{
 				// } else {
 				// 	$this->Session->setFlash('Erro ao salvar Contato!');
 				// }
-			} else {
-				$this->Session->setFlash('Erro ao salvar Contato!');
+		} else {
+			$this->Session->setFlash('Erro ao salvar Contato!');
+		}
+	}
+}
+
+public function visualizar($id){
+	$this->set('permissoes',$this->PessoaAcesso->find('list', array(
+		'fields' => array('PessoaAcesso.id', 'PessoaAcesso.tipo')
+		))); 
+
+	$this->set('paises',$this->Pais->find('list'));
+	$this->set('estados',$this->Estados->find('list', array(
+		'fields' => array('Estados.id', 'Estados.nome')
+		))); 
+	$this->set('Pessoas', $this->Pessoas->findById($id));	
+	$this->set('PessoaModulo', $this->PessoaModulo->find('all',array('conditions'=>array('PessoaModulo.id_pessoa'=>$id))));
+	$this->Pessoas[]=$this->PessoaModulo;
+     //$this->set('Pessoas', $this->Pessoas->find('all',array('conditions'=>array('Pessoas.id'=>$id))));
+	
+}
+public function editar($id){
+	if($this->request->is('post')){
+		$datasource = $this->Pessoas->getDataSource();
+		try{
+			$datasource->begin();
+			if($this->Pessoas->updateAll($this->request->data)){
+				$this->request->data['PessoaContato']['id_pessoa'] = $this->Pessoas->id;
+				$this->request->data['PessoaFisica']['id_pessoa'] = $this->Pessoas->id;
+
+				for($x=0; $x<count($this->request->data['PessoaModulo']);$x++){
+					$this->request->data['PessoaModulo'][$x]['id_pessoa'] = $this->Pessoas->id;		
+				}
+				//die(print_r($this->request->data['PessoaModulo']));
+			}else{
+				throw new Exception();
 			}
-		}
+            
+			if(!$this->Pessoas->PessoaContato->updateAll($this->request->data))
+			    throw new Exception();
+			if(!$this->Pessoas->PessoaFisica->updateAll($this->request->data))
+    		    throw new Exception();
+			if(!$this->PessoaModulo->updateAll($this->request->data['PessoaModulo']))
+			    throw new Exception();
+             
+			$datasource->commit();
+			$this->Session->setFlash('Contato atualizado com sucesso!');
+		} catch(Exception $e) {
+		   	$datasource->rollback();
+		   	$this->Session->setFlash('Erro ao atualizar Contato!');
+	    }
+	} 
+	else 
+	{
+		$this->Session->setFlash('Erro ao começar atualização de Contato!');
 	}
-
-	public function editar($id){
-		$this->set('permissoes',$this->PessoaAcesso->find('list', array(
-        	'fields' => array('PessoaAcesso.id', 'PessoaAcesso.tipo')
-        ))); 
-		$this->set('paises',$this->Pais->find('list'));
-		$this->set('estados',$this->Estados->find('list', array(
-        	'fields' => array('Estados.id', 'Estados.nome')
-        ))); 
-		$this->set('pessoa', $this->Pessoas->findById($id));	
-	}
-
-	public function searchPessoa(){
-		$this->autoRender = false;
-		$conditions = 'Pessoas.nome LIKE "%'. $this->request->data['string'].'%"'; 
+}
+public function searchPessoa(){
+	$this->autoRender = false;
+	$conditions = 'Pessoas.nome LIKE "%'. $this->request->data['string'].'%"'; 
 		//$conditions .= ' OR Practitioner.surname LIKE "%'.$surname.'%"'; 		
-		
-		$allPessoas =  $this->Pessoas->find('all', array('conditions'=> $conditions ));
-		$conteudo = "";
 
-		if(count($allPessoas) >0){
-			foreach($allPessoas as $pessoa){
+	$allPessoas =  $this->Pessoas->find('all', array('conditions'=> $conditions ));
+	$conteudo = "";
+
+	if(count($allPessoas) >0){
+		foreach($allPessoas as $pessoa){
 			$link = Router::url("/pessoas/editar/".$pessoa['Pessoas']['id']);
-            $conteudo .= "<a href='{$link}'><div class='itm' id='".$pessoa['Pessoas']['id']."'>
-				<div class='itm_nome'><h3>".$pessoa['Pessoas']['nome']."</h3></div>
-				<div class='info'>
-					<span class='label'>Login: ".$pessoa['Pessoas']['login']."</span></br>
-					<span class='label'>e-Mail: ".$pessoa['Pessoas']['tipo_pessoa']."</span></br>
-					<span class='value'>Perfil: ".$pessoa['Pessoas']['tipo_acesso']."</span>
-				</div>
-			</div>";			
-			} 
-		}else{
-			$conteudo ="<div class='itm'>Nenhum registro correponde a esta busca.</div>";
-		}
-		return $conteudo;
-	}
-	public function searchPessoaInicial(){
-		$this->autoRender = false;
-		$conditions = 'Pessoas.nome LIKE "'. $this->request->data['string'].'%"'; 
+			$conteudo .= "<a href='{$link}'><div class='itm' id='".$pessoa['Pessoas']['id']."'>
+			<div class='itm_nome'><h3>".$pessoa['Pessoas']['nome']."</h3></div>
+			<div class='info'>
+				<span class='label'>Login: ".$pessoa['Pessoas']['login']."</span></br>
+				<span class='label'>e-Mail: ".$pessoa['Pessoas']['tipo_pessoa']."</span></br>
+				<span class='value'>Perfil: ".$pessoa['Pessoas']['tipo_acesso']."</span>
+			</div>
+		</div>";			
+	} 
+}else{
+	$conteudo ="<div class='itm'>Nenhum registro correponde a esta busca.</div>";
+}
+return $conteudo;
+}
+public function searchPessoaInicial(){
+	$this->autoRender = false;
+	$conditions = 'Pessoas.nome LIKE "'. $this->request->data['string'].'%"'; 
 		//$conditions .= ' OR Practitioner.surname LIKE "%'.$surname.'%"'; 		
-		
-		$allPessoas =  $this->Pessoas->find('all', array('conditions'=> $conditions ));
-		$conteudo = "";
 
-		if(count($allPessoas) >0){
-			foreach($allPessoas as $pessoa){
+	$allPessoas =  $this->Pessoas->find('all', array('conditions'=> $conditions ));
+	$conteudo = "";
+
+	if(count($allPessoas) >0){
+		foreach($allPessoas as $pessoa){
 			$link = Router::url("/pessoas/editar/".$pessoa['Pessoas']['id']);
-            $conteudo .= "<a href='{$link}'><div class='itm' id='".$pessoa['Pessoas']['id']."'>
-				<div class='itm_nome'><h3>".$pessoa['Pessoas']['nome']."</h3></div>
-				<div class='info'>
-					<span class='label'>Login: ".$pessoa['Pessoas']['login']."</span></br>
-					<span class='label'>e-Mail: ".$pessoa['Pessoas']['tipo_pessoa']."</span></br>
-					<span class='value'>Perfil: ".$pessoa['Pessoas']['tipo_acesso']."</span>
-				</div>
-			</div>";			
-			} 
-		}else{
-			$conteudo = "<div class='itm-NFound'>
-				<div class='itm_nome'><h3>Nenhum registro correponde a esta busca</h3></div>
-				
-			</div>";		
-		}
-		return $conteudo;
-	}
-	public function getCities(){
-		$this->autoRender = false;
-		$findCities = $this->Cidade->find('list', array(
-			'conditions' => array(
-				'Cidade.estado' => $this->request->data['state']
+			$conteudo .= "<a href='{$link}'><div class='itm' id='".$pessoa['Pessoas']['id']."'>
+			<div class='itm_nome'><h3>".$pessoa['Pessoas']['nome']."</h3></div>
+			<div class='info'>
+				<span class='label'>Login: ".$pessoa['Pessoas']['login']."</span></br>
+				<span class='label'>e-Mail: ".$pessoa['Pessoas']['tipo_pessoa']."</span></br>
+				<span class='value'>Perfil: ".$pessoa['Pessoas']['tipo_acesso']."</span>
+			</div>
+		</div>";			
+	} 
+}else{
+	$conteudo = "<div class='itm-NFound'>
+	<div class='itm_nome'><h3>Nenhum registro correponde a esta busca</h3></div>
+
+</div>";		
+}
+return $conteudo;
+}
+public function getCities(){
+	$this->autoRender = false;
+	$findCities = $this->Cidade->find('list', array(
+		'conditions' => array(
+			'Cidade.estado' => $this->request->data['state']
 			),
-			'fields' => array(
-				'Cidade.id', 'Cidade.nome'
+		'fields' => array(
+			'Cidade.id', 'Cidade.nome'
 			)
 		));
-		echo $this->prepareSelect($findCities);
-	}
+	echo $this->prepareSelect($findCities);
+}
 
-	public function prepareSelect($data){
-		$cities = "";
-		foreach($data as $key => $city){
-			$cities .= "<option value='$key'>".$city."</option>";
-		}
-		return $cities;
+public function prepareSelect($data){
+	$cities = "";
+	foreach($data as $key => $city){
+		$cities .= "<option value='$key'>".$city."</option>";
 	}
+	return $cities;
+}
 
-	public function login() {
-		$this->set('pessoascad', $this->Pessoas->find('all'));
-		$this->layout = 'login';
-	    if ($this->request->is('post')) {
+public function login() {
+	$this->set('pessoascad', $this->Pessoas->find('all'));
+	$this->layout = 'login';
+	if ($this->request->is('post')) {
 /*
 	        $username = $this->request->data['login-form']['username'];
 	        die($this->request->data['login-form']['password']);
-=======*/
+	        =======*/
 	        $username = $this->request->data['username'];
 	        $passwordHasher = new SimplePasswordHasher(array('hashType' => 'sha256'));
-            $password = $passwordHasher->hash($this->request->data['password']);
+	        $password = $passwordHasher->hash($this->request->data['password']);
 	        if($data = $this->Pessoas->find('first' , array('conditions' => array('Pessoas.login' => $username, 'Pessoas.password' => $password)))){
 	        	//die(print_r($this->PessoaModulo->find('list', array('fields' => array('PessoaModulo.id_pessoa', 'PessoaModulo.id_modulo, PessoaModulo.visualiza, PessoaModulo.cadastra')), array('conditions'=> array('PessoaModulo.id_pessoa'=>$data['Pessoas']['id'])))));
 
 
-                if($dat = $this->registerSession($data)){
-                    $this->redirect('/pessoas');
-                } 
-                else{
-                    $this->Session->setFlash(
-		                __('Não foi possivel setar a sessão!'),
-		                'default',
-		                array(),
-		                'auth'
-		            );
-		            $this->redirect($this->referer());
-                }
+	        	if($dat = $this->registerSession($data)){
+	        		$this->redirect('/pessoas');
+	        	} 
+	        	else{
+	        		$this->Session->setFlash(
+	        			__('Não foi possivel setar a sessão!'),
+	        			'default',
+	        			array(),
+	        			'auth'
+	        			);
+	        		$this->redirect($this->referer());
+	        	}
 	        }
 	        $this->Session->setFlash(
-                __('Usuário e senha incorretos!'),
-                'default',
-                array(),
-                'auth'
-            );
-            $this->redirect($this->referer());
+	        	__('Usuário e senha incorretos!'),
+	        	'default',
+	        	array(),
+	        	'auth'
+	        	);
+	        $this->redirect($this->referer());
 	    }
 	}  
 
 	public function registerSession($data){
-$permissoes =$this->PessoaModulo->find('all', array(
-    'joins' => array(
-        array(
-            'table' => 'modulos',
-            'alias' => 'Modulo',
-            'type' => 'LEFT',
-            'conditions' => array(
-                'Modulo.id = PessoaModulo.id_modulo'
-            )
-        )
-    ),
-    'conditions' => array(
-        'PessoaModulo.id_pessoa = '. $data['Pessoas']['id']
-    ),
-    'fields' => array('Modulo.nome', 'PessoaModulo.*'),
-    'order' => 'Modulo.id ASC'
-));
-        $this->Session->write('User.id', $data['Pessoas']['id']);
-        $this->Session->write('User.nome', $data['Pessoas']['nome']);
-        $this->Session->write('User.login', $data['Pessoas']['login']);
-        $this->Session->write('User.permissions',$permissoes);
-        if($this->Session->read('User')){
-        	$this->Auth->login($data['Pessoas']['id']);
-            return true;
-        }
-    }
-    
-    public function logout(){
-        $this->autoRender = false;
-        $this->Session->delete('User');
-        $this->Session->destroy();
-        $this->redirect(array('controller' => 'home'));
-    }
+		$permissoes =$this->PessoaModulo->find('all', array(
+			'joins' => array(
+				array(
+					'table' => 'modulos',
+					'alias' => 'Modulo',
+					'type' => 'LEFT',
+					'conditions' => array(
+						'Modulo.id = PessoaModulo.id_modulo'
+						)
+					)
+				),
+			'conditions' => array(
+				'PessoaModulo.id_pessoa = '. $data['Pessoas']['id']
+				),
+			'fields' => array('Modulo.nome', 'PessoaModulo.*'),
+			'order' => 'Modulo.id ASC'
+			));
+		$this->Session->write('User.id', $data['Pessoas']['id']);
+		$this->Session->write('User.nome', $data['Pessoas']['nome']);
+		$this->Session->write('User.login', $data['Pessoas']['login']);
+		$this->Session->write('User.permissions',$permissoes);
+		if($this->Session->read('User')){
+			$this->Auth->login($data['Pessoas']['id']);
+			return true;
+		}
+	}
 
-    public function previewAvatar(){
-    	$this->autoRender = false;
-    	$image = new File($_FILES['data']['tmp_name']['Pessoas']['avatar']);
-    	$cpName = rand(111111, 999999);
-    	$copy = $image->copy(TMP . "tmp_avatar" . DS . "avatar".$cpName.'.png');
-    	$copied = new File(TMP . "tmp_avatar" . DS . "avatar".$cpName.'.png');
-    	echo json_encode(array(
-	    		'status' => true,
-	    		'image' => base64_encode($image->read()),
-	    		'path' => $copied->path
-    		)
-    	);
-    }
-    public function atualizar(){		
+	public function logout(){
+		$this->autoRender = false;
+		$this->Session->delete('User');
+		$this->Session->destroy();
+		$this->redirect(array('controller' => 'home'));
+	}
+
+	public function previewAvatar(){
+		$this->autoRender = false;
+		$image = new File($_FILES['data']['tmp_name']['Pessoas']['avatar']);
+		$cpName = rand(111111, 999999);
+		$copy = $image->copy(TMP . "tmp_avatar" . DS . "avatar".$cpName.'.png');
+		$copied = new File(TMP . "tmp_avatar" . DS . "avatar".$cpName.'.png');
+		echo json_encode(array(
+			'status' => true,
+			'image' => base64_encode($image->read()),
+			'path' => $copied->path
+			)
+		);
+	}
+	public function atualizar(){		
 		
 		if($this->request->is('post')){
 			// temporario enquanto falta os fields no form

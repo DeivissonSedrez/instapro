@@ -9,8 +9,11 @@ echo $this->Html->script("scripts");
 </div>
 <div class="panelcmd">
 	<?php echo $this->Form->create('buscaProc')?>
-	<?php echo $this->Html->link('Incluir', array('controller'=> 'processos', 'action' => 'adicionar'), array('class' => 'button-blue'));?>&nbsp;&nbsp;
-	<?php echo $this->Html->link('Alterar', array('controller'=> 'processos', 'action' => '#'), array('class' => 'button-grey', 'disabled' => 'disabled'));?>
+	<?php
+		if(CakeSession::read('User.processos')){
+			echo $this->Html->link('Incluir', array('controller'=> 'processos', 'action' => 'adicionar'), array('class' => 'button-blue'));?>&nbsp;&nbsp;
+	<?php echo $this->Html->link('Alterar', array('controller'=> 'processos', 'action' => '#'), array('class' => 'button-grey', 'disabled' => 'disabled'));
+	}?>
 	<div style="position:relative; float:right;">
 		<?php echo $this->Form->input('valor', array('label'=>false, 'type' => 'text', 'class'=>'small', 'maxlength'=>100, 'div'=>false));?>&nbsp;&nbsp;
 		<a href="#" class='button-grey arrow'>Buscar<span></span></a>

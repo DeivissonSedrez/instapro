@@ -17,13 +17,18 @@ echo $this->Html->script("scripts");
 </div>
 
 
-
+<?php 
+	echo $this->Form->create('Processos', array('enctype' => 'multipart/form-data'));
+	?>
 <h3 style="margin-left: 40%;"><?php echo $this->Session->flash(); ?></h3>
 <div class="process-panel">
 	<div>
 		<table class="tableProc">
 			<tr>
-				<td>Pasta: </td><td>Escritório: </td>
+				<td><?php
+echo $this->Form->input('pasta', array('label'=> array('text' => '<h4 style="display:inline">Pasta: </h4>', 'class'=>'labelform'), 'class'=>'small',  'css' => array('display'=>'inline')));
+			?>	
+				 </td><td>Escritório: </td>
 			</tr>
 			<tr>
 				<td>Titulo: </td><td>Cliente: </td>
