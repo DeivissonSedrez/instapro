@@ -1547,3 +1547,35 @@ Stack Trace:
 #3 C:\xampp\htdocs\instapro\lib\Cake\Core\App.php(902): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2014-10-16 17:35:35 Error: Fatal Error (1): Cannot use object of type Pessoas as array in [C:\xampp\htdocs\instapro\app\Controller\PessoasController.php, line 98]
+2014-10-16 17:35:35 Error: [FatalErrorException] Cannot use object of type Pessoas as array
+Request URL: /instapro/pessoas/visualizar/5
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Cannot use obje...', 'C:\xampp\htdocs...', 98)
+#1 [internal function]: ErrorHandler::handleError(1, 'Cannot use obje...', 'C:\xampp\htdocs...', 98, Array)
+#2 C:\xampp\htdocs\instapro\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Cannot use obje...', 'C:\xampp\htdocs...', 98, Array)
+#3 C:\xampp\htdocs\instapro\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-16 18:00:37 Error: [MissingActionException] Action PessoasController::instapro() could not be found.
+Exception Attributes: array (
+  'controller' => 'PessoasController',
+  'action' => 'instapro',
+)
+Request URL: /instapro/pessoas/instapro/pessoas/editar/3
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(PessoasController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-16 18:01:27 Error: [MissingActionException] Action PessoasController::instapro() could not be found.
+Exception Attributes: array (
+  'controller' => 'PessoasController',
+  'action' => 'instapro',
+)
+Request URL: /instapro/pessoas/instapro/pessoas/editar
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(PessoasController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}

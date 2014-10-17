@@ -95,12 +95,13 @@ public function visualizar($id){
 		))); 
 	$this->set('Pessoas', $this->Pessoas->findById($id));	
 	$this->set('PessoaModulo', $this->PessoaModulo->find('all',array('conditions'=>array('PessoaModulo.id_pessoa'=>$id))));
-	$this->Pessoas[]=$this->PessoaModulo;
+	//$this->Pessoas[]=$this->PessoaModulo;
      //$this->set('Pessoas', $this->Pessoas->find('all',array('conditions'=>array('Pessoas.id'=>$id))));
 	
 }
 public function editar($id){
 	if($this->request->is('post')){
+		die(print_r($this->request->data));
 		$datasource = $this->Pessoas->getDataSource();
 		try{
 			$datasource->begin();

@@ -17,7 +17,7 @@ echo $this->Html->script("avatar");
 	<ul class="breadcrumb">
 		<li class="home"><a href="/instapro/"></a></li>		
 		<li class=""><a href="/instapro/pessoas">Pessoas</a></li>
-		<li class="last"><a href="/instapro/pessoas/editar"><?php echo $crumb ?></a></li>
+		<li class="last"><a href="/instapro/pessoas/visualizar"><?php echo $crumb ?></a></li>
 	</ul>
 </div>
 <h3 style="margin-left: 40%;"><?php echo $this->Session->flash(); ?></h3>
@@ -26,12 +26,13 @@ echo $this->Html->script("avatar");
 	<div class="hr"></div>
 	<?php 
 	//print_r($pessoa);
-	echo $this->Form->create('Pessoas', array('enctype' => 'multipart/form-data'));
+	echo $this->Form->create('Pessoas', array('enctype' => 'multipart/form-data', 'action'=>'/instapro/pessoas/editar'));
 	?>
-	<?php 
+	<?php /*
 	print "<pre>";
-	print_r($Pessoas);
-	print "</pre>";?>
+	print_r($PessoaModulo);
+	print "</pre>";
+	*/?>
 	<TABLE>
 		<tr>
 			<td width="395" style="border-right:1px solid #ccc;">
@@ -48,11 +49,11 @@ echo $this->Html->script("avatar");
 				?>
 			</td>
 			<td style="padding: 0px 0px 0px 25px;"><?php
-                echo $this->Form->input('PessoaModulo.0.visualiza', array('label'=> array('text' => '<h4 style="display:inline">Visualiza Processos: </h4>',  'class'=>'labelform'),'disabled'=>$edita,'default'=>$Pessoas['PessoaModulo'][0]['visualiza'], 'class'=>'dropdown small', 'type'=>'select', 'options' => array('1' => 'Sim', '0' => 'Não'), 'css' => array('display'=>'inline')));				
-				echo $this->Form->input('PessoaModulo.0.cadastra', array('label'=> array('text' => '<h4 style="display:inline">Cadastra Processos: </h4>',  'class'=>'labelform'),'disabled'=>$edita, 'default'=>$Pessoas['PessoaModulo'][0]['cadastra'], 'class'=>'dropdown small', 'type'=>'select', 'options' => array('1' => 'Sim', '0' => 'Não'), 'css' => array('display'=>'inline')));
+                echo $this->Form->input('PessoaModulo.0.visualiza', array('label'=> array('text' => '<h4 style="display:inline">Visualiza Processos: </h4>',  'class'=>'labelform'),'disabled'=>$edita,'default'=>$PessoaModulo[0]['PessoaModulo']['visualiza'], 'class'=>'dropdown small', 'type'=>'select', 'options' => array('1' => 'Sim', '0' => 'Não'), 'css' => array('display'=>'inline')));				
+				echo $this->Form->input('PessoaModulo.0.cadastra', array('label'=> array('text' => '<h4 style="display:inline">Cadastra Processos: </h4>',  'class'=>'labelform'),'disabled'=>$edita, 'default'=>$PessoaModulo[0]['PessoaModulo']['cadastra'], 'class'=>'dropdown small', 'type'=>'select', 'options' => array('1' => 'Sim', '0' => 'Não'), 'css' => array('display'=>'inline')));
 				echo "<input type='hidden' id='' value='2'  name='data[PessoaModulo][0][id_modulo]'";
-				echo $this->Form->input('PessoaModulo.1.visualiza', array('label'=> array('text' => '<h4 style="display:inline">Visualiza Pessoas: </h4>',  'class'=>'labelform'),'disabled'=>$edita, 'default'=>$Pessoas['PessoaModulo'][1]['visualiza'],'class'=>'dropdown small', 'type'=>'select', 'options' => array('1' => 'Sim', '0' => 'Não'), 'css' => array('display'=>'inline')));
-				echo $this->Form->input('PessoaModulo.1.cadastra', array('label'=> array('text' => '<h4 style="display:inline">Cadastra Pessoas: </h4>',  'class'=>'labelform'),'disabled'=>$edita, 'default'=>$Pessoas['PessoaModulo'][1]['cadastra'],'class'=>'dropdown small', 'type'=>'select', 'options' => array('1' => 'Sim', '0' => 'Não'), 'css' => array('display'=>'inline')));
+				echo $this->Form->input('PessoaModulo.1.visualiza', array('label'=> array('text' => '<h4 style="display:inline">Visualiza Pessoas: </h4>',  'class'=>'labelform'),'disabled'=>$edita, 'default'=>$PessoaModulo[1]['PessoaModulo']['visualiza'],'class'=>'dropdown small', 'type'=>'select', 'options' => array('1' => 'Sim', '0' => 'Não'), 'css' => array('display'=>'inline')));
+				echo $this->Form->input('PessoaModulo.1.cadastra', array('label'=> array('text' => '<h4 style="display:inline">Cadastra Pessoas: </h4>',  'class'=>'labelform'),'disabled'=>$edita, 'default'=>$PessoaModulo[1]['PessoaModulo']['cadastra'],'class'=>'dropdown small', 'type'=>'select', 'options' => array('1' => 'Sim', '0' => 'Não'), 'css' => array('display'=>'inline')));
 				echo "<input type='hidden' id='' value='1'  name='data[PessoaModulo][1][id_modulo]'";
 
 
