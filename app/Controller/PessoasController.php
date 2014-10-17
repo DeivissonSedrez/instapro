@@ -70,7 +70,6 @@ public function adicionar(){
 				$datasource->rollback();
 				$this->Session->setFlash('Erro ao salvar Contato!');
 			}
-
 				// 	$this->Pessoas->PessoaContato->save($this->request->data);
 				// 	$this->Pessoas->PessoaFisica->save($this->request->data);					
 				// 	$this->Pessoas->PessoaModulo->save($this->request->data);
@@ -95,16 +94,23 @@ public function visualizar($id){
 		))); 
 	$this->set('Pessoas', $this->Pessoas->findById($id));	
 	$this->set('PessoaModulo', $this->PessoaModulo->find('all',array('conditions'=>array('PessoaModulo.id_pessoa'=>$id))));
-	$this->Pessoas[]=$this->PessoaModulo;
+	//$this->add('Pessoas', $this->PessoaModulo->find('all',array('conditions'=>array('PessoaModulo.id_pessoa'=>$id))));
      //$this->set('Pessoas', $this->Pessoas->find('all',array('conditions'=>array('Pessoas.id'=>$id))));
 	
 }
 public function editar($id){
 	if($this->request->is('post')){
+		/*
+	print "<pre>";
+	print_r($this->request->data);
+	print "</pre>";*/
 		$datasource = $this->Pessoas->getDataSource();
 		try{
 			$datasource->begin();
-			if($this->Pessoas->updateAll($this->request->data)){
+
+			echo "1";
+			if($this->Pessoas->save($this->request->data)){
+				echo "2";
 				$this->request->data['PessoaContato']['id_pessoa'] = $this->Pessoas->id;
 				$this->request->data['PessoaFisica']['id_pessoa'] = $this->Pessoas->id;
 
@@ -113,19 +119,27 @@ public function editar($id){
 				}
 				//die(print_r($this->request->data['PessoaModulo']));
 			}else{
+				echo "3";
 				throw new Exception();
 			}
-            
-			if(!$this->Pessoas->PessoaContato->updateAll($this->request->data))
+            echo "4";
+			if(!$this->Pessoas->PessoaContato->save($this->request->data)){
+			    echo "5";
 			    throw new Exception();
-			if(!$this->Pessoas->PessoaFisica->updateAll($this->request->data))
+			}
+			if(!$this->Pessoas->PessoaFisica->save($this->request->data)){
+    		    echo "6";
     		    throw new Exception();
-			if(!$this->PessoaModulo->updateAll($this->request->data['PessoaModulo']))
+			}
+			if(!$this->PessoaModulo->updateAll($this->request->data['PessoaModulo'])){
+			    echo "7";
 			    throw new Exception();
+			}
              
 			$datasource->commit();
 			$this->Session->setFlash('Contato atualizado com sucesso!');
 		} catch(Exception $e) {
+			echo "8".$e;
 		   	$datasource->rollback();
 		   	$this->Session->setFlash('Erro ao atualizar Contato!');
 	    }
