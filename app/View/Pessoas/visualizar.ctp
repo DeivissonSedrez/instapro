@@ -30,7 +30,8 @@ echo $this->Html->script("avatar");
 	<?php /*
 	print "<pre>";
 	print_r($Pessoas);
-	print "</pre>";*/?>
+	print "</pre>";*/
+	?>
 	<TABLE>
 		<tr>
 			<td width="395" style="border-right:1px solid #ccc;">
@@ -47,18 +48,14 @@ echo $this->Html->script("avatar");
 				?>
 			</td>
 			<td style="padding: 0px 0px 0px 25px;"><?php
-			echo "#".$PessoaModulo[1]['PessoaModulo']['id_pessoa_modulo']."#";
                 echo $this->Form->input('PessoaModulo.0.visualiza', array('label'=> array('text' => '<h4 style="display:inline">Visualiza Processos: </h4>',  'class'=>'labelform'),'disabled'=>$edita,'default'=>$PessoaModulo[0]['PessoaModulo']['visualiza'], 'class'=>'dropdown small', 'type'=>'select', 'options' => array('1' => 'Sim', '0' => 'Não'), 'css' => array('display'=>'inline')));				
 				echo $this->Form->input('PessoaModulo.0.cadastra', array('label'=> array('text' => '<h4 style="display:inline">Cadastra Processos: </h4>',  'class'=>'labelform'),'disabled'=>$edita, 'default'=>$PessoaModulo[0]['PessoaModulo']['cadastra'], 'class'=>'dropdown small', 'type'=>'select', 'options' => array('1' => 'Sim', '0' => 'Não'), 'css' => array('display'=>'inline')));
-				echo "<input type='hidden' id='data[PessoaModulo][0][id_modulo]' value='2'  name='data[PessoaModulo][0][id_modulo]'";
-				echo "<input type='hidden' id='data[PessoaModulo][0][id_pessoa_modulo] value='".$PessoaModulo[0]['PessoaModulo']['id_pessoa_modulo']."'  name='data[PessoaModulo][0][id_pessoa_modulo]'";
-
+				echo $this->Form->input('PessoaModulo.0.id_modulo', array('type'=>'hidden', 'default'=>'2'));
+				echo $this->Form->input('PessoaModulo.0.id_pessoa_modulo', array('type'=>'hidden', 'default'=>$PessoaModulo[0]['PessoaModulo']['id_pessoa_modulo']));
 				echo $this->Form->input('PessoaModulo.1.visualiza', array('label'=> array('text' => '<h4 style="display:inline">Visualiza Pessoas: </h4>',  'class'=>'labelform'),'disabled'=>$edita, 'default'=>$PessoaModulo[1]['PessoaModulo']['visualiza'],'class'=>'dropdown small', 'type'=>'select', 'options' => array('1' => 'Sim', '0' => 'Não'), 'css' => array('display'=>'inline')));
 				echo $this->Form->input('PessoaModulo.1.cadastra', array('label'=> array('text' => '<h4 style="display:inline">Cadastra Pessoas: </h4>',  'class'=>'labelform'),'disabled'=>$edita, 'default'=>$PessoaModulo[1]['PessoaModulo']['cadastra'],'class'=>'dropdown small', 'type'=>'select', 'options' => array('1' => 'Sim', '0' => 'Não'), 'css' => array('display'=>'inline')));
-				echo "<input type='hidden' id='data[PessoaModulo][0][id_modulo]' value='1'  name='data[PessoaModulo][1][id_modulo]'";
-				echo "<input type='hidden' id=data[PessoaModulo][1][id_pessoa_modulo] value='".$PessoaModulo[1]['PessoaModulo']['id_pessoa_modulo']."'  name='data[PessoaModulo][1][id_pessoa_modulo]'";
-
-
+				echo $this->Form->input('PessoaModulo.1.id_modulo', array('type'=>'hidden', 'default'=>'1'));
+				echo $this->Form->input('PessoaModulo.1.id_pessoa_modulo', array('type'=>'hidden', 'default'=>$PessoaModulo[1]['PessoaModulo']['id_pessoa_modulo']));
 				?>
 			</td>
 		</tr>

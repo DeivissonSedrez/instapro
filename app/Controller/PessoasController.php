@@ -102,8 +102,7 @@ public function visualizar($id){
 }
 public function editar($id){
 	if($this->request->is('post')){
-		die(print_r($this->request->data));
-		/*
+	/*	
 	print "<pre>";
 	print_r($this->request->data);
 	print "</pre>";*/
@@ -111,9 +110,9 @@ public function editar($id){
 	try{
 		$datasource->begin();
 
-		echo "1";
-		if($this->Pessoas->save($this->request->data)){
-			echo "2";
+		//echo "1";
+		if($this->Pessoas->update($this->request->data)){
+			//echo "2";
 			$this->request->data['PessoaContato']['id_pessoa'] = $this->Pessoas->id;
 			$this->request->data['PessoaFisica']['id_pessoa'] = $this->Pessoas->id;
 
@@ -122,27 +121,32 @@ public function editar($id){
 			}
 				//die(print_r($this->request->data['PessoaModulo']));
 		}else{
-			echo "3";
+			//echo "3";
 			throw new Exception();
 		}
-		echo "4";
-		if(!$this->Pessoas->PessoaContato->save($this->request->data)){
-			echo "5";
+		//echo "4";
+		if(!$this->Pessoas->PessoaContato->update($this->request->data)){
+			//echo "5";
 			throw new Exception();
 		}
-		if(!$this->Pessoas->PessoaFisica->save($this->request->data)){
-			echo "6";
+		if(!$this->Pessoas->PessoaFisica->update($this->request->data)){
+			//echo "6";
 			throw new Exception();
 		}
-		if(!$this->PessoaModulo->saveAll($this->request->data['PessoaModulo'])){
-			echo "7";
-			throw new Exception();
+		foreach($this->request->data['PessoaModulo'] as $modulo){
+			//if(!$this->PessoaModulo->update($modulo)){
+			if(!$this->PessoaModulo->query("update pessoa_modulo set visualiza=".$modulo['visualiza'].", cadastra=".$modulo['cadastra']." where id_pessoa_modulo=".$modulo['id_pessoa_modulo'])){
+				//echo "7";
+				throw new Exception();
+			}
 		}
+		
 
 		$datasource->commit();
 		$this->Session->setFlash('Contato atualizado com sucesso!');
 	} catch(Exception $e) {
-		echo "8".$e;
+		//echo "8".$e;
+		echo $e;
 		$datasource->rollback();
 		$this->Session->setFlash('Erro ao atualizar Contato!');
 	}

@@ -23,6 +23,7 @@ class PessoaContato extends AppModel{
             $tel=str_replace("-", "", $tel);
             $tel=str_replace(" ", "", $tel);
 
+
             $this->data['PessoaContato']['telefone_2']=$tel;
         }
         if(!empty($this->data['PessoaContato']['telefone_3'])){
