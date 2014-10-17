@@ -22,6 +22,11 @@ class  ProcessosController extends AppController{
 				ini_set('memory_limit', '-1');
 				$datasource = $this->Pessoas->getDataSource();
 				try{
+
+					'
+
+
+					'
 					$datasource->begin();
 
 					if($this->Pessoas->save($this->request->data)){

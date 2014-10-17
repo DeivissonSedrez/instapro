@@ -1547,6 +1547,7 @@ Stack Trace:
 #3 C:\xampp\htdocs\instapro\lib\Cake\Core\App.php(902): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+<<<<<<< HEAD
 2014-10-16 17:35:35 Error: Fatal Error (1): Cannot use object of type Pessoas as array in [C:\xampp\htdocs\instapro\app\Controller\PessoasController.php, line 98]
 2014-10-16 17:35:35 Error: [FatalErrorException] Cannot use object of type Pessoas as array
 Request URL: /instapro/pessoas/visualizar/5
@@ -1558,10 +1559,157 @@ Stack Trace:
 #4 [internal function]: App::shutdown()
 #5 {main}
 2014-10-16 18:00:37 Error: [MissingActionException] Action PessoasController::instapro() could not be found.
+=======
+2014-10-17 01:54:29 Error: [MissingControllerException] Controller class Favicon.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.pngController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/favicon.png
+Stack Trace:
+#0 D:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-17 01:54:29 Error: [MissingControllerException] Controller class Favicon.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.pngController',
+  'plugin' => NULL,
+)
+Request URL: /instapro/favicon.png
+Stack Trace:
+#0 D:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-17 02:08:20 Error: Fatal Error (1): Cannot use object of type Pessoas as array in [D:\xampp\htdocs\instapro\app\Controller\PessoasController.php, line 97]
+2014-10-17 02:08:20 Error: [FatalErrorException] Cannot use object of type Pessoas as array
+Request URL: /instapro/pessoas/visualizar/3
+Stack Trace:
+#0 D:\xampp\htdocs\instapro\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Cannot use obje...', 'D:\xampp\htdocs...', 97)
+#1 [internal function]: ErrorHandler::handleError(1, 'Cannot use obje...', 'D:\xampp\htdocs...', 97, Array)
+#2 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Cannot use obje...', 'D:\xampp\htdocs...', 97, Array)
+#3 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-17 02:10:46 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'append' at line 1
+Request URL: /instapro/pessoas/visualizar/3
+Stack Trace:
+#0 D:\xampp\htdocs\instapro\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 D:\xampp\htdocs\instapro\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('append', Array)
+#2 D:\xampp\htdocs\instapro\lib\Cake\Model\Datasource\DboSource.php(665): DboSource->execute('append', Array, Array)
+#3 D:\xampp\htdocs\instapro\lib\Cake\Model\Datasource\DboSource.php(609): DboSource->fetchAll('append', Array, Array)
+#4 D:\xampp\htdocs\instapro\lib\Cake\Model\Model.php(800): DboSource->query('append', Array, Object(Pessoas))
+#5 D:\xampp\htdocs\instapro\app\Controller\PessoasController.php(97): Model->__call('append', Array)
+#6 D:\xampp\htdocs\instapro\app\Controller\PessoasController.php(97): Pessoas->append(Array)
+#7 [internal function]: PessoasController->visualizar('3')
+#8 D:\xampp\htdocs\instapro\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(PessoasController), Array)
+#9 D:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#10 D:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(PessoasController), Object(CakeRequest), Object(CakeResponse))
+#11 D:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-10-17 02:10:46 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'append' at line 1
+Request URL: /instapro/pessoas/visualizar/3
+Stack Trace:
+#0 D:\xampp\htdocs\instapro\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 D:\xampp\htdocs\instapro\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('append', Array)
+#2 D:\xampp\htdocs\instapro\lib\Cake\Model\Datasource\DboSource.php(665): DboSource->execute('append', Array, Array)
+#3 D:\xampp\htdocs\instapro\lib\Cake\Model\Datasource\DboSource.php(609): DboSource->fetchAll('append', Array, Array)
+#4 D:\xampp\htdocs\instapro\lib\Cake\Model\Model.php(800): DboSource->query('append', Array, Object(Pessoas))
+#5 D:\xampp\htdocs\instapro\app\Controller\PessoasController.php(97): Model->__call('append', Array)
+#6 D:\xampp\htdocs\instapro\app\Controller\PessoasController.php(97): Pessoas->append(Array)
+#7 [internal function]: PessoasController->visualizar('3')
+#8 D:\xampp\htdocs\instapro\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(PessoasController), Array)
+#9 D:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#10 D:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(PessoasController), Object(CakeRequest), Object(CakeResponse))
+#11 D:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-10-17 02:11:29 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'append' at line 1
+Request URL: /instapro/pessoas/visualizar/3
+Stack Trace:
+#0 D:\xampp\htdocs\instapro\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 D:\xampp\htdocs\instapro\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('append', Array)
+#2 D:\xampp\htdocs\instapro\lib\Cake\Model\Datasource\DboSource.php(665): DboSource->execute('append', Array, Array)
+#3 D:\xampp\htdocs\instapro\lib\Cake\Model\Datasource\DboSource.php(609): DboSource->fetchAll('append', Array, Array)
+#4 D:\xampp\htdocs\instapro\lib\Cake\Model\Model.php(800): DboSource->query('append', Array, Object(Pessoas))
+#5 D:\xampp\htdocs\instapro\app\Controller\PessoasController.php(97): Model->__call('append', Array)
+#6 D:\xampp\htdocs\instapro\app\Controller\PessoasController.php(97): Pessoas->append(Array)
+#7 [internal function]: PessoasController->visualizar('3')
+#8 D:\xampp\htdocs\instapro\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(PessoasController), Array)
+#9 D:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#10 D:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(PessoasController), Object(CakeRequest), Object(CakeResponse))
+#11 D:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-10-17 02:11:29 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'append' at line 1
+Request URL: /instapro/pessoas/visualizar/3
+Stack Trace:
+#0 D:\xampp\htdocs\instapro\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 D:\xampp\htdocs\instapro\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('append', Array)
+#2 D:\xampp\htdocs\instapro\lib\Cake\Model\Datasource\DboSource.php(665): DboSource->execute('append', Array, Array)
+#3 D:\xampp\htdocs\instapro\lib\Cake\Model\Datasource\DboSource.php(609): DboSource->fetchAll('append', Array, Array)
+#4 D:\xampp\htdocs\instapro\lib\Cake\Model\Model.php(800): DboSource->query('append', Array, Object(Pessoas))
+#5 D:\xampp\htdocs\instapro\app\Controller\PessoasController.php(97): Model->__call('append', Array)
+#6 D:\xampp\htdocs\instapro\app\Controller\PessoasController.php(97): Pessoas->append(Array)
+#7 [internal function]: PessoasController->visualizar('3')
+#8 D:\xampp\htdocs\instapro\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(PessoasController), Array)
+#9 D:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#10 D:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(PessoasController), Object(CakeRequest), Object(CakeResponse))
+#11 D:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-10-17 02:11:51 Error: Fatal Error (1): Call to a member function append() on a non-object in [D:\xampp\htdocs\instapro\app\Controller\PessoasController.php, line 97]
+2014-10-17 02:11:51 Error: [FatalErrorException] Call to a member function append() on a non-object
+Request URL: /instapro/pessoas/visualizar/3
+Stack Trace:
+#0 D:\xampp\htdocs\instapro\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'D:\xampp\htdocs...', 97)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'D:\xampp\htdocs...', 97, Array)
+#2 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'D:\xampp\htdocs...', 97, Array)
+#3 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-17 02:14:27 Error: Fatal Error (1): Call to undefined method PessoasController::append() in [D:\xampp\htdocs\instapro\app\Controller\PessoasController.php, line 97]
+2014-10-17 02:14:27 Error: [FatalErrorException] Call to undefined method PessoasController::append()
+Request URL: /instapro/pessoas/visualizar/3
+Stack Trace:
+#0 D:\xampp\htdocs\instapro\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'D:\xampp\htdocs...', 97)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'D:\xampp\htdocs...', 97, Array)
+#2 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'D:\xampp\htdocs...', 97, Array)
+#3 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-17 02:14:31 Error: Fatal Error (1): Call to undefined method PessoasController::append() in [D:\xampp\htdocs\instapro\app\Controller\PessoasController.php, line 97]
+2014-10-17 02:14:31 Error: [FatalErrorException] Call to undefined method PessoasController::append()
+Request URL: /instapro/pessoas/visualizar/3
+Stack Trace:
+#0 D:\xampp\htdocs\instapro\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'D:\xampp\htdocs...', 97)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'D:\xampp\htdocs...', 97, Array)
+#2 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'D:\xampp\htdocs...', 97, Array)
+#3 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-17 02:14:40 Error: Fatal Error (1): Call to undefined method PessoasController::add() in [D:\xampp\htdocs\instapro\app\Controller\PessoasController.php, line 97]
+2014-10-17 02:14:40 Error: [FatalErrorException] Call to undefined method PessoasController::add()
+Request URL: /instapro/pessoas/visualizar/3
+Stack Trace:
+#0 D:\xampp\htdocs\instapro\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'D:\xampp\htdocs...', 97)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'D:\xampp\htdocs...', 97, Array)
+#2 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'D:\xampp\htdocs...', 97, Array)
+#3 D:\xampp\htdocs\instapro\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-17 02:23:58 Error: [MissingActionException] Action PessoasController::instapro() could not be found.
 Exception Attributes: array (
   'controller' => 'PessoasController',
   'action' => 'instapro',
 )
+Request URL: /instapro/pessoas/instapro/pessoas/editar/2
+Stack Trace:
+#0 D:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 D:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(PessoasController), Object(CakeRequest), Object(CakeResponse))
+#2 D:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-17 02:24:19 Error: [MissingActionException] Action PessoasController::instapro() could not be found.
+>>>>>>> 27b24277564b2578c37fed39b32767fbcf3dd55e
+Exception Attributes: array (
+  'controller' => 'PessoasController',
+  'action' => 'instapro',
+)
+<<<<<<< HEAD
 Request URL: /instapro/pessoas/instapro/pessoas/editar/3
 Stack Trace:
 #0 C:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
@@ -1569,13 +1717,51 @@ Stack Trace:
 #2 C:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
 2014-10-16 18:01:27 Error: [MissingActionException] Action PessoasController::instapro() could not be found.
+=======
+Request URL: /instapro/pessoas/instapro/pessoas/editar/2
+Stack Trace:
+#0 D:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 D:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(PessoasController), Object(CakeRequest), Object(CakeResponse))
+#2 D:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-17 02:24:27 Error: [MissingActionException] Action PessoasController::instapro() could not be found.
+>>>>>>> 27b24277564b2578c37fed39b32767fbcf3dd55e
 Exception Attributes: array (
   'controller' => 'PessoasController',
   'action' => 'instapro',
 )
+<<<<<<< HEAD
 Request URL: /instapro/pessoas/instapro/pessoas/editar
 Stack Trace:
 #0 C:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
 #1 C:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(PessoasController), Object(CakeRequest), Object(CakeResponse))
 #2 C:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+=======
+Request URL: /instapro/pessoas/instapro/pessoas/editar/2
+Stack Trace:
+#0 D:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 D:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(PessoasController), Object(CakeRequest), Object(CakeResponse))
+#2 D:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+>>>>>>> 27b24277564b2578c37fed39b32767fbcf3dd55e
 #3 {main}
+2014-10-17 17:50:16 Error: [MissingActionException] Action PessoasController::instapro() could not be found.
+Exception Attributes: array (
+  'controller' => 'PessoasController',
+  'action' => 'instapro',
+)
+Request URL: /instapro/pessoas/instapro/pessoas/
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\instapro\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(PessoasController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\instapro\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-17 18:02:12 Error: Fatal Error (4): syntax error, unexpected T_VARIABLE in [C:\xampp\htdocs\instapro\app\Controller\ProcessosController.php, line 30]
+2014-10-17 18:02:12 Error: [FatalErrorException] syntax error, unexpected T_VARIABLE
+Request URL: /instapro/processos
+Stack Trace:
+#0 C:\xampp\htdocs\instapro\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 30)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 30, Array)
+#2 C:\xampp\htdocs\instapro\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\xampp\htdocs...', 30, Array)
+#3 C:\xampp\htdocs\instapro\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
