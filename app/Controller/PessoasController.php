@@ -102,22 +102,29 @@ public function visualizar($id){
 }
 public function editar($id){
 	if($this->request->is('post')){
-	/*	
-	print "<pre>";
-	print_r($this->request->data);
-	print "</pre>";*/
-	$datasource = $this->Pessoas->getDataSource();
-	try{
-		$datasource->begin();
+
+		print "<pre>";
+		print_r($this->request->data);
+		print "</pre>";
+		die();
+		$datasource = $this->Pessoas->getDataSource();
+		try{
+			$datasource->begin();
 
 		//echo "1";
-		if($this->Pessoas->update($this->request->data)){
+			if($this->Pessoas->query("update pessoas
+				set 
+				nome=".$this->request->data['Pessoas']['nome'].", 
+				tipo_Acesso=".$this->request->data['Pessoas']['tipo_acesso'].", 
+				image=".$this->request->data['Pessoas']['avatarPath']." where id=".$this->request->data['Pessoas']['id'])){
+
+			//$this->Pessoas->query($this->request->data)){
 			//echo "2";
-			$this->request->data['PessoaContato']['id_pessoa'] = $this->Pessoas->id;
-			$this->request->data['PessoaFisica']['id_pessoa'] = $this->Pessoas->id;
+				$this->request->data['PessoaContato']['id_pessoa'] = $this->request->data['Pessoas']['id'];
+			$this->request->data['PessoaFisica']['id_pessoa'] = $this->request->data['Pessoas']['id'];
 
 			for($x=0; $x<count($this->request->data['PessoaModulo']);$x++){
-				$this->request->data['PessoaModulo'][$x]['id_pessoa'] = $this->Pessoas->id;		
+				$this->request->data['PessoaModulo'][$x]['id_pessoa'] = $this->request->data['Pessoas']['id'];		
 			}
 				//die(print_r($this->request->data['PessoaModulo']));
 		}else{
@@ -125,31 +132,61 @@ public function editar($id){
 			throw new Exception();
 		}
 		//echo "4";
-		if(!$this->Pessoas->PessoaContato->update($this->request->data)){
+		//if(!$this->Pessoas->PessoaContato->update($this->request->data)){
+		if(!$this->Pessoas->PessoaContato->query("update pessoa_contato
+			set 
+			endereco=".$this->request->data['PessoaContato']['endereco'].", 
+			complemento=".$this->request->data['PessoaContato']['complemento'].", 
+			bairro=".$this->request->data['PessoaContato']['bairro'].", 
+			id_pais=".$this->request->data['PessoaContato']['id_pais'].", 
+			id_estado=".$this->request->data['PessoaContato']['id_estado'].", 
+			id_cidade=".$this->request->data['PessoaContato']['id_cidade'].", 
+			cep=".$this->request->data['PessoaContato']['cep'].", 
+			email=".$this->request->data['PessoaContato']['email'].", 
+			telefone_1=".$this->request->data['PessoaContato']['telefone_1'].", 
+			tipo_tel_1=".$this->request->data['PessoaContato']['tipo_tel_1'].", 
+			telefone_2=".$this->request->data['PessoaContato']['telefone_2'].", 
+			tipo_tel_2=".$this->request->data['PessoaContato']['tipo_tel_2'].", 
+			telefone_3=".$this->request->data['PessoaContato']['telefone_3'].", 
+			tipo_tel_3=".$this->request->data['PessoaContato']['tipo_tel_3']."  where id_pessoa=".$this->request->data['Pessoas']['id_pessoa'])){
 			//echo "5";
-			throw new Exception();
-		}
-		if(!$this->Pessoas->PessoaFisica->update($this->request->data)){
+	throw new Exception();
+}
+//if(!$this->Pessoas->PessoaFisica->update($this->request->data)){
+if(!$this->Pessoas->PessoaFisica->query("update pessoa_fisica
+			set 
+			sexo=".$this->request->data['PessoaFisica']['sexo'].", 
+			ctps_num=".$this->request->data['PessoaFisica']['ctps_num'].", 
+			ctps_serie=".$this->request->data['PessoaFisica']['ctps_serie'].", 
+			oab=".$this->request->data['PessoaFisica']['oab'].", 
+			tratamento=".$this->request->data['PessoaFisica']['tratamento'].", 
+			estado_civil=".$this->request->data['PessoaFisica']['estado_civil'].", 
+			data_nascimento=".$this->request->data['PessoaFisica']['data_nascimento'].", 
+			nacionalidade=".$this->request->data['PessoaFisica']['nacionalidade'].", 
+			rg=".$this->request->data['PessoaFisica']['rg'].", 
+			cpf=".$this->request->data['PessoaFisica']['cpf'].", 
+			titulo_eleitor=".$this->request->data['PessoaFisica']['titulo_eleitor'].", 
+			profissao=".$this->request->data['PessoaFisica']['profissao']." where id_pessoa=".$this->request->data['Pessoas']['id_pessoa'])){
 			//echo "6";
-			throw new Exception();
-		}
-		foreach($this->request->data['PessoaModulo'] as $modulo){
+	throw new Exception();
+}
+foreach($this->request->data['PessoaModulo'] as $modulo){
 			//if(!$this->PessoaModulo->update($modulo)){
-			if(!$this->PessoaModulo->query("update pessoa_modulo set visualiza=".$modulo['visualiza'].", cadastra=".$modulo['cadastra']." where id_pessoa_modulo=".$modulo['id_pessoa_modulo'])){
+	if(!$this->PessoaModulo->query("update pessoa_modulo set visualiza=".$modulo['visualiza'].", cadastra=".$modulo['cadastra']." where id_pessoa_modulo=".$modulo['id_pessoa_modulo'])){
 				//echo "7";
-				throw new Exception();
-			}
-		}
-		
-
-		$datasource->commit();
-		$this->Session->setFlash('Contato atualizado com sucesso!');
-	} catch(Exception $e) {
-		//echo "8".$e;
-		echo $e;
-		$datasource->rollback();
-		$this->Session->setFlash('Erro ao atualizar Contato!');
+		throw new Exception();
 	}
+}
+
+
+$datasource->commit();
+$this->Session->setFlash('Contato atualizado com sucesso!');
+} catch(Exception $e) {
+		//echo "8".$e;
+	echo $e;
+	$datasource->rollback();
+	$this->Session->setFlash('Erro ao atualizar Contato!');
+}
 } 
 else 
 {
