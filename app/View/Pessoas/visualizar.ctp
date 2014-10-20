@@ -27,10 +27,10 @@ echo $this->Html->script("avatar");
 	<?php 
 	echo $this->Form->create('Pessoas', array('enctype' => 'multipart/form-data', 'action'=>'/editar/'.$Pessoas['Pessoas']['id']));
 	?>
-	<?php /*
+	<?php 
 	print "<pre>";
 	print_r($Pessoas);
-	print "</pre>";*/
+	print "</pre>";
 	?>
 	<TABLE>
 		<tr>

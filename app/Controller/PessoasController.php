@@ -102,60 +102,125 @@ public function visualizar($id){
 }
 public function editar($id){
 	if($this->request->is('post')){
-	/*	
-	print "<pre>";
-	print_r($this->request->data);
-	print "</pre>";*/
-	$datasource = $this->Pessoas->getDataSource();
-	try{
-		$datasource->begin();
 
-		//echo "1";
-		if($this->Pessoas->update($this->request->data)){
-			//echo "2";
-			$this->request->data['PessoaContato']['id_pessoa'] = $this->Pessoas->id;
-			$this->request->data['PessoaFisica']['id_pessoa'] = $this->Pessoas->id;
+		/*print "<pre>";
+		print_r($this->request->data);
+		print "</pre>";*/
+		//die();
+		$datasource = $this->Pessoas->getDataSource();
+		try{
+			$datasource->begin();
 
-			for($x=0; $x<count($this->request->data['PessoaModulo']);$x++){
-				$this->request->data['PessoaModulo'][$x]['id_pessoa'] = $this->Pessoas->id;		
-			}
+			echo "1";
+			$sql ="update pessoas
+			set 
+			nome='".$this->request->data['Pessoas']['nome']."', 
+			tipo_Acesso='".$this->request->data['Pessoas']['tipo_acesso']."' where id=".$this->request->data['Pessoas']['id'];
+			if($this->Pessoas->query($sql))
+			{
+
+			    //$this->Pessoas->query($this->request->data)){
+				echo "2";
+				//$this->request->data['PessoaContato']['id_pessoa'] = $this->request->data['Pessoas']['id'];
+				//$this->request->data['PessoaFisica']['id_pessoa'] = $this->request->data['Pessoas']['id'];
+
+				/*for($x=0; $x<count($this->request->data['PessoaModulo']);$x++){
+					$this->request->data['PessoaModulo'][$x]['id_pessoa'] = $this->request->data['Pessoas']['id'];		
+				}*/
 				//die(print_r($this->request->data['PessoaModulo']));
-		}else{
-			//echo "3";
-			throw new Exception();
-		}
-		//echo "4";
-		if(!$this->Pessoas->PessoaContato->update($this->request->data)){
-			//echo "5";
-			throw new Exception();
-		}
-		if(!$this->Pessoas->PessoaFisica->update($this->request->data)){
-			//echo "6";
-			throw new Exception();
-		}
-		foreach($this->request->data['PessoaModulo'] as $modulo){
-			//if(!$this->PessoaModulo->update($modulo)){
-			if(!$this->PessoaModulo->query("update pessoa_modulo set visualiza=".$modulo['visualiza'].", cadastra=".$modulo['cadastra']." where id_pessoa_modulo=".$modulo['id_pessoa_modulo'])){
-				//echo "7";
+			}else{
+				echo "3";
+				echo $sql;
 				throw new Exception();
 			}
-		}
-		
+			echo "4";
+		//if(!$this->Pessoas->PessoaContato->update($this->request->data)){
+			$cep = $this->request->data['PessoaContato']['cep'];
+			$cep =  ( $cep != null) ? $this->removeChar($cep) : ""; 
+			$tel1 = $this->request->data['PessoaContato']['telefone_1'];
+			$tel1 = ($tel1  != null) ? $this->removeChar($tel1) : "";
+			$tel2 = $this->request->data['PessoaContato']['telefone_2'];
+			$tel2 = ($tel2  != null) ? $this->removeChar($tel2) : "";
+			$tel3 = $this->request->data['PessoaContato']['telefone_3'];
+			$tel3 = ($tel3  != null) ? $this->removeChar($tel3) : "";
 
-		$datasource->commit();
-		$this->Session->setFlash('Contato atualizado com sucesso!');
-	} catch(Exception $e) {
-		//echo "8".$e;
-		echo $e;
-		$datasource->rollback();
-		$this->Session->setFlash('Erro ao atualizar Contato!');
+			$sql="update pessoa_contato
+			set 
+			endereco='".$this->request->data['PessoaContato']['endereco']."', 
+			complemento='".$this->request->data['PessoaContato']['complemento']."', 
+			bairro='".$this->request->data['PessoaContato']['bairro']."', 
+			id_pais='".$this->request->data['PessoaContato']['id_pais']."', 
+			id_estado='".$this->request->data['PessoaContato']['id_estado']."', 
+			id_cidade='".$this->request->data['PessoaContato']['id_cidade']."', 
+			cep='".$cep."', 
+			email='".$this->request->data['PessoaContato']['email']."', 
+			telefone_1='".$tel1."', 
+			tipo_tel_1='".$this->request->data['PessoaContato']['tipo_tel_1']."', 
+			telefone_2='".$tel2."', 
+			tipo_tel_2='".$this->request->data['PessoaContato']['tipo_tel_2']."', 
+			telefone_3='".$tel3."', 
+			tipo_tel_3='".$this->request->data['PessoaContato']['tipo_tel_3']."'  where id_pessoa=".$this->request->data['Pessoas']['id'];
+			if(!$this->PessoaContato->query($sql))
+			{
+				echo "5";
+				echo $sql;
+				throw new Exception();
+			}
+			echo "6";
+            //if(!$this->Pessoas->PessoaFisica->update($this->request->data)){
+			$cpf = $this->request->data['PessoaFisica']['cpf'];
+			$cpf =  ( $cpf != null) ? $this->removeChar($cpf) : null; 
+			$rg = $this->request->data['PessoaFisica']['rg'];
+			$rg =  ( $rg != null) ? $this->removeChar($rg) : null; 
+		   // $titulo = $this->request->data['PessoaFisica']['titulo_eleitor'];
+		    //$titulo =  ( $titulo != null) ? $this->removeChar($titulo) : null; 
+			$sql="update pessoa_fisica
+			set 
+			sexo='".$this->request->data['PessoaFisica']['sexo']."', 
+			ctps_num='".$this->removeChar($this->request->data['PessoaFisica']['ctps_num'])."', 
+			ctps_serie='".$this->removeChar($this->request->data['PessoaFisica']['ctps_serie'])."', 
+			oab='".$this->request->data['PessoaFisica']['oab']."', 
+			tratamento='".$this->request->data['PessoaFisica']['tratamento']."', 
+			estado_civil='".$this->request->data['PessoaFisica']['estado_civil']."',     	
+			data_nascimento='".implode("-",array_reverse(explode("/", $this->request->data['PessoaFisica']['data_nascimento'])))."', 
+			nacionalidade='".$this->request->data['PessoaFisica']['nacionalidade']."', 
+			rg='".$rg."', 
+			cpf='".$cpf."', 
+			profissao='".$this->request->data['PessoaFisica']['profissao']."' where id_pessoa=".$this->request->data['Pessoas']['id'];
+			if(!$this->PessoaFisica->query($sql))
+			{
+				echo "7";
+				echo $sql;
+				throw new Exception();
+			}
+            echo "8";
+			foreach($this->request->data['PessoaModulo'] as $modulo){
+			     //if(!$this->PessoaModulo->update($modulo)){
+				if(!$this->PessoaModulo->query("update pessoa_modulo set visualiza=".$modulo['visualiza'].", cadastra=".$modulo['cadastra']." where id_pessoa_modulo=".$modulo['id_pessoa_modulo']))
+				{
+					echo "9";
+					throw new Exception();
+				}
+			}
+			$datasource->commit();
+			echo "10";
+			$this->Session->setFlash('Contato atualizado com sucesso!');
+		} catch(Exception $e) {
+			echo "11";
+		    //print "<pre>";
+			//print($e);
+		    //print "</pre>";
+        	//echo $e;
+			$datasource->rollback();
+			$this->Session->setFlash('Erro ao atualizar Contato!');
+		}
+	} 
+	else 
+	{
+		$this->Session->setFlash('Erro ao começar atualização de Contato!');
 	}
-} 
-else 
-{
-	$this->Session->setFlash('Erro ao começar atualização de Contato!');
 }
-}
+
 public function searchPessoa(){
 	$this->autoRender = false;
 	$conditions = 'Pessoas.nome LIKE "%'. $this->request->data['string'].'%"'; 
@@ -339,6 +404,15 @@ public function login() {
 			}
 		}
 	}
+	private function removeChar($string){
+		$string=str_replace("(", "", trim($string));
+			$string=str_replace(")", "", $string);
+			$string=str_replace("-", "", $string);
+			$string=str_replace(".", "", $string);            
+			$string=str_replace("/", "", $string);            
+			$string=str_replace(" ", "", $string);
+			return $string;
+		}
 
-}
-?>
+	}
+	?>
