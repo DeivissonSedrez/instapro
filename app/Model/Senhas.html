@@ -1,0 +1,27 @@
+<?php
+App::uses('SimplePasswordHasher', 'Controller/Component/Auth');
+class Senhas extends AppModel{
+	var $name = 'Pessoas';
+	public $useTable = 'Pessoas'; 	
+	
+	public $validate = array(		
+	    'password' => array(
+	        'identicalFieldValues' => array(
+		        'rule' => array('identicalFieldValues', 'password2' ),
+		        'message' => 'Suas senhas não conferem, por favor verifique!'
+		    )
+        )
+	);
+
+	public function beforeSave($options = array()){
+		if (!empty($this->data['Pessoas']['password'])) {
+            $passwordHasher = new SimplePasswordHasher(array('hashType' => 'sha256'));
+            $this->data['Pessoas']['password'] = $passwordHasher->hash(
+                $this->data['Pessoas']['password']
+            );
+        }
+       
+        return true;
+	}
+}
+?>

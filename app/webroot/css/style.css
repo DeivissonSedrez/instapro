@@ -571,3 +571,4 @@ table.tableProc.sortable .header 													{ background-image:url("../img/bac
 .tabs-content2 > div.active2															{ display:block; }
 	
 .tabs-content2 p	 																{ margin-bottom:0; }
+#boxSenha																			{position:absolute; background-color:#FFF; top:10px; height: 200px; width:400px; padding: 10px;  left:50%; margin-left:-200px; display:none; clear:both; overflow:hidden;  z-index:10000;  border:1px solid #b9c4cf;-webkit-box-shadow: 0 2px 4px rgba(5,22,52,.2), inset 0 1px 3px rgba(5,22,52,.2);-moz-box-shadow: 0 2px 4px rgba(5,22,52,.2), inset 0 1px 3px rgba(5,22,52,.2);box-shadow: 0 2px 4px rgba(5,22,52,.2), inset 0 1px 3px rgba(5,22,52,.2);border-radius:4px; }

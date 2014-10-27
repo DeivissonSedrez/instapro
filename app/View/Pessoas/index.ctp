@@ -38,7 +38,8 @@ echo $this->Html->script("scripts.js");
 	<?php $sizes = array('s' => 'Small', 'm' => 'Medium', 'l' => 'Large'); ?>
 	<?php echo $this->Form->create('busca')?>
 	<?php 
-		if(CakeSession::read('User.processos'))
+		$modulo = CakeSession::read('User.permissions');
+		if($modulo[0]['PessoaModulo']['cadastra']==1)
 		    echo $this->Html->link('Novo Usuário', array('controller'=> 'pessoas', 'action' => 'adicionar'), array('class' => 'button-blue'));
 		?>
  

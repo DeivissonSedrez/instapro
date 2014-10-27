@@ -1,5 +1,6 @@
 <?php 
-		if(CakeSession::read('User.processos')){
+		$modulo = CakeSession::read('User.permissions');
+		if($modulo[0]['PessoaModulo']['cadastra']==1){
 		    $edita= "";
 		    $crumb="Editar";
 		}
@@ -32,13 +33,13 @@ echo $this->Html->script("avatar");
 		<tr>
 			<td width="395" style="border-right:1px solid #ccc;">
 				<?php
-				$acesso=$pessoa['Pessoas']['tipo_acesso'];
+				$acesso=$Pessoas['Pessoas']['tipo_acesso'];
 				echo $this->Form->input('tipo_acesso', array('label'=> array('text' => '<h4 style="display:inline">Tipo Usuário: </h4>', 'class'=>'labelform'), 'disabled'=>$edita, 'class'=>'dropdown small', 'type'=>'select', 'options' => $permissoes,  'default'=>$acesso, 'css' => array('display'=>'inline'))); 
-				echo $this->Form->input('login', array('label'=> array('text' => '<h4 style="display:inline">Login: </h4>', 'class'=>'labelform'), 'disabled'=>'disabled', 'value'=>$pessoa['Pessoas']['login'], 'class'=>'small',  'css' => array('display'=>'inline')));
+				echo $this->Form->input('login', array('label'=> array('text' => '<h4 style="display:inline">Login: </h4>', 'class'=>'labelform'), 'disabled'=>'disabled', 'value'=>$Pessoas['Pessoas']['login'], 'class'=>'small',  'css' => array('display'=>'inline')));
 				/*echo $this->Form->input('password', array('label'=> array('text' => '<h4 style="display:inline">Senha: </h4>', 'class'=>'labelform'), 'disabled'=>$edita,  'class'=>'small', 'type'=>'password','css' => array('display'=>'inline')));
 				echo $this->Form->input('password2', array('label'=> array('text' => '<h4 style="display:inline">Confirme a senha: </h4>', 'class'=>'labelform'), 'disabled'=>$edita, 'class'=>'small','type'=>'password', 'css' => array('display'=>'inline')));*/
-				if($acesso==1 && CakeSession::read('User.processos')){
-                     echo "<button class = 'button-blue-input' style='white-space:nowrap; width:100px;'>Alterar senha</button>";
+				if(CakeSession::read('User.admin')){
+                     echo "<button class = 'button-blue-input' type='button' style='white-space:nowrap; width:100px;'>Alterar senha</button>";
 				}
 				echo $this->Form->input('id', array('value' => $Pessoas['Pessoas']['id'], 'type' => 'hidden'));
 				?>
@@ -63,23 +64,23 @@ echo $this->Html->script("avatar");
 		<tr>
 			<td width="395" style="border-right:1px solid #ccc;">
 				<?php
-				echo $this->Form->input('nome', array('label'=> array('text' => '<h4 style="display:inline">Nome: </h4>', 'class'=>'labelform'), 'disabled'=>$edita, 'value'=>$pessoa['Pessoas']['nome'], 'class'=>'small', 'css' => array('display'=>'inline')));
-				echo $this->Form->input('PessoaFisica.tratamento', array('label'=> array('text' => '<h4 style="display:inline">Tratamento: </h4>', 'class'=>'labelform'),'disabled'=>$edita, 'value'=>$pessoa['PessoaFisica']['tratamento'],  'class'=>'small', 'css' => array('display'=>'inline')));
-				echo $this->Form->input('PessoaFisica.estado_civil', array('label'=> array('text' => '<h4 style="display:inline">Estado Civil: </h4>', 'class'=>'labelform'),'disabled'=>$edita,  'class'=>'dropdown small', 'type'=>'select', 'options' => array('S' => 'Solteiro', 'C' => 'Casado', 'D' => 'Divorciado', 'V' => 'Viuvo'), 'default'=>$pessoa['PessoaFisica']['estado_civil'],  'css' => array('display'=>'inline')));
-				echo $this->Form->input('PessoaFisica.sexo', array('label'=> array('text' => '<h4 style="display:inline">Sexo: </h4>', 'class'=>'labelform'),'disabled'=>$edita,  'default'=>$pessoa['PessoaFisica']['sexo'], 'class'=>'dropdown small', 'type'=>'select', 'options' => array('M' => "Masculino", 'F' => 'Feminino'),'css' => array('display'=>'inline')));
-				echo $this->Form->input('PessoaFisica.ctps_num', array('label'=> array('text' => '<h4 style="display:inline">CTPS Número: </h4>', 'class'=>'labelform'),'disabled'=>$edita, 'value'=>$pessoa['PessoaFisica']['ctps_num'],  'class'=>'small', 'type'=>'text', 'css' => array('display'=>'inline')));
-				echo $this->Form->input('PessoaFisica.ctps_serie', array('label'=> array('text' => '<h4 style="display:inline">CTPS Série: </h4>', 'class'=>'labelform'),'disabled'=>$edita, 'value'=>$pessoa['PessoaFisica']['ctps_serie'],  'class'=>'small', 'type'=>'text', 'css' => array('display'=>'inline')));
-				echo $this->Form->input('PessoaFisica.oab', array('label'=> array('text' => '<h4 style="display:inline">OAB: </h4>', 'class'=>'labelform'),'disabled'=>$edita, 'value'=>$pessoa['PessoaFisica']['oab'],  'class'=>'small', 'type'=>'text', 'css' => array('display'=>'inline')));
-                $nasc=implode("/",array_reverse(explode("-", $pessoa['PessoaFisica']['data_nascimento'])));
+				echo $this->Form->input('nome', array('label'=> array('text' => '<h4 style="display:inline">Nome: </h4>', 'class'=>'labelform'), 'disabled'=>$edita, 'value'=>$Pessoas['Pessoas']['nome'], 'class'=>'small', 'css' => array('display'=>'inline')));
+				echo $this->Form->input('PessoaFisica.tratamento', array('label'=> array('text' => '<h4 style="display:inline">Tratamento: </h4>', 'class'=>'labelform'),'disabled'=>$edita, 'value'=>$Pessoas['PessoaFisica']['tratamento'],  'class'=>'small', 'css' => array('display'=>'inline')));
+				echo $this->Form->input('PessoaFisica.estado_civil', array('label'=> array('text' => '<h4 style="display:inline">Estado Civil: </h4>', 'class'=>'labelform'),'disabled'=>$edita,  'class'=>'dropdown small', 'type'=>'select', 'options' => array('S' => 'Solteiro', 'C' => 'Casado', 'D' => 'Divorciado', 'V' => 'Viuvo'), 'default'=>$Pessoas['PessoaFisica']['estado_civil'],  'css' => array('display'=>'inline')));
+				echo $this->Form->input('PessoaFisica.sexo', array('label'=> array('text' => '<h4 style="display:inline">Sexo: </h4>', 'class'=>'labelform'),'disabled'=>$edita,  'default'=>$Pessoas['PessoaFisica']['sexo'], 'class'=>'dropdown small', 'type'=>'select', 'options' => array('M' => "Masculino", 'F' => 'Feminino'),'css' => array('display'=>'inline')));
+				echo $this->Form->input('PessoaFisica.ctps_num', array('label'=> array('text' => '<h4 style="display:inline">CTPS Número: </h4>', 'class'=>'labelform'),'disabled'=>$edita, 'value'=>$Pessoas['PessoaFisica']['ctps_num'],  'class'=>'small', 'type'=>'text', 'css' => array('display'=>'inline')));
+				echo $this->Form->input('PessoaFisica.ctps_serie', array('label'=> array('text' => '<h4 style="display:inline">CTPS Série: </h4>', 'class'=>'labelform'),'disabled'=>$edita, 'value'=>$Pessoas['PessoaFisica']['ctps_serie'],  'class'=>'small', 'type'=>'text', 'css' => array('display'=>'inline')));
+				echo $this->Form->input('PessoaFisica.oab', array('label'=> array('text' => '<h4 style="display:inline">OAB: </h4>', 'class'=>'labelform'),'disabled'=>$edita, 'value'=>$Pessoas['PessoaFisica']['oab'],  'class'=>'small', 'type'=>'text', 'css' => array('display'=>'inline')));
+                $nasc=implode("/",array_reverse(explode("-", $Pessoas['PessoaFisica']['data_nascimento'])));
 				echo $this->Form->input('PessoaFisica.data_nascimento', array('label'=> array('text' => '<h4 style="display:inline">Data de Nascimento: </h4>', 'class'=>'labelform'),'disabled'=>$edita,  'value'=>$nasc,  'class'=>'small', 'type'=>'text', 'css' => array('display'=>'inline')));
 				?>
 			</td>
 			<td style="padding: 0px 0px 0px 25px;"><?php
-				echo $this->Form->input('PessoaFisica.nacionalidade', array('label'=> array('text' => '<h4 style="display:inline">Nacionalidade: </h4>', 'class'=>'labelform'),'disabled'=>$edita,  'value'=>$pessoa['PessoaFisica']['nacionalidade'], 'class'=>'small', 'type'=>'text', 'css' => array('display'=>'inline')));
-				echo $this->Form->input('PessoaFisica.rg', array('label'=> array('text' => '<h4 style="display:inline">RG: </h4>', 'class'=>'labelform'),'disabled'=>$edita, 'value'=>$pessoa['PessoaFisica']['rg'],  'class'=>'small', 'type'=>'text', 'css' => array('display'=>'inline')));
-				echo $this->Form->input('PessoaFisica.cpf', array('label'=> array('text' => '<h4 style="display:inline">CPF: </h4>', 'class'=>'labelform'),'disabled'=>$edita,  'value'=>$pessoa['PessoaFisica']['cpf'], 'class'=>'small', 'type'=>'text', 'css' => array('display'=>'inline')));
-				echo $this->Form->input('PessoaFisica.profissao', array('label'=> array('text' => '<h4 style="display:inline">Profissão/Ocupação: </h4>', 'class'=>'labelform'),'disabled'=>$edita,  'value'=>$pessoa['PessoaFisica']['profissao'], 'class'=>'small', 'type'=>'text', 'css' => array('display'=>'inline')));
-				echo $this->Form->input('PessoaFisica.matricula_codigo', array('label'=> array('text' => '<h4 style="display:inline">Matrícula/Código: </h4>', 'class'=>'labelform'),'disabled'=>$edita,  'value'=>$pessoa['PessoaFisica']['oab'], 'class'=>'small', 'type'=>'text', 'css' => array('display'=>'inline')));
+				echo $this->Form->input('PessoaFisica.nacionalidade', array('label'=> array('text' => '<h4 style="display:inline">Nacionalidade: </h4>', 'class'=>'labelform'),'disabled'=>$edita,  'value'=>$Pessoas['PessoaFisica']['nacionalidade'], 'class'=>'small', 'type'=>'text', 'css' => array('display'=>'inline')));
+				echo $this->Form->input('PessoaFisica.rg', array('label'=> array('text' => '<h4 style="display:inline">RG: </h4>', 'class'=>'labelform'),'disabled'=>$edita, 'value'=>$Pessoas['PessoaFisica']['rg'],  'class'=>'small', 'type'=>'text', 'css' => array('display'=>'inline')));
+				echo $this->Form->input('PessoaFisica.cpf', array('label'=> array('text' => '<h4 style="display:inline">CPF: </h4>', 'class'=>'labelform'),'disabled'=>$edita,  'value'=>$Pessoas['PessoaFisica']['cpf'], 'class'=>'small', 'type'=>'text', 'css' => array('display'=>'inline')));
+				echo $this->Form->input('PessoaFisica.profissao', array('label'=> array('text' => '<h4 style="display:inline">Profissão/Ocupação: </h4>', 'class'=>'labelform'),'disabled'=>$edita,  'value'=>$Pessoas['PessoaFisica']['profissao'], 'class'=>'small', 'type'=>'text', 'css' => array('display'=>'inline')));
+				echo $this->Form->input('PessoaFisica.matricula_codigo', array('label'=> array('text' => '<h4 style="display:inline">Matrícula/Código: </h4>', 'class'=>'labelform'),'disabled'=>$edita,  'value'=>$Pessoas['PessoaFisica']['oab'], 'class'=>'small', 'type'=>'text', 'css' => array('display'=>'inline')));
 				echo $this->Form->input('avatar', array( 'label' => array('text' => '', 'value'=> 2, 'class'=>'labelform'), 'style' => 'box-shadow: none; border: none; display:none;', 'disabled'=>$edita, 'class' => 'file', 'between' => '<br />','type' => 'file'));
 				echo $this->Form->input('userAvatarAdded', array( 'label' => array('text' => '', 'value'=> 2, 'class'=>'labelform'), 'value' => 0, 'type' => 'hidden'));
 				echo $this->Form->input('avatarPath', array( 'label' => array('text' => '', 'value'=> 2, 'class'=>'labelform'), 'value' => 0, 'type' => 'hidden'));
@@ -101,25 +102,25 @@ echo $this->Html->script("avatar");
 		<tr>
 			<td width="395" style="border-right:1px solid #ccc;">
 				<?php
-				echo $this->Form->input('PessoaContato.endereco', array('label'=> array('text' => '<h4 style="display:inline">Endereço: </h4>', 'class'=>'labelform'),'disabled'=>$edita, 'value'=>$pessoa['PessoaContato']['endereco'],  'class'=>'small', 'css' => array('display'=>'inline')));
-				echo $this->Form->input('PessoaContato.complemento', array('label'=> array('text' => '<h4 style="display:inline">Complemento: </h4>', 'class'=>'labelform'),'disabled'=>$edita,'value'=>$pessoa['PessoaContato']['complemento'], 'class'=>'small', 'css' => array('display'=>'inline')));
-				echo $this->Form->input('PessoaContato.bairro', array('label'=> array('text' => '<h4 style="display:inline">Bairro: </h4>', 'class'=>'labelform'),'disabled'=>$edita,'value'=>$pessoa['PessoaContato']['bairro'], 'class'=>'small', 'css' => array('display'=>'inline')));
+				echo $this->Form->input('PessoaContato.endereco', array('label'=> array('text' => '<h4 style="display:inline">Endereço: </h4>', 'class'=>'labelform'),'disabled'=>$edita, 'value'=>$Pessoas['PessoaContato']['endereco'],  'class'=>'small', 'css' => array('display'=>'inline')));
+				echo $this->Form->input('PessoaContato.complemento', array('label'=> array('text' => '<h4 style="display:inline">Complemento: </h4>', 'class'=>'labelform'),'disabled'=>$edita,'value'=>$Pessoas['PessoaContato']['complemento'], 'class'=>'small', 'css' => array('display'=>'inline')));
+				echo $this->Form->input('PessoaContato.bairro', array('label'=> array('text' => '<h4 style="display:inline">Bairro: </h4>', 'class'=>'labelform'),'disabled'=>$edita,'value'=>$Pessoas['PessoaContato']['bairro'], 'class'=>'small', 'css' => array('display'=>'inline')));
 
-				echo $this->Form->input('PessoaContato.id_pais', array('label'=> array('text' => '<h4 style="display:inline">País: </h4>', 'class'=>'labelform'),'disabled'=>$edita, 'class'=>'dropdown small',  'type'=>'select', 'options' => $paises, 'value'=>$pessoa['PessoaContato']['id_pais'], 'css' => array('display'=>'inline')));
-				echo $this->Form->input('PessoaContato.id_estado', array('label'=> array('text' => '<h4 style="display:inline">Estado: </h4>', 'class'=>'labelform'),'disabled'=>$edita,'value'=>$pessoa['PessoaContato']['id_estado'], 'class'=>'dropdown small',  'type'=>'select', 'options' => $estados,'css' => array('display'=>'inline')));
-				echo $this->Form->input('PessoaContato.id_cidade', array('label'=> array('text' => '<h4 style="display:inline">Cidade: </h4>', 'class'=>'labelform'),'disabled'=>$edita, 'value'=>$pessoa['PessoaContato']['id_cidade'],'class'=>'dropdown small',  'type'=>'select', 'css' => array('display'=>'inline')));
+				echo $this->Form->input('PessoaContato.id_pais', array('label'=> array('text' => '<h4 style="display:inline">País: </h4>', 'class'=>'labelform'),'disabled'=>$edita, 'class'=>'dropdown small',  'type'=>'select', 'options' => $paises, 'value'=>$Pessoas['PessoaContato']['id_pais'], 'css' => array('display'=>'inline')));
+				echo $this->Form->input('PessoaContato.id_estado', array('label'=> array('text' => '<h4 style="display:inline">Estado: </h4>', 'class'=>'labelform'),'disabled'=>$edita,'value'=>$Pessoas['PessoaContato']['id_estado'], 'class'=>'dropdown small',  'type'=>'select', 'options' => $estados,'css' => array('display'=>'inline')));
+				echo $this->Form->input('PessoaContato.id_cidade', array('label'=> array('text' => '<h4 style="display:inline">Cidade: </h4>', 'class'=>'labelform'),'disabled'=>$edita, 'value'=>$Pessoas['PessoaContato']['id_cidade'],'class'=>'dropdown small',  'type'=>'select', 'css' => array('display'=>'inline')));
 
-				echo $this->Form->input('PessoaContato.cep', array('label'=> array('text' => '<h4 style="display:inline">Cep: </h4>', 'class'=>'labelform'),'disabled'=>$edita, 'value'=>$pessoa['PessoaContato']['cep'],'class'=>'small', 'css' => array('display'=>'inline'),'type' => 'text'));
+				echo $this->Form->input('PessoaContato.cep', array('label'=> array('text' => '<h4 style="display:inline">Cep: </h4>', 'class'=>'labelform'),'disabled'=>$edita, 'value'=>$Pessoas['PessoaContato']['cep'],'class'=>'small', 'css' => array('display'=>'inline'),'type' => 'text'));
 				?>
 			</td>
 			<td style="padding: 0px 0px 0px 25px;"><?php
-				echo $this->Form->input('PessoaContato.email', array('label'=> array('text' => '<h4 style="display:inline">e-Mail: </h4>', 'class'=>'labelform'), 'disabled'=>$edita, 'value'=>$pessoa['PessoaContato']['email'],'class'=>'small', 'css' => array('display'=>'inline')));
-				echo $this->Form->input('PessoaContato.telefone_1', array('label'=> array('text' => '<h4 style="display:inline">Telefone 1: </h4>', 'class'=>'labelform'), 'disabled'=>$edita, 'value'=>$pessoa['PessoaContato']['telefone_1'],'class'=>'small', 'css' => array('display'=>'inline'),'type' => 'text'));
-				echo $this->Form->input('PessoaContato.tipo_tel_1', array('label'=> array('text' => '<h4 style="display:inline">Tipo: </h4>', 'class'=>'labelform'),'disabled'=>$edita,'value'=>$pessoa['PessoaContato']['tipo_tel_1'], 'class'=>'small', 'css' => array('display'=>'inline')));
-				echo $this->Form->input('PessoaContato.telefone_2', array('label'=> array('text' => '<h4 style="display:inline">Telefone 2: </h4>', 'class'=>'labelform'),'disabled'=>$edita, 'value'=>$pessoa['PessoaContato']['telefone_2'],'class'=>'small', 'css' => array('display'=>'inline'),'type' => 'text'));
-				echo $this->Form->input('PessoaContato.tipo_tel_2', array('label'=> array('text' => '<h4 style="display:inline">Tipo: </h4>', 'class'=>'labelform'),'disabled'=>$edita, 'value'=>$pessoa['PessoaContato']['tipo_tel_2'], 'class'=>'small', 'css' => array('display'=>'inline')));
-				echo $this->Form->input('PessoaContato.telefone_3', array('label'=> array('text' => '<h4 style="display:inline">Telefone 3: </h4>', 'class'=>'labelform'),'disabled'=>$edita, 'value'=>$pessoa['PessoaContato']['telefone_3'], 'class'=>'small', 'css' => array('display'=>'inline'),'type' => 'text'));
-				echo $this->Form->input('PessoaContato.tipo_tel_3', array('label'=> array('text' => '<h4 style="display:inline">Tipo: </h4>', 'class'=>'labelform'), 'disabled'=>$edita,'value'=>$pessoa['PessoaContato']['tipo_tel_3'],'class'=>'small', 'css' => array('display'=>'inline')));
+				echo $this->Form->input('PessoaContato.email', array('label'=> array('text' => '<h4 style="display:inline">e-Mail: </h4>', 'class'=>'labelform'), 'disabled'=>$edita, 'value'=>$Pessoas['PessoaContato']['email'],'class'=>'small', 'css' => array('display'=>'inline')));
+				echo $this->Form->input('PessoaContato.telefone_1', array('label'=> array('text' => '<h4 style="display:inline">Telefone 1: </h4>', 'class'=>'labelform'), 'disabled'=>$edita, 'value'=>$Pessoas['PessoaContato']['telefone_1'],'class'=>'small', 'css' => array('display'=>'inline'),'type' => 'text'));
+				echo $this->Form->input('PessoaContato.tipo_tel_1', array('label'=> array('text' => '<h4 style="display:inline">Tipo: </h4>', 'class'=>'labelform'),'disabled'=>$edita,'value'=>$Pessoas['PessoaContato']['tipo_tel_1'], 'class'=>'small', 'css' => array('display'=>'inline')));
+				echo $this->Form->input('PessoaContato.telefone_2', array('label'=> array('text' => '<h4 style="display:inline">Telefone 2: </h4>', 'class'=>'labelform'),'disabled'=>$edita, 'value'=>$Pessoas['PessoaContato']['telefone_2'],'class'=>'small', 'css' => array('display'=>'inline'),'type' => 'text'));
+				echo $this->Form->input('PessoaContato.tipo_tel_2', array('label'=> array('text' => '<h4 style="display:inline">Tipo: </h4>', 'class'=>'labelform'),'disabled'=>$edita, 'value'=>$Pessoas['PessoaContato']['tipo_tel_2'], 'class'=>'small', 'css' => array('display'=>'inline')));
+				echo $this->Form->input('PessoaContato.telefone_3', array('label'=> array('text' => '<h4 style="display:inline">Telefone 3: </h4>', 'class'=>'labelform'),'disabled'=>$edita, 'value'=>$Pessoas['PessoaContato']['telefone_3'], 'class'=>'small', 'css' => array('display'=>'inline'),'type' => 'text'));
+				echo $this->Form->input('PessoaContato.tipo_tel_3', array('label'=> array('text' => '<h4 style="display:inline">Tipo: </h4>', 'class'=>'labelform'), 'disabled'=>$edita,'value'=>$Pessoas['PessoaContato']['tipo_tel_3'],'class'=>'small', 'css' => array('display'=>'inline')));
 				?>
 			</td>
 		</tr>

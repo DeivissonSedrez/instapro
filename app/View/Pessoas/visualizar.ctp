@@ -1,5 +1,7 @@
 <?php 
-		if(CakeSession::read('User.processos')){
+error_reporting(0);
+		$modulo = CakeSession::read('User.permissions');
+		if($modulo[0]['PessoaModulo']['cadastra']==1){
 		    $edita= "";
 		    $crumb="Editar";
 		}
@@ -13,6 +15,36 @@
 echo $this->Html->script("scripts");
 echo $this->Html->script("avatar");
 ?>
+<script>
+	$( document ).ready(function() {
+		$("#alteraSenha").click(function(){
+			 var container = $("#boxSenha");
+			if ( container.is(':visible') ) {	    
+				container.toggle('scale',{ percent: 0 },500);
+				$("#alteraSenha").show();
+			  // container.html("");
+			} else { 
+			   container.toggle('scale',{ percent: 100 },500);
+				$("#alteraSenha").hide();
+				//container.html()="";
+			}			
+		});
+	});
+	$(document).mouseup(function (e)
+	{
+	    var container = $("#boxSenha");
+		if ( $("#boxSenha").is(':visible') ) {	
+		    if (!container.is(e.target) // if the target of the click isn't the container...
+		        && container.has(e.target).length === 0) // ... nor a descendant of the container
+		    {
+		    	
+		        	container.toggle('scale',{ percent: 0 },500);
+					$("#alteraSenha").show();
+		        	//container.html("");
+		    }
+		}
+	});
+</script>
 <div id="breadcrumbbox">
 	<ul class="breadcrumb">
 		<li class="home"><a href="/instapro/"></a></li>		
@@ -28,9 +60,9 @@ echo $this->Html->script("avatar");
 	echo $this->Form->create('Pessoas', array('enctype' => 'multipart/form-data', 'action'=>'/editar/'.$Pessoas['Pessoas']['id']));
 	?>
 	<?php 
-	print "<pre>";
+	/*print "<pre>";
 	print_r($Pessoas);
-	print "</pre>";
+	print "</pre>";*/
 	?>
 	<TABLE>
 		<tr>
@@ -41,8 +73,8 @@ echo $this->Html->script("avatar");
 				echo $this->Form->input('login', array('label'=> array('text' => '<h4 style="display:inline">Login: </h4>', 'class'=>'labelform'), 'disabled'=>'disabled', 'value'=>$Pessoas['Pessoas']['login'], 'class'=>'small',  'css' => array('display'=>'inline')));
 				/*echo $this->Form->input('password', array('label'=> array('text' => '<h4 style="display:inline">Senha: </h4>', 'class'=>'labelform'), 'disabled'=>$edita,  'class'=>'small', 'type'=>'password','css' => array('display'=>'inline')));
 				echo $this->Form->input('password2', array('label'=> array('text' => '<h4 style="display:inline">Confirme a senha: </h4>', 'class'=>'labelform'), 'disabled'=>$edita, 'class'=>'small','type'=>'password', 'css' => array('display'=>'inline')));*/
-				if($acesso==1 && CakeSession::read('User.processos')){
-                     echo "<button class = 'button-blue-input' style='white-space:nowrap; width:100px;'>Alterar senha</button>";
+				if(CakeSession::read('User.admin')){
+                     echo "<button class = 'button-blue-input' id='alteraSenha' type='button' style='white-space:nowrap; width:100px;'>Alterar senha</button>";
 				}
 				echo $this->Form->input('id', array('value' => $Pessoas['Pessoas']['id'], 'type' => 'hidden'));
 				?>
@@ -134,4 +166,20 @@ echo $this->Html->script("avatar");
 		if(CakeSession::read('User.processos'))
 		echo $this->Form->end(array('class' => 'button-blue-input', 'label' => 'Alterar', 'div' => false));
 		?>
+	</div>
+</div>
+	<div id="boxSenha">
+		<h3>Dados de Login</h3>
+		<div class="hr"></div>
+		<?php 
+		echo $this->Form->create('Senha', array('enctype' => 'multipart/form-data', 'action'=>'/AlteraSenha/'.$Pessoas['Pessoas']['id']));
+		
+		echo $this->Form->input('password', array('label'=> array('text' => '<h4 style="display:inline">Senha: </h4>', 'class'=>'labelform'), 'disabled'=>$edita,  'class'=>'small', 'type'=>'password','css' => array('display'=>'inline')));
+			echo $this->Form->input('password2', array('label'=> array('text' => '<h4 style="display:inline">Confirme a senha: </h4>', 'class'=>'labelform'), 'disabled'=>$edita, 'class'=>'small','type'=>'password', 'css' => array('display'=>'inline')));
+		?>
+		<div style='margin-left: 50%; left:-45px; position:relative;'>
+		<?php
+		echo $this->Form->end(array('class' => 'button-blue-input', 'label' => 'Alterar Senha', 'div' => false));
+		?>
+		</div>
 	</div>

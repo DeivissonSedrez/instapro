@@ -1,6 +1,5 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html dir="ltr" lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -32,10 +31,11 @@
 	<!-- Scripts -->
 	
 	<?php echo $this->Html->script(array('jquery.maskedinput.js')); ?>
+
 	<!-- The Load Image plugin is included for the preview images and image resizing functionality -->
-	<script src="http://blueimp.github.io/JavaScript-Load-Image/js/load-image.min.js"></script>
+	<?php echo $this->Html->script(array('load-image.all.min.js')); ?>
 	<!-- The Canvas to Blob plugin is included for image resizing functionality -->
-	<script src="http://blueimp.github.io/JavaScript-Canvas-to-Blob/js/canvas-to-blob.min.js"></script>
+	<?php echo $this->Html->script(array('canvas-to-blob.min.js')); ?>
 
 	<?php echo $this->Html->script(array('fileupload/jquery.fileupload.js')); ?>
 	<?php echo $this->Html->script(array('fileupload/jquery.iframe-transport.js')); ?>
